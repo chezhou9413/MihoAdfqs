@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Miho_SS 专用：中文“德国风格”人名 -->
+  <RulePackDef>
+    <defName>NamerPerson_MihoThirdEmpire_GermanCN</defName>
+    <rulePack>
+      <rulesStrings>
+        <!-- 标准人名入口 -->
+        <li>r_name->[given]·[family]</li>
+
+        <!-- 名（可继续扩充） -->
+        <li>given->阿道夫</li>
+        <li>given->奥托</li>
+        <li>given->海因里希</li>
+        <li>given->威廉</li>
+        <li>given->卡尔</li>
+        <li>given->约翰</li>
+        <li>given->弗里德里希</li>
+        <li>given->鲁道夫</li>
+        <li>given->埃里希</li>
+        <li>given->赫尔曼</li>
+        <li>given->马克斯</li>
+        <li>given->沃尔特</li>
+        <li>given->保罗</li>
+        <li>given->汉斯</li>
+        <li>given->约瑟夫</li>
+        <li>given->阿尔伯特</li>
+        <li>given->理查德</li>
+        <li>given->维尔纳</li>
+
+        <!-- 姓（可继续扩充） -->
+        <li>family->施密特</li>
+        <li>family->穆勒</li>
+        <li>family->施耐德</li>
+        <li>family->费舍尔</li>
+        <li>family->韦伯</li>
+        <li>family->迈耶</li>
+        <li>family->瓦格纳</li>
+        <li>family->贝克尔</li>
+        <li>family->霍夫曼</li>
+        <li>family->里希特</li>
+        <li>family->克莱因</li>
+        <li>family->沃尔夫</li>
+        <li>family->克劳斯</li>
+        <li>family->朗格</li>
+        <li>family->布劳恩</li>
+        <li>family->施瓦茨</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
+

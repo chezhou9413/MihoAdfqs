@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThoughtDef>
+    <defName>Miho_AteNutrientPaste_Disgust</defName>
+    <durationDays>1</durationDays> <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>吃了营养膏</label>
+        <description>呕！渣渣！这么难吃的东西是喂猪的吗！</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Miho_AteFineMeal_Critique</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>吃了精致食物</label>
+        <description>厨艺还算不错，有待提升，可惜，这个地方的红酒太少了。</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Miho_AteLavishMeal_Praise</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>吃了奢侈食物</label>
+        <description>相当美味，或许，我应该把制作这道菜的家伙聘请为私人厨师了。</description>
+        <baseMoodEffect>15</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>Miho_AteHumanMeat_Acceptance</defName>
+    <durationDays>1</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>吃了人肉</label>
+        <description>或许，汉尼拔做的没错，脂肪也不该浪费。</description>
+        <baseMoodEffect>5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</Defs>

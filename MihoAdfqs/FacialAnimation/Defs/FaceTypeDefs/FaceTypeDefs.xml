@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <FacialAnimation.HeadTypeDef>
+        <defName>MihoAdfqsHead</defName>        <!--MihoHighmate-->
+        <texPath>FacialAnimation/Adfqs/Head</texPath>
+        <shader>Map/Cutout</shader>
+        <enableUnisexTexPath>True</enableUnisexTexPath>
+        <raceName>Alien_Miho</raceName>
+        <targetGeneDefs>
+            <li>Gene_MihoThirdEmpireFuhrer</li>
+        </targetGeneDefs>
+    </FacialAnimation.HeadTypeDef>
+</Defs>

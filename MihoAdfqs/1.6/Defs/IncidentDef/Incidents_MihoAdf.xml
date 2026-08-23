@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <IncidentDef>
+        <defName>Incidents_MihoAdf</defName>
+        <label>阿道夫-秋霜来访</label>
+        <category>Misc</category> <targetTags>
+            <li>Map_PlayerHome</li>
+        </targetTags>
+        <workerClass>MihoAdfqs.MihoAdfIncidents.IncidentWorker_MihoAdfApproach</workerClass>  
+        <baseChance>0</baseChance>    
+        <minRefireDays>15</minRefireDays>
+    </IncidentDef>
+</Defs>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Blank" and defaultOffset="Tail"]</xpath>
+    <value>
+      <name>MihoTail</name>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Addon/TailMoving/TailMoving"]</xpath>
+    <value>
+      <name>MihoTailMoving</name>
+    </value>
+  </Operation>
+
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Addon/Hair/Hair"]</xpath>
+    <value>
+      <name>MihoHairFront</name>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Addon/HairBack/HairBack"]</xpath>
+    <value>
+      <name>MihoHairBack</name>
+    </value>
+  </Operation>
+
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Addon/EarRight/Ear"]</xpath>
+    <value>
+      <name>MihoEarRight</name>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Addon/EarLeft/Ear"]</xpath>
+    <value>
+      <name>MihoEarLeft</name>
+    </value>
+  </Operation>
+
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Head/Head"]</xpath>
+    <value>
+      <name>MihoHead</name>
+    </value>
+  </Operation>
+
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Blank" and colorChannel="mask" and alignWithHead="false" and not(drawSize="0.95")]</xpath>
+    <value>
+      <name>MihoBodySkin</name>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Blank" and alignWithHead="true"]</xpath>
+    <value>
+      <name>MihoAccessoriesHead</name>
+    </value>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/bodyAddons/li[path="Miho/Blank" and drawSize="0.95"]</xpath>
+    <value>
+      <name>MihoBodyMarkings</name>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/alienRace/generalSettings/alienPartGenerator/colorChannels</xpath>
+    <value>
+      <li>
+        <name>apparel</name>
+        <first Class="ColorGenerator_Single">
+          <color>RGB(255,255,255)</color>
+        </first>
+      </li>
+    </value>
+  </Operation>
+</Patch>

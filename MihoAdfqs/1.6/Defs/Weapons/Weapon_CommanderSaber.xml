@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+        <defName>Weapon_CommanderSaber</defName>
+        <label>指挥用长柄军刀</label>
+        <description>一把专为指挥官设计的长柄军刀，兼具威严与实用性。</description>
+
+        <techLevel>Industrial</techLevel>
+
+        <weaponTags>
+            <li>MeleeWeapon</li>
+        </weaponTags>
+
+        <tradeTags>
+            <li>MihoThirdEmpireGoods</li>
+        </tradeTags>
+        <graphicData>
+            <texPath>Weapon/CommanderSaber</texPath>            <!-- 如有实际贴图路径可替换 -->
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+
+        <soundInteract>Interact_Melee</soundInteract>
+
+        <!-- 制作成本 -->
+        <costList>
+            <Steel>45</Steel>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+
+        <statBases>
+            <WorkToMake>20000</WorkToMake>
+            <Mass>2.5</Mass>
+            <MeleeWeapon_DamageMultiplier>2</MeleeWeapon_DamageMultiplier>
+            <MarketValue>850</MarketValue>
+        </statBases>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <researchPrerequisite Inherit="False" />
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <unfinishedThingDef>UnfinishedWeapon</unfinishedThingDef>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+
+        <tools>
+            <li>
+                <label>刀刃</label>
+                <capacities>
+                    <li>Cut</li>
+                </capacities>
+                <power>20</power>
+                <armorPenetration>0.65</armorPenetration>
+                <cooldownTime>1.2</cooldownTime>
+            </li>
+            <li>
+                <label>刀尖</label>
+                <capacities>
+                    <li>Stab</li>
+                </capacities>
+                <power>18</power>
+                <armorPenetration>0.65</armorPenetration>
+                <cooldownTime>1.2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+</Defs>

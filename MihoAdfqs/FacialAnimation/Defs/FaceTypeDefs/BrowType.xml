@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<FacialAnimation.BrowTypeDef>
+		<defName>MihoAdfqsBrow</defName>
+		<texPath>FacialAnimation/Adfqs/Brows</texPath>
+		<shader>Map/Transparent</shader>
+		<raceName>Alien_Miho</raceName>
+		<enableUnisexTexPath>True</enableUnisexTexPath>
+		<targetGeneDefs>
+			<li>Gene_MihoThirdEmpireFuhrer</li>
+		</targetGeneDefs>
+	</FacialAnimation.BrowTypeDef>
+</Defs>

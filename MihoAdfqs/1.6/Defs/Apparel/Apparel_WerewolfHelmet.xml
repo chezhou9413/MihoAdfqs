@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- 人狼头盔：与人狼盔甲配套 -->
+    <ThingDef>
+        <defName>Apparel_WerewolfHelmet</defName>
+        <label>人狼头盔</label>
+        <description>与人狼盔甲配套的重型战术头盔，提供极强的头部防护。</description>
+
+        <!-- 基本属性 -->
+        <thingClass>Apparel</thingClass>
+        <category>Item</category>
+        <techLevel>Spacer</techLevel>
+        <selectable>true</selectable>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+
+        <!-- 外观（占位路径：与盔甲同目录风格；需要你提供贴图） -->
+        <graphicData>
+            <texPath>apparel/Werewolf/WerewolfHelmet</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+            <color>(1,1,1,1)</color>
+        </graphicData>
+
+        <costStuffCount>300</costStuffCount>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costList>
+            <Plasteel>200</Plasteel>
+            <ComponentSpacer>12</ComponentSpacer>
+        </costList>
+
+        <!-- 制作：缝纫台 -->
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Tailor</effectWorking>
+            <soundWorking>Recipe_Tailor</soundWorking>
+            <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+            <recipeUsers>
+                <li>HandTailoringBench</li>
+                <li>ElectricTailoringBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <displayPriority>210</displayPriority>
+        </recipeMaker>
+
+
+        <!-- 组件 -->
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="CompProperties_Forbiddable"/>
+            <!-- 禁用材料染色 -->
+            <li Class="ChezhouLib.ClThingComp.ThingCompProperties_DisableStuffColor"/>
+            <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+                <targetRaces>
+                    <li>Alien_Miho</li>
+                </targetRaces>
+                <bodyAddonHidden>
+                    <li>MihoEarRight</li>
+                    <li>MihoEarLeft</li>
+                    <li>MihoHairFront</li>
+                    <li>MihoHairBack</li>
+                    <li>MihoHead</li>
+                </bodyAddonHidden>
+            </li>            <!-- 若你的框架需要隐藏耳朵/头发，可在此参考 Apparel_SSHelmet.xml 加 bodyAddonHidden -->
+        </comps>
+        <!-- 基础数值 -->
+        <statBases>
+            <MaxHitPoints>260</MaxHitPoints>
+            <WorkToMake>40000</WorkToMake>
+            <Mass>4</Mass>
+            <Flammability>0.2</Flammability>
+            <DeteriorationRate>0.5</DeteriorationRate>
+            <Beauty>-1</Beauty>
+            <MarketValue>1200</MarketValue>
+            <EquipDelay>3.5</EquipDelay>
+            <ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.40</ArmorRating_Blunt>
+            <ArmorRating_Heat>1.20</ArmorRating_Heat>
+            <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+            <Insulation_Heat>50</Insulation_Heat>
+            <Insulation_Cold>50</Insulation_Cold>
+        </statBases>
+
+        <!-- 分类/交易 -->
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        <tradeTags>
+            <li>MihoThirdEmpireApparel</li>
+        </tradeTags>
+
+        <!-- 服装定义：头盔覆盖全头 -->
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <wornGraphicPath>AlienRace/adfqs/Null/Null</wornGraphicPath>
+            <tags>
+                <li>Armor</li>
+                <li>MihoSpecialForces</li>
+                <li>Headgear</li>
+            </tags>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>ChezhouLib.ClPawnRenderNodeWorker.PawnRenderNodeWorker_FixedSize</workerClass>
+                    <texPath>apparel/Werewolf/WerewolfHelmet</texPath>
+                    <parentTagDef>Head</parentTagDef>
+                    <baseLayer>170</baseLayer>
+                    <shaderTypeDef>Cutout</shaderTypeDef>
+                    <drawData>
+                        <scale>0.65</scale>
+                        <defaultData>
+                            <offset>(0, 0, 0)</offset>
+                        </defaultData>
+                        <dataNorth>
+                            <offset>(0, 0, 0)</offset>
+                        </dataNorth>
+                        <dataSouth>
+                            <offset>(0, 0, 0)</offset>
+                        </dataSouth>
+                        <dataWest>
+                            <offset>(0, 0, 0)</offset>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(0, 0, 0)</offset>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+        </apparel>
+    </ThingDef>
+</Defs>
+

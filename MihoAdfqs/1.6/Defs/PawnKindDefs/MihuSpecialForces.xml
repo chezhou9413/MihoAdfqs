@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <PawnKindDef ParentName="MihoMilBase">
+        <defName>Miho_SpecialForces</defName>
+        <label>美狐第三帝国特战部队</label>
+        <combatPower>600</combatPower>
+        <defaultFactionType>MihoThirdEmpire</defaultFactionType>
+        <minGenerationAge>23</minGenerationAge>
+        <maxGenerationAge>27</maxGenerationAge>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>MihoThirdEmpire_SS</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+        <nameMaker>NamerPerson_MihoThirdEmpire_GermanCN</nameMaker>
+        <nameMakerFemale>NamerPerson_MihoThirdEmpire_GermanCN</nameMakerFemale>
+        <weaponMoney>
+            <!-- 修复报错：weaponTags里最便宜武器约4200，因此min必须>=4200，否则可能刷出“没武器” -->
+            <min>4200</min>
+            <max>20000</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>ThirdEmpireHighWeapon</li>
+        </weaponTags>
+        <apparelMoney>
+            <min>5000</min>
+            <max>5000</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MihoSpecialForces</li>
+        </apparelTags>
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <techHediffsMoney>
+            <min>0</min>
+            <max>0</max>
+        </techHediffsMoney>
+        <techHediffsTags Inherit="False"/>
+        <techHediffsChance>0</techHediffsChance>
+        <apparelRequired>
+            <li>Apparel_WerewolfArmor</li>
+            <li>Apparel_WerewolfHelmet</li>
+        </apparelRequired>
+        <inventoryOptions Inherit="False"/>
+    </PawnKindDef>
+</Defs>

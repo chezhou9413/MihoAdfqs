@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef>
+    <defName>WerewolfArmor_Regen</defName>
+    <label>生命维持系统</label>
+    <description>由生命维持系统提供的异常再生能力：伤口愈合极快，并显著提高免疫增长。</description>
+
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <tendable>false</tendable>
+
+    <stages>
+      <li>
+        <statFactors>
+          <InjuryHealingFactor>6.0</InjuryHealingFactor>
+          <ImmunityGainSpeed>6.0</ImmunityGainSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

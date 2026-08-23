@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <PawnKindDef ParentName="MihoMilBase">
+        <defName>Miho_SS</defName>
+        <label>美狐第三帝国党卫军</label>
+        <combatPower>200</combatPower>
+        <defaultFactionType>MihoThirdEmpire</defaultFactionType>
+        <minGenerationAge>23</minGenerationAge>
+        <maxGenerationAge>27</maxGenerationAge>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>MihoThirdEmpire_SS</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+        <nameMaker>NamerPerson_MihoThirdEmpire_GermanCN</nameMaker>
+        <nameMakerFemale>NamerPerson_MihoThirdEmpire_GermanCN</nameMakerFemale>
+        <weaponMoney>
+            <min>2800</min>
+            <max>20000</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>ThirdEmpireWeapon</li>
+        </weaponTags>
+        <apparelMoney>
+            <min>5000</min>
+            <max>5000</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MihoSS</li>
+        </apparelTags>
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <techHediffsMoney>
+            <min>0</min>
+            <max>0</max>
+        </techHediffsMoney>
+        <techHediffsTags Inherit="False"/>
+        <techHediffsChance>0</techHediffsChance>
+        <apparelRequired>
+            <li>Miho_Apparel_Middle_MilitiaVest</li>
+            <li>Apparel_SSArmor</li>
+            <li>Apparel_SSHelmet</li>
+        </apparelRequired>
+        <inventoryOptions Inherit="False"/>
+    </PawnKindDef>
+    <PawnKindDef ParentName="MihoMilBase">
+        <trader>true</trader>
+        <defName>Miho_SSTrader</defName>
+        <label>美狐第三帝国商队护卫队</label>
+        <combatPower>20</combatPower>
+        <defaultFactionType>MihoThirdEmpire</defaultFactionType>
+        <minGenerationAge>23</minGenerationAge>
+        <maxGenerationAge>27</maxGenerationAge>
+        <backstoryFiltersOverride>
+            <li>
+                <categories>
+                    <li>MihoThirdEmpire_SS</li>
+                </categories>
+            </li>
+        </backstoryFiltersOverride>
+        <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+        <nameMaker>NamerPerson_MihoThirdEmpire_GermanCN</nameMaker>
+        <nameMakerFemale>NamerPerson_MihoThirdEmpire_GermanCN</nameMakerFemale>
+        <weaponMoney>
+            <min>2800</min>
+            <max>20000</max>
+        </weaponMoney>
+        <weaponTags>
+            <li>ThirdEmpireWeapon</li>
+        </weaponTags>
+        <apparelMoney>
+            <min>5000</min>
+            <max>5000</max>
+        </apparelMoney>
+        <apparelTags>
+            <li>MihoSS</li>
+        </apparelTags>
+        <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+        <techHediffsMoney>
+            <min>0</min>
+            <max>0</max>
+        </techHediffsMoney>
+        <techHediffsTags Inherit="False"/>
+        <techHediffsChance>0</techHediffsChance>
+        <apparelRequired>
+            <li>Miho_Apparel_Middle_MilitiaVest</li>
+            <li>Apparel_SSArmor</li>
+            <li>Apparel_SSHelmet</li>
+        </apparelRequired>
+        <inventoryOptions Inherit="False"/>
+    </PawnKindDef>
+</Defs>

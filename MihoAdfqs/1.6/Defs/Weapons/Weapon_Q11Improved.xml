@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>Weapon_Q11Improved</defName>
+        <label>Q11改进版</label>
+        <description>Q11的改进版本，能够进行6连发范围爆炸打击。</description>
+
+        <techLevel>Spacer</techLevel>
+
+        <weaponTags>
+            <li>ThirdEmpireHighWeapon</li>
+            <li>LongShots</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+
+        <tradeTags>
+            <li>MihoThirdEmpireGoods</li>
+        </tradeTags>
+
+        <graphicData>
+            <texPath>Weapon/Q11</texPath>            <!-- 你需要提供这个贴图 -->
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+        </graphicData>
+
+        <soundInteract>Interact_ChargeLance</soundInteract>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <!-- 制作成本 -->
+        <costList>
+            <Plasteel>300</Plasteel>
+            <Steel>125</Steel>
+            <ComponentSpacer>10</ComponentSpacer>
+        </costList>
+
+        <!-- 基础数值 -->
+        <statBases>
+            <WorkToMake>40000</WorkToMake>
+            <Mass>12</Mass>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.85</AccuracyMedium>
+            <AccuracyLong>0.90</AccuracyLong>
+            <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
+            <MarketValue>5500</MarketValue>
+        </statBases>
+
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <researchPrerequisite Inherit="False" />
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Q11Improved_Explosive</defaultProjectile>
+                <burstShotCount>6</burstShotCount>
+                <warmupTime>3.5</warmupTime>
+                <range>75</range>
+                <forcedMissRadius>1.5</forcedMissRadius>
+                <soundCast>ChargeLance_Fire</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>枪托</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>枪管</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_Q11Improved_Explosive</defName>
+        <label>Q11改进型爆炸弹</label>
+        <graphicData>
+            <texPath>Things/Projectile/Rocket_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>(0.35, 0.35)</drawSize>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Bomb</damageDef>
+            <damageAmountBase>60</damageAmountBase>
+            <armorPenetrationBase>0.9</armorPenetrationBase>
+            <speed>60</speed>
+            <explosionRadius>1.5</explosionRadius>            <!-- 近似3x3范围 -->
+            <soundExplode>MortarBomb_Explode</soundExplode>
+        </projectile>
+    </ThingDef>
+
+</Defs>

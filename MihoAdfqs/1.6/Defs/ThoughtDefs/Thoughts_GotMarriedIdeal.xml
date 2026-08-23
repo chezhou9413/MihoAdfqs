@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>Thoughts_GotMarriedIdeal</defName>
+        <durationDays>20</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>结婚</label>
+                <description>我希望，我能和你一起，继续我的理想。待到鲜花开满大地，夕阳落下，银河闪耀之时。</description>
+                <baseMoodEffect>45</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

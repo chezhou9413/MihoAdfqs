@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>美狐扩展派系-帝国狂想曲-美狐第三帝国</name>
+  <author>作者:秋霜狐狐亲</author>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>  （平行世界）美狐民主联盟，人民的生活水深火热，朝不保夕。那些无能的，贪婪的，残暴的，只会肆意掠夺权力的政客，打着一遍又一遍的改善现状的口号，人们不断失望。一场对外史无前例的大败，彻底击碎了联盟的脊梁，无数的子民沦为了玩物，奴隶。
+  有人反抗着，咆哮着，想要改变这一切，被政客们控制的政府军无情镇压。
+  恶劣的生存环境，飙升的死亡率，黑暗的未来，甚至是饥饿，一个在外界看来，无比先进的星际文明出现了饥饿。
+  出逃，反抗，战争。
+  联盟的人口消失了近一半，在这场长达百年的时间内，直到末期。
+  政客们新推上的一位傀儡总统，结束了这个黑暗时代。
+  这位傀儡总统，用着她早已暗中执行的计划，一个长达数十年的伟大计划，打破了牢笼。
+  一场发自当地知名”餐馆“的暴动，掀开了时代的帷幕。
+  从前无比顺从的军队倒戈；那些无能的，慌张的政客们，自一个空气中弥漫着血水气息的雨夜，仅剩下了自以为能掌控一切的脑袋，悬挂着总统府的房梁上。
+  内战又持续了二十年，所有的”前政客“被清除干净。
+  美狐的人口所剩不多，联盟？不，此时称为帝国的巨树伸直了它的根系，扎根于前联盟的遗骸上，重新生长。
+  领导者在之后的五十年逐渐实现了她的承诺，她所构筑的世界，只是，尚未完成的，还有那不断生长的野心。
+  美狐们信任这位”至高“领导者，相信她，会给美狐族，带来”新生“
+  
+  
+  [美狐语]或许，你已经看清了许多，那些摆在眼前的事实。帝国的建立源于压迫，迷茫的美狐们也需要一个确切的领导者，所以，我站在台前，带着他们踏出黑暗。
+  你可以说我极端，暴政，种族屠杀者，战争贩子。但，无可否认的事实是，我让一盘散沙的美狐们凝聚在了一起。
+  我不关心其他种族过得怎么样，也不在他们的生命，我只在乎我的同族，其他人，只需要”安静的“变成帝国成长的肥料。
+  
+  在某位疯狂的独裁者的领导下，一大群狐狸来到了边缘世界——她们带来了战争，庞大的舰队，播撒战争，混乱，妄图拓张自己的地盘。届时，会有两个选择。这位独裁者会亲自前来你的殖民地，接受与否，接下来能预知的道路，会截然不同。
+  
+  内容：
+  大致足够（存疑）的武器
+一个对所有美狐族表现的友好的派系（敌对所有非美狐派系，对玩家殖民地取决于你的选择）
+专为美狐族设计的服装（后续会添加，当前很少）
+若干小道具（部分会有些地狱笑话）
+一些有趣的机制（后续）
+帝国专属的科技树（暂时没加）
+CE兼容（还没做）
+初版（内容不多，后续会往死里加）
+特殊人物（目前就一个，预期拓展到20+）
+升变机制（普通美狐跃迁至九尾，未实装）
+特殊灵能（未实装，击落鸽子！）
+
+
+常见问题
+刚发，暂未发现，后续会不断补充
+
+支持语言
+中文
+
+一定要加的
+动态表情【灵魂，许多专属人物都有自己的独特动态表情，当然，目前只有1个，甚至还没完成，大雾，完成了会去掉这句话（）】
+
+贡献者名单（名单顺序按照字母表）
+程序：追踪虫
+贴图：冰皮汤圆
+
+作者的话：
+咕咕嘎嘎，咕咕嘎嘎！
+封面也没做完！</description>
+  <packageId>chezhou.Kind.MihoAdfqs</packageId>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2009463077</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>erdelf.HumanoidAlienRaces</packageId>
+      <displayName>Humanoid Alien Races 2.0</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=839005762</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>Chezhou.ChezhouLib.lib</packageId>
+      <displayName>ChezhouLib</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3595247479</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>miho.fortifiedoutremer</packageId>
+      <displayName>miho</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2816826107</steamWorkshopUrl>
+    </li>
+  </modDependencies>
+
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>erdelf.HumanoidAlienRaces</li>
+    <li>Chezhou.ChezhouLib.lib</li>
+    <li>miho.fortifiedoutremer</li>
+  </loadAfter>
+
+  <modIconPath>Fc/enp</modIconPath>
+</ModMetaData>
+

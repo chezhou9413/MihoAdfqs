@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <AbilityDef>
+        <defName>Ability_RequestSSReinforcements</defName>
+        <label>召唤党卫军</label>
+        <description>召唤五个身着（党卫军盔甲+美狐防弹衣）的美狐种族乘坐空降舱空投到殖民地中心（不会破坏建筑），召唤的美狐属性（射击和近战均大于10），武器在Hk416，Mg42通用机枪，单发式铁拳火箭筒，Stg44步枪，Pzb38反坦克步枪，火焰喷射器中随机选择。</description>
+        <!-- <iconPath>Eff/GoldSpireRiftIcon</iconPath> -->
+        <cooldownTicksRange>180000</cooldownTicksRange>
+        <hostile>true</hostile>
+        <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
+        <verbProperties>
+            <verbClass>MihoAdfqs.MihoAdfqsVerb.Verb_RequestSSReinforcements</verbClass>
+            <label>召唤党卫军</label>
+            <violent>true</violent>
+            <warmupTime>0.2</warmupTime>
+            <range>40</range>
+            <requireLineOfSight>false</requireLineOfSight>
+            <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+            <targetParams>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetPawns>false</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetLocations>true</canTargetLocations>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+</Defs> 

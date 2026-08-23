@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+  <!-- 幼年背景故事 - 元首用 -->
+  <BackstoryDef>
+    <defName>MihoAdfqs_YouthMember_Fuhrer</defName>
+    <title>美狐第三帝国青年团</title>
+    <titleShort>青年团员</titleShort>
+    <baseDesc>[PAWN_nameDef]在美狐第三帝国青年团中成长，接受了严格的组织训练和思想教育。[PAWN_pronoun]在集体生活中学会了纪律和服从，为日后的发展打下了基础。</baseDesc>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>MihoThirdEmpire_Fuhrer</li>
+    </spawnCategories>
+    <workDisables />
+  </BackstoryDef>
+
+  <!-- 幼年背景故事 - 党卫军用 -->
+  <BackstoryDef>
+    <defName>MihoAdfqs_YouthMember_SS</defName>
+    <title>美狐第三帝国青年团</title>
+    <titleShort>青年团员</titleShort>
+    <baseDesc>[PAWN_nameDef]在美狐第三帝国青年团中成长，接受了严格的组织训练和思想教育。[PAWN_pronoun]在集体生活中学会了纪律和服从，为日后的发展打下了基础。</baseDesc>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Childhood</slot>
+    <spawnCategories>
+      <li>MihoThirdEmpire_SS</li>
+    </spawnCategories>
+    <workDisables />
+  </BackstoryDef>
+
+  <!-- 成年背景故事 - 元首（仅用于阿道夫-秋霜） -->
+  <BackstoryDef>
+    <defName>MihoAdfqs_Fuhrer</defName>
+    <title>美狐第三帝国元首</title>
+    <titleShort>元首</titleShort>
+    <baseDesc>[PAWN_nameDef]是美狐第三帝国的最高领导人，拥有至高无上的权力和威望。[PAWN_pronoun]领导着整个帝国，制定战略方针，指挥千军万马。</baseDesc>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>MihoThirdEmpire_Fuhrer</li>
+    </spawnCategories>
+    <workDisables />
+  </BackstoryDef>
+
+  <!-- 成年背景故事 - 党卫军（仅用于党卫军） -->
+  <BackstoryDef>
+    <defName>MihoAdfqs_SS</defName>
+    <title>美狐第三帝国党卫军</title>
+    <titleShort>党卫军</titleShort>
+    <baseDesc>[PAWN_nameDef]是美狐第三帝国党卫军的一员，这是帝国最精锐的武装力量。[PAWN_pronoun]接受了严格的军事训练，忠诚于帝国和元首。</baseDesc>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <slot>Adulthood</slot>
+    <spawnCategories>
+      <li>MihoThirdEmpire_SS</li>
+    </spawnCategories>
+    <workDisables />
+    <skillGains>
+      <Shooting>10</Shooting>
+      <Melee>10</Melee>
+    </skillGains>
+  </BackstoryDef>
+
+</Defs>

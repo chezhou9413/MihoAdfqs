@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>Thoughts_WitnessedMarriageBlessing</defName>
+    <durationDays>10</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>见证结婚</label>
+        <description>呼，祝福这对新人吧，只是，在这颗星球，这样的好日子恐怕不会持续多久。</description>
+        <baseMoodEffect>25</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

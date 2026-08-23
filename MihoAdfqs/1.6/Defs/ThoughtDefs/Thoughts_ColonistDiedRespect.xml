@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>Thoughts_ColonistDiedRespect</defName>
+    <durationDays>6</durationDays>
+    <stackLimit>5</stackLimit>
+    <stages>
+      <li>
+        <label>殖民者死亡</label>
+        <description>你的死亡，所有人都应该铭记，安息吧，我的战士。</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

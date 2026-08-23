@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 美狐第三帝国：武器商队（通过标签随机抽取多种武器） -->
+  <TraderKindDef>
+    <defName>Caravan_MihoThirdEmpire_Weapons</defName>
+    <label>美狐第三帝国贸易队</label>
+
+    <stockGenerators>
+      <!-- 基础银币 -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>1000~3000</countRange>
+      </li>
+
+      <!-- 必定携带：天穹鳞片（Miho_CelestialScale）固定 600 -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Miho_CelestialScale</thingDef>
+        <countRange>600~600</countRange>
+      </li>
+
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>MihoThirdEmpireGoods</tradeTag>
+        <countRange>2~10</countRange>
+      </li>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>MihoThirdEmpireCoat</tradeTag>
+        <countRange>2~6</countRange>
+      </li>
+      <!-- 原版基础物资：食物/药品/基础材料/少量零件 -->
+      <li Class="StockGenerator_Category">
+        <categoryDef>Foods</categoryDef>
+        <countRange>60~160</countRange>
+      </li>
+      <li Class="MihoAdfqs.Trader.StockGenerator_Slaves_ExcludeRace">
+        <excludedRaceDef>Alien_Miho</excludedRaceDef>
+        <countRange>0~6</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>Medicine</categoryDef>
+        <countRange>10~35</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Steel</thingDef>
+        <countRange>250~800</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>WoodLog</thingDef>
+        <countRange>250~900</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>4~12</countRange>
+      </li>
+
+      <!-- 收购（可选）：让商队也会买你的东西，避免太“死板” -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>MihoThirdEmpireApparel</tradeTag>
+        <countRange>3~5</countRange>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+
+  <!-- 美狐第三帝国：基地/据点交易（通过标签随机抽取多种武器） -->
+  <TraderKindDef>
+    <defName>Base_MihoThirdEmpire_Weapons</defName>
+    <label>美狐第三帝国贸易队（基地）</label>
+    <faction>MihoThirdEmpire</faction>
+
+    <stockGenerators>
+      <!-- 基地银币通常更多一些 -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>2000~6000</countRange>
+      </li>
+
+      <!-- 必定携带：天穹鳞片（Miho_CelestialScale）固定 600 -->
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Miho_CelestialScale</thingDef>
+        <countRange>600~600</countRange>
+      </li>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>MihoThirdEmpireCoat</tradeTag>
+        <countRange>2~6</countRange>
+      </li>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>MihoThirdEmpireGoods</tradeTag>
+        <countRange>5~15</countRange>
+      </li>
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>MihoThirdEmpireApparel</tradeTag>
+        <countRange>3~5</countRange>
+      </li>
+      <li Class="MihoAdfqs.Trader.StockGenerator_Slaves_ExcludeRace">
+        <excludedRaceDef>Alien_Miho</excludedRaceDef>
+        <countRange>0~6</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>Foods</categoryDef>
+        <countRange>120~320</countRange>
+      </li>
+      <li Class="StockGenerator_Category">
+        <categoryDef>Medicine</categoryDef>
+        <countRange>20~60</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Steel</thingDef>
+        <countRange>600~1800</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>WoodLog</thingDef>
+        <countRange>600~2000</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentIndustrial</thingDef>
+        <countRange>10~28</countRange>
+      </li>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>ComponentSpacer</thingDef>
+        <countRange>0~6</countRange>
+      </li>
+
+      <!-- 允许收购一些贵重物品 -->
+      <li Class="StockGenerator_BuyExpensiveSimple" />
+
+      <!-- 大量收购（只在本派系出现）：肥皂（Miho_Soap） -->
+      <li Class="StockGenerator_MarketValue">
+        <tradeTag>MihoThirdEmpireOnly</tradeTag>
+        <countRange>50~200</countRange>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+
+  <!-- 美狐第三帝国：肥皂征募队（只收肥皂，不卖货，极高银币） -->
+  <TraderKindDef>
+    <defName>Caravan_MihoThirdEmpire_SoapRecruit</defName>
+    <label>肥皂征募队</label>
+    <faction>MihoThirdEmpire</faction>
+    <!-- 只给银币：不卖任何货物；并且只收购“肥皂” -->
+    <stockGenerators>
+      <li Class="StockGenerator_SingleDef">
+        <thingDef>Silver</thingDef>
+        <countRange>500000~2000000</countRange>
+      </li>
+      <li Class="StockGenerator_BuySingleDef">
+        <thingDef>Miho_Soap</thingDef>
+      </li>
+    </stockGenerators>
+  </TraderKindDef>
+
+</Defs>

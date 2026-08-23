@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Weapon_BeamFlamethrower</defName>
+    <label>火焰喷射器</label>
+    <description>一把参考原版焚化器（Incinerator）的火焰喷射器。</description>
+
+    <techLevel>Industrial</techLevel>
+    <weaponTags>
+      <li>ThirdEmpireWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+
+    <tradeTags>
+      <li>MihoThirdEmpireGoods</li>
+    </tradeTags>
+
+    <graphicData>
+      <texPath>Weapon/BeamFlamethrower</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6, 0.6)</drawSize>
+    </graphicData>
+
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>6.0</Mass>
+      <AccuracyTouch>0.70</AccuracyTouch>
+      <AccuracyShort>0.60</AccuracyShort>
+      <AccuracyMedium>0.30</AccuracyMedium>
+      <AccuracyLong>0.10</AccuracyLong>
+      <RangedWeapon_Cooldown>0.4</RangedWeapon_Cooldown>
+      <Flammability>0.7</Flammability>
+    </statBases>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <costList>
+      <Steel>400</Steel>
+      <ComponentIndustrial>16</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+      <Chemfuel>100</Chemfuel>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <researchPrerequisite Inherit="False" />
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+
+    <verbs>
+      <li>
+        <verbClass>Verb_ArcSprayIncinerator</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <warmupTime>0.1</warmupTime>
+        <range>12.9</range>
+        <minRange>1</minRange>
+
+        <soundCastBeam>Flamethrower_Firing</soundCastBeam>
+
+        <beamFullWidthRange>11</beamFullWidthRange>
+        <burstShotCount>30</burstShotCount>
+        <showBurstShotStats>false</showBurstShotStats>
+        <requireLineOfSight>true</requireLineOfSight>
+
+        <beamWidth>6</beamWidth>
+        <ticksBetweenBurstShots>1</ticksBetweenBurstShots>
+        <beamDamageDef>Flame</beamDamageDef>
+
+        <beamGroundFleckDef>Fleck_IncineratorBeamBurn</beamGroundFleckDef>
+        <beamFleckChancePerTick>0.32</beamFleckChancePerTick>
+        <beamMaxDeviation>0.5</beamMaxDeviation>
+        <beamCurvature>0</beamCurvature>
+
+        <beamChanceToStartFire>1.0</beamChanceToStartFire>
+        <beamFireSizeRange>0.5~0.8</beamFireSizeRange>
+        <beamStartOffset>.5</beamStartOffset>
+
+        <beamHitsNeighborCells>true</beamHitsNeighborCells>
+        <beamCantHitWithinMinRange>true</beamCantHitWithinMinRange>
+        <beamHitsNeighborCellsRequiresLOS>true</beamHitsNeighborCellsRequiresLOS>
+        <beamSetsGroundOnFire>true</beamSetsGroundOnFire>
+        <ai_BeamIsIncendiary>true</ai_BeamIsIncendiary>
+
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+      </li>
+    </verbs>
+
+    <comps>
+      <li Class="ChezhouLib.ClThingComp.ThingCompProperties_GroundGraphic">
+        <texPath>Weapon/BeamFlamethrowerG</texPath>
+      </li>
+      <li Class="MihoAdfqs.MihoAdfComp.ThingCompProperties_FueledSprayer">
+        <maxFuel>60</maxFuel>
+        <fuelPerBurst>1</fuelPerBurst>
+        <fuelDef>Chemfuel</fuelDef>
+        <fuelPerLoad>5</fuelPerLoad>
+        <ticksToRefuel>120</ticksToRefuel>
+        <autoRefuel>true</autoRefuel>
+      </li>
+      <li Class = "ChezhouLib.ClThingComp.ThingCompProperties_RenderNodeSender">
+        <renderNodeProperties>
+          <li>
+            <nodeClass>PawnRenderNode</nodeClass>
+            <workerClass>ChezhouLib.ClPawnRenderNodeWorker.PawnRenderNodeWorker_FixedSize</workerClass>
+            <texPath>Weapon/BeamFlametPack</texPath>
+            <parentTagDef>Body</parentTagDef>
+            <baseLayer>-10</baseLayer>
+            <shaderTypeDef>Cutout</shaderTypeDef>
+            <drawSize>(1, 1)</drawSize>
+            <drawData>
+              <defaultData>
+                <offset>(0, 0, 0)</offset>
+                <layer>0</layer>
+              </defaultData>
+              <dataNorth>
+                <offset>(0, 0, 0)</offset>
+                <layer>30</layer>
+              </dataNorth>
+              <dataSouth>
+                <offset>(0, 0, 0)</offset>
+                <layer>-20</layer>
+              </dataSouth>
+              <dataWest>
+                <offset>(0, 0, 0)</offset>
+                <layer>-20</layer>
+              </dataWest>
+              <dataEast>
+                <offset>(0, 0, 0)</offset>
+                <layer>-20</layer>
+              </dataEast>
+            </drawData>
+          </li>
+        </renderNodeProperties>
+      </li>
+    </comps>
+  </ThingDef>
+</Defs>

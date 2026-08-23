@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- 党卫军头盔：任意金属x80 + 零部件x5；护甲（示例钢铁）：锐80% 钝100% 热80% -->
+    <ThingDef>
+        <defName>Apparel_SSHelmet</defName>
+        <label>党卫军头盔</label>
+        <description>党卫军专用的重型战术头盔，采用先进的金属合金制造，提供卓越的头部防护。能够有效抵御利器、钝器和热能攻击，是党卫军标准装备的重要组成部分。</description>
+
+        <!-- 基本属性 -->
+        <thingClass>Apparel</thingClass>
+        <category>Item</category>
+        <techLevel>Industrial</techLevel>
+        <selectable>true</selectable>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+
+        <!-- 外观（占位路径，可替换为你的贴图） -->
+        <graphicData>
+            <texPath>apparel/SS/sshelmet</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+            <color>(1,1,1,1)</color>
+        </graphicData>
+
+        <costStuffCount>150</costStuffCount>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costList>
+            <Cloth>20</Cloth>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+
+        <!-- 制作：缝纫台 -->
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Tailor</effectWorking>
+            <soundWorking>Recipe_Tailor</soundWorking>
+            <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+            <recipeUsers>
+                <li>HandTailoringBench</li>
+                <li>ElectricTailoringBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <displayPriority>210</displayPriority>
+        </recipeMaker>
+
+        <!-- 组件 -->
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <!-- 可被禁止/放弃 -->
+            <li Class="CompProperties_Forbiddable" />
+            <!-- 禁用材料染色（忽略材料的颜色） -->
+            <li Class="ChezhouLib.ClThingComp.ThingCompProperties_DisableStuffColor"/>
+            <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+                <targetRaces>
+                    <li>Alien_Miho</li>
+                </targetRaces>
+                <bodyAddonHidden>
+                    <li>MihoEarRight</li>
+                    <li>MihoEarLeft</li>
+                    <!-- <li>MihoHairFront</li> -->
+                    <li>MihoHairBack</li>
+                </bodyAddonHidden>
+            </li>
+        </comps>
+
+        <!-- 基础数值 -->
+        <statBases>
+            <MaxHitPoints>200</MaxHitPoints>
+            <WorkToMake>15000</WorkToMake>
+            <Mass>3</Mass>
+            <Flammability>0.4</Flammability>
+            <DeteriorationRate>0.8</DeteriorationRate>
+            <Beauty>-1</Beauty>
+            <MarketValue>650</MarketValue>
+            <EquipDelay>3</EquipDelay>
+            <!-- 护甲（示例钢铁效果）：锐80% 钝100% 热80% -->
+            <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+            <ArmorRating_Blunt>1.00</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.80</ArmorRating_Heat>
+            <!-- 材料对护甲的影响 -->
+            <StuffEffectMultiplierArmor>1.0</StuffEffectMultiplierArmor>
+            <Insulation_Heat>50</Insulation_Heat>
+            <Insulation_Cold>50</Insulation_Cold>
+        </statBases>
+
+        <!-- 分类/交易 -->
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        <tradeTags>
+            <li>MihoThirdEmpireApparel</li>
+        </tradeTags>
+
+        <!-- 服装定义：重型头盔，覆盖头部 -->
+        <apparel>
+            <bodyPartGroups>
+                <li>FullHead</li>
+            </bodyPartGroups>
+            <!-- 使用 Overhead 层 -->
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <wornGraphicPath>AlienRace/adfqs/Null/Null</wornGraphicPath>
+            <renderNodeProperties>
+                <li>
+                    <nodeClass>PawnRenderNode</nodeClass>
+                    <workerClass>ChezhouLib.ClPawnRenderNodeWorker.PawnRenderNodeWorker_FixedSize</workerClass>
+                    <texPath>apparel/SS/sshelmet</texPath>
+                    <parentTagDef>Head</parentTagDef>
+                    <baseLayer>170</baseLayer>
+                    <shaderTypeDef>Cutout</shaderTypeDef>
+                    <drawData>
+                        <scale>0.75</scale>
+                        <defaultData>
+                            <offset>(0, 0, 0)</offset>
+                        </defaultData>
+                        <dataNorth>
+                            <offset>(0, 0, 0.05)</offset>
+                        </dataNorth>
+                        <dataSouth>
+                            <offset>(0, 0, 0.05)</offset>
+                        </dataSouth>
+                        <dataWest>
+                            <offset>(0, 0, 0.05)</offset>
+                        </dataWest>
+                        <dataEast>
+                            <offset>(0, 0, 0.05)</offset>
+                        </dataEast>
+                    </drawData>
+                </li>
+            </renderNodeProperties>
+            <tags>
+                <li>Armor</li>
+                <li>MihoSS</li>
+                <li>Headgear</li>
+            </tags>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+            <countsAsClothingForNudity>false</countsAsClothingForNudity>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+</Defs>
+

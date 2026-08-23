@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ApparelBase">
+    <defName>Miho_GoldenPen</defName>
+    <label>金色钢笔</label>
+    <description>一支做工精致的金色钢笔。佩戴它会让人显得更专业、更有说服力，从而提升社交表现。</description>
+    <apparel>
+      <wornGraphicPath />
+      <layers>
+        <li>Belt</li>
+      </layers>
+      <bodyPartGroups>
+        <li>Waist</li>
+      </bodyPartGroups>
+    </apparel>
+
+    <graphicData>
+      <texPath>Thing/Miho_GoldenPen</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+
+    <statBases>
+      <Mass>0.05</Mass>
+      <MarketValue>50000</MarketValue>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Flammability>0.3</Flammability>
+      <Insulation_Cold>0</Insulation_Cold>
+      <Insulation_Heat>0</Insulation_Heat>
+    </statBases>
+
+    <tradeability>All</tradeability>
+
+    <equippedStatOffsets>
+      <SocialImpact>0.15</SocialImpact>
+    </equippedStatOffsets>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailoring</soundWorking>
+      <recipeUsers>
+        <li>Miho_TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+      <displayPriority>500</displayPriority>
+    </recipeMaker>
+
+    <costList>
+      <WoodLog>50</WoodLog>
+      <Gold>20</Gold>
+    </costList>
+
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+
+  </ThingDef>
+
+</Defs>
+

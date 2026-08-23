@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>Thought_BrainwashHappy</defName>
+        <label>我什么都忘了</label>
+        <description>我什么都忘了... 感觉很平静。</description>
+        <stages>
+            <li>
+                <label>我什么都忘了</label>
+                <description>我的过去消失了。我很开心。</description>
+                <baseMoodEffect>40</baseMoodEffect>
+            </li>
+        </stages>
+        <durationDays>30</durationDays>
+        <stackLimit>1</stackLimit>
+    </ThoughtDef>
+</Defs>

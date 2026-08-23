@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 美狐第三帝国专属据点（世界地图物体） -->
+  <WorldObjectDef>
+    <defName>MihoThirdEmpire_Settlement</defName>
+    <label>美狐第三帝国据点</label>
+    <worldObjectClass>Settlement</worldObjectClass>
+
+    <!-- 世界地图图标（展开/缩放时使用） -->
+    <expandingIcon>true</expandingIcon>
+    <expandingIconTexture>Fc/enp</expandingIconTexture>
+
+    <!-- 可选：默认图标颜色（若贴图自带颜色可不写） -->
+    <expandingIconColor>(0.85,0.85,0.9)</expandingIconColor>
+
+  </WorldObjectDef>
+
+</Defs>
+

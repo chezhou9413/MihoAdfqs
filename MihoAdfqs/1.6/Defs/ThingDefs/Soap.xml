@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 肥皂：原材料，只用于合成 -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>Miho_Soap</defName>
+    <label>肥皂</label>
+    <description>由脂肪与碱性物质加工而成的清洁用品。主要作为合成原料使用。</description>
+
+    <graphicData>
+      <texPath>Thing/Soap</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <soundInteract>Metal_Drop</soundInteract>
+    <soundDrop>Metal_Drop</soundDrop>
+    <stackLimit>200</stackLimit>
+    <statBases>
+      <Mass>0.02</Mass>
+      <MarketValue>100</MarketValue>
+      <Flammability>0.6</Flammability>
+    </statBases>
+
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+
+    <!-- 只让“美狐第三帝国”相关商人愿意收购：通过 tradeTags 做过滤 -->
+    <tradeTags>
+      <li>MihoThirdEmpireOnly</li>
+    </tradeTags>
+
+    <!-- 可被卖出（商人是否愿意买由 TraderKindDef 的 willBuy/stockGenerators 决定） -->
+    <tradeability>Sellable</tradeability>
+
+  </ThingDef>
+
+  <!-- 制作配方：电力烹饪台（ElectricStove） -->
+  <RecipeDef>
+    <defName>Make_Miho_Soap</defName>
+    <label>制作肥皂</label>
+    <description>将人肉熬炼并加工成可用于合成的肥皂。</description>
+
+    <recipeUsers>
+      <li>ElectricStove</li>
+    </recipeUsers>
+
+    <products>
+      <Miho_Soap>4</Miho_Soap>
+    </products>
+
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Meat_Human</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+
+    <workAmount>2000</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+  </RecipeDef>
+
+</Defs>

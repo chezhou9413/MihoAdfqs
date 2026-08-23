@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- 铁拳火箭筒 (武器本体) -->
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>Gun_Panzerfaust</defName>
+        <label>铁拳火箭筒</label>
+        <description>一把威力巨大的单发反坦克火箭筒。</description>
+
+        <techLevel>Industrial</techLevel>
+        <graphicData>
+            <texPath>Weapon/Panzerfaust</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+
+        <costList>
+            <Steel>400</Steel>
+            <ComponentIndustrial>10</ComponentIndustrial>
+        </costList>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <statBases>
+            <WorkToMake>30000</WorkToMake>
+            <Mass>6.0</Mass>
+            <MarketValue>1500</MarketValue>
+            <!-- 命中率 -->
+            <AccuracyTouch>0.90</AccuracyTouch>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.85</AccuracyMedium>
+            <AccuracyLong>0.80</AccuracyLong>
+            <!-- 冷却时间 (12秒) -->
+            <RangedWeapon_Cooldown>12</RangedWeapon_Cooldown>
+        </statBases>
+
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <researchPrerequisite Inherit="False" />
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+        <weaponTags>
+            <li>ThirdEmpireWeapon</li>
+            <li>LongShots</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+
+        <tradeTags>
+            <li>MihoThirdEmpireGoods</li>
+        </tradeTags>
+
+        <!-- 改为普通武器机制：直接发射火箭，无需装填 -->
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_PanzerfaustRocket</defaultProjectile>
+                <!-- 瞄准时间 (3秒) -->
+                <warmupTime>3</warmupTime>
+                <range>55</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_Rocket</soundCast>
+                <forcedMissRadius>2.9</forcedMissRadius>
+                <muzzleFlashScale>14</muzzleFlashScale>
+                <targetParams>
+                    <canTargetLocations>true</canTargetLocations>
+                </targetParams>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>tube</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- 火箭弹投射物 -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_PanzerfaustRocket</defName>
+        <label>铁拳火箭弹</label>
+        <graphicData>
+            <texPath>Things/Projectile/Rocket_Big</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <thingClass>Projectile_Explosive</thingClass>
+        <projectile>
+            <damageDef>Damage_Panzerfaust</damageDef>
+            <damageAmountBase>320</damageAmountBase>
+            <armorPenetrationBase>1.0</armorPenetrationBase>
+            <speed>40</speed>
+            <explosionRadius>1.8</explosionRadius>
+            <soundExplode>MortarBomb_Explode</soundExplode>
+        </projectile>
+    </ThingDef>
+    <DamageDef ParentName="Bomb">
+        <defName>Damage_Panzerfaust</defName>
+        <label>破甲爆破</label>
+        <workerClass>DamageWorker_AddInjury</workerClass>
+        <externalViolence>true</externalViolence>
+        <isExplosive>true</isExplosive>
+        <deathMessage>{0} died in an explosion.</deathMessage>
+        <hediff>Shredded</hediff>
+        <hediffSolid>Crack</hediffSolid>
+        <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+        <impactSoundType>Blunt</impactSoundType>
+        <armorCategory>Heat</armorCategory>
+        <defaultDamage>320</defaultDamage>
+        <buildingDamageFactor>10</buildingDamageFactor>
+        <explosionCellFleck>BlastDry</explosionCellFleck>
+        <soundExplosion>Explosion_Bomb</soundExplosion>
+    </DamageDef>
+</Defs>

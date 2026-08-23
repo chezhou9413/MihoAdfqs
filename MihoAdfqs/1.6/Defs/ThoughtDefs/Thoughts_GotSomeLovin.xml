@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>Thoughts_GotSomeLovin</defName>
+        <durationDays>3</durationDays>
+        <stackLimit>10</stackLimit>
+        <stackedEffectMultiplier>0.75</stackedEffectMultiplier>
+        <stages>
+            <li>
+                <label>滚床单</label>
+                <description>唔，这不对，等下，哈....哈.....哈......绝不是，绝不是因为我的体质特殊！</description>
+                <baseMoodEffect>15</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

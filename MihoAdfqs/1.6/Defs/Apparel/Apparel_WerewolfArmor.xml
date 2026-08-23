@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- 人狼盔甲：任意金属x300 + 玻璃钢x200 + 高级零部件x12；护甲（示例钢铁）：锐140% 钝140% 热120% -->
+  <ThingDef>
+    <defName>Apparel_WerewolfArmor</defName>
+    <label>人狼盔甲</label>
+    <description>重型动力盔甲，提供极强的防护能力。</description>
+
+    <!-- 基本属性 -->
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <techLevel>Spacer</techLevel>
+    <selectable>true</selectable>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+
+    <!-- 外观（占位路径，可替换为你的贴图） -->
+    <graphicData>
+      <texPath>apparel/Werewolf/WerewolfArmor</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+      <color>(1,1,1,1)</color>
+    </graphicData>
+
+    <!-- 成本：任意金属x300 + 玻璃钢x200 + 高级零部件x12 -->
+    <costStuffCount>300</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+    <costList>
+      <Plasteel>200</Plasteel>
+      <ComponentSpacer>12</ComponentSpacer>
+    </costList>
+
+    <!-- 制作：缝纫台 -->
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <recipeUsers>
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+      <displayPriority>210</displayPriority>
+    </recipeMaker>
+
+    <!-- 组件 -->
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Forbiddable"/>
+      <!-- 禁用材料染色 -->
+      <li Class="ChezhouLib.ClThingComp.ThingCompProperties_DisableStuffColor"/>
+      <li Class="ChezhouLib.ClThingComp.ThingCompProperties_ApparelHidBody"/>
+      <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+        <targetRaces>
+          <li>Alien_Miho</li>
+        </targetRaces>
+        <bodyAddonHidden>
+          <li>MihoBodySkin</li>
+        </bodyAddonHidden>
+      </li>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>WerewolfArmor_Regen</hediff>
+        <part>Torso</part>
+      </li>
+    </comps>
+
+    <!-- 基础数值 -->
+    <statBases>
+      <MaxHitPoints>600</MaxHitPoints>
+      <WorkToMake>60000</WorkToMake>
+      <Mass>25</Mass>
+      <Flammability>0.2</Flammability>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Beauty>-2</Beauty>
+      <MarketValue>3500</MarketValue>
+      <EquipDelay>12</EquipDelay>
+      <!-- 护甲（固定值，示例钢铁效果）：锐140% 钝140% 热120% -->
+      <ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.40</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.20</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+      <Insulation_Heat>50</Insulation_Heat>
+      <Insulation_Cold>50</Insulation_Cold>
+    </statBases>
+
+    <!-- 佩戴者属性增益/减益 -->
+    <equippedStatOffsets>
+      <MoveSpeed>-0.4</MoveSpeed>
+      <WorkSpeedGlobal>-0.15</WorkSpeedGlobal>
+    </equippedStatOffsets>
+
+    <!-- 分类/交易 -->
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <tradeTags>
+      <li>MihoThirdEmpireApparel</li>
+    </tradeTags>
+
+    <!-- 服装定义：重型盔甲，覆盖全身 -->
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/Werewolf/WerewolfArmor</wornGraphicPath>
+      <tags>
+        <li>Armor</li>
+        <li>MihoSpecialForces</li>
+      </tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <renderNodeProperties>
+        <li>
+          <nodeClass>PawnRenderNode</nodeClass>
+          <workerClass>PawnRenderNodeWorker_AttachmentBody</workerClass>
+          <texPath>apparel/Werewolf/WerewolfArmorBack</texPath>
+          <parentTagDef>Body</parentTagDef>
+          <baseLayer>10</baseLayer>
+          <shaderTypeDef>Cutout</shaderTypeDef>
+          <drawData>
+            <defaultData>
+              <offset>(0, 0, 0)</offset>
+            </defaultData>
+            <dataWest>
+              <flip>true</flip>
+            </dataWest>
+          </drawData>
+        </li>
+      </renderNodeProperties>
+    </apparel>
+  </ThingDef>
+</Defs>
+

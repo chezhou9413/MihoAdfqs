@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>Weapon_AshTwelve</defName>
+        <label>Ash12</label>
+        <description>Ash12电荷步枪，三连发，兼具稳定性与中近距离火力。</description>
+
+        <techLevel>Spacer</techLevel>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+        <weaponTags>
+            <li>ThirdEmpireHighWeapon</li>
+            <li>LongShots</li>
+        </weaponTags>
+
+        <tradeTags>
+            <li>MihoThirdEmpireGoods</li>
+        </tradeTags>
+        <graphicData>
+            <texPath>Weapon/Ash12</texPath>            <!-- 如有实际贴图路径可替换 -->
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+        </graphicData>
+
+        <soundInteract>Interact_ChargeLance</soundInteract>
+        <equippedAngleOffset>45</equippedAngleOffset>
+        <!-- 制作成本 -->
+        <costList>
+            <Plasteel>125</Plasteel>            <!-- 玻璃钢 -->
+            <Steel>145</Steel>
+            <ComponentIndustrial>10</ComponentIndustrial>            <!-- 零部件 -->
+            <ComponentSpacer>5</ComponentSpacer>            <!-- 高级零部件 -->
+        </costList>
+
+        <statBases>
+            <WorkToMake>40000</WorkToMake>
+            <Mass>9</Mass>
+            <AccuracyShort>0.90</AccuracyShort>
+            <AccuracyMedium>0.85</AccuracyMedium>
+            <AccuracyLong>0.90</AccuracyLong>
+            <RangedWeapon_Cooldown>1.8</RangedWeapon_Cooldown>
+            <MarketValue>4800</MarketValue>
+        </statBases>
+
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <researchPrerequisite Inherit="False" />
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_AshTwelve_Charge</defaultProjectile>
+                <burstShotCount>3</burstShotCount>
+                <warmupTime>1.2</warmupTime>
+                <range>45</range>
+                <soundCast>ChargeLance_Fire</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>7</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>枪托</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>枪管</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>10</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- 电荷弹投射物 -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_AshTwelve_Charge</defName>
+        <label>Ash12电荷弹</label>
+        <graphicData>
+            <texPath>Things/Projectile/ChargeLanceShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>1.2</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>45</damageAmountBase>
+            <armorPenetrationBase>0.75</armorPenetrationBase>
+            <stoppingPower>1.2</stoppingPower>
+            <speed>110</speed>
+        </projectile>
+    </ThingDef>
+
+</Defs>
+

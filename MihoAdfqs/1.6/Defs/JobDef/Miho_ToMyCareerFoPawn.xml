@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>Miho_ToMyCareerFoPawn</defName>
+    <driverClass>MihoAdfqs.MihoAdfJobDriver.JobDriver_ToMyCareerFoPawn</driverClass>
+    <reportString>正在使用我的奋斗进行洗脑</reportString>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

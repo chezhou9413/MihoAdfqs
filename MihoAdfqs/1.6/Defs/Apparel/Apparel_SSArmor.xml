@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- 党卫军盔甲：任意金属x150 + 棉布x20 + 零部件x4；护甲（示例钢铁）：锐80% 钝80% 热40% -->
+    <ThingDef>
+        <defName>Apparel_SSArmor</defName>
+        <label>党卫军盔甲</label>
+        <description>党卫军专用的战术盔甲，提供优秀的防护能力。采用金属板材和战术织物制成，能够有效抵御利器和钝器攻击。可以与战术背心一起穿戴。</description>
+
+        <!-- 基本属性 -->
+        <thingClass>Apparel</thingClass>
+        <category>Item</category>
+        <techLevel>Industrial</techLevel>
+        <selectable>true</selectable>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+
+        <!-- 外观（占位路径，可替换为你的贴图） -->
+        <graphicData>
+            <texPath>apparel/SS/ss</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+            <color>(1,1,1,1)</color>
+        </graphicData>
+
+        <!-- 成本：任意金属x150 + 棉布x20 + 零部件x4 -->
+        <costStuffCount>150</costStuffCount>
+        <stuffCategories>
+            <li>Metallic</li>
+        </stuffCategories>
+        <costList>
+            <Cloth>20</Cloth>
+            <ComponentIndustrial>4</ComponentIndustrial>
+        </costList>
+
+        <!-- 制作：缝纫台 -->
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Tailor</effectWorking>
+            <soundWorking>Recipe_Tailor</soundWorking>
+            <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+            <recipeUsers>
+                <li>HandTailoringBench</li>
+                <li>ElectricTailoringBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <displayPriority>210</displayPriority>
+        </recipeMaker>
+
+        <!-- 组件 -->
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="CompProperties_Forbiddable"/>
+            <!-- 可被禁止/放弃 -->
+            <li Class="CompProperties_Forbiddable" />
+            <!-- 禁用材料染色（忽略布料/皮革的颜色） -->
+            <li Class="ChezhouLib.ClThingComp.ThingCompProperties_DisableStuffColor"/>
+            <li Class="ChezhouLib.ClThingComp.ThingCompProperties_ApparelHidBody"/>
+            <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+                <targetRaces>
+                    <li>Alien_Miho</li>
+                </targetRaces>
+                <bodyAddonHidden>
+                    <li>MihoBodySkin</li>
+                </bodyAddonHidden>
+            </li>
+        </comps>
+
+        <!-- 基础数值 -->
+        <statBases>
+            <MaxHitPoints>350</MaxHitPoints>
+            <WorkToMake>20000</WorkToMake>
+            <Mass>12</Mass>
+            <Flammability>0.4</Flammability>
+            <DeteriorationRate>0.8</DeteriorationRate>
+            <Beauty>-1</Beauty>
+            <MarketValue>1200</MarketValue>
+            <EquipDelay>10</EquipDelay>
+            <!-- 护甲（示例钢铁效果）：锐80% 钝80% 热40% -->
+            <ArmorRating_Sharp>0.80</ArmorRating_Sharp>
+            <ArmorRating_Blunt>0.80</ArmorRating_Blunt>
+            <ArmorRating_Heat>0.40</ArmorRating_Heat>
+            <!-- 护甲设为固定值（示例钢铁：锐80% 钝80% 热40%），避免材料造成大幅波动 -->
+            <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+            <Insulation_Heat>50</Insulation_Heat>
+            <Insulation_Cold>50</Insulation_Cold>
+        </statBases>
+
+        <!-- 佩戴者属性增益/减益 -->
+        <equippedStatOffsets>
+            <MoveSpeed>-0.25</MoveSpeed>
+        </equippedStatOffsets>
+
+        <!-- 分类/交易 -->
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        <tradeTags>
+            <li>MihoThirdEmpireApparel</li>
+        </tradeTags>
+
+        <!-- 服装定义：重型盔甲，覆盖躯干、肩膀、手臂和腿部 -->
+        <apparel>
+            <bodyPartGroups>
+                <li>Torso</li>
+                <li>Neck</li>
+                <li>Shoulders</li>
+                <li>Arms</li>
+                <li>Legs</li>
+            </bodyPartGroups>
+            <!-- 使用 Shell 层，这样可以和 Middle 层的 MilitiaVest 一起穿戴 -->
+            <layers>
+                <li>Shell</li>
+            </layers>
+            <wornGraphicPath>apparel/SS/ss</wornGraphicPath>
+            <tags>
+                <li>Armor</li>
+                <li>MihoSS</li>
+            </tags>
+            <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+            <countsAsClothingForNudity>true</countsAsClothingForNudity>
+            <defaultOutfitTags>
+                <li>Soldier</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+</Defs>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>Thoughts_MihoEmpireAmbition</defName>
+    <workerClass>MihoAdfqs.MihoAdfThoughtWorker.ThoughtWorker_MihoEmpireAmbition</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>殖民地有很多美狐</label>
+        <description>这里的大家都非常敬仰我，那么，我不该让他们失望！这颗星球，用不了多少时间，它会成为美狐第三帝国的领土的！无论是米莉拉，抑或是人类，都阻止不了我！</description>
+        <baseMoodEffect>10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

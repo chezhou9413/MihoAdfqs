@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>Thought_NotLeaderOrMoralGuide</defName>
+    <workerClass>MihoAdfqs.MihoAdfThoughtWorker.ThoughtWorker_NotLeaderOrMoralGuide</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>未担任领袖或思想家</label>
+        <description>想想吧，如果由我带领他们，这个殖民地将会变得多么强大。</description>
+        <baseMoodEffect>-20</baseMoodEffect>
+      </li>
+    </stages>
+    </ThoughtDef>
+</Defs>

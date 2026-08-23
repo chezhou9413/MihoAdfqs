@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 肥皂征募队到访事件：指定点数规模 -->
+  <IncidentDef>
+    <defName>CaravanArrivalSoapRecruit</defName>
+    <label>soap recruit caravan arrival</label>
+    <category>FactionArrival</category>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_TraderCaravanArrival</workerClass>
+    <minThreatPoints>8000</minThreatPoints>
+    <pointsScaleable>true</pointsScaleable>
+
+    <baseChance>0</baseChance>
+    <requireColonistsPresent>true</requireColonistsPresent>
+  </IncidentDef>
+</Defs>

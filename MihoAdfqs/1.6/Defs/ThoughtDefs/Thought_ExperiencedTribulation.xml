@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>Thought_ExperiencedTribulation</defName>
+    <workerClass>MihoAdfqs.MihoAdfThoughtWorker.ThoughtWorker_ExperiencedTribulation</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>经历劫难</label>
+        <description>我希望蓝天上的声音，是鸟儿飞过，树叶在莎莎作响。不是轰鸣的飞机，不是致命的炮弹，我不想，也不愿意看见这一切发生，我喜欢战争，但也讨厌它，因为不得不做。美狐第三帝国，诞生于美狐政权的暴政，我看见了太多惨案，它们本不该发生。</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

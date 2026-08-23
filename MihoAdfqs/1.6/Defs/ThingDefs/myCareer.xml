@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+    <!-- @myCareer：基础普通物品示例 -->
+    <ThingDef ParentName="ResourceBase">
+        <!-- 唯一 ID，不要和其他 Def 重复 -->
+        <defName>Miho_myCareer</defName>
+
+        <!-- 游戏内显示名称 -->
+        <label>我的奋斗</label>
+        <thingClass>MihoAdfqs.ThingClass.myCareerThing</thingClass>
+        <!-- 物品说明 -->
+        <description>一本书</description>
+        <graphicData>
+            <texPath>Thing/myCareer</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.6,0.6)</drawSize>
+        </graphicData>
+        <statBases>
+            <Mass>0.1</Mass>
+            <MarketValue>1200</MarketValue>
+            <Flammability>0.2</Flammability>
+        </statBases>
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Tailor</effectWorking>
+            <soundWorking>Recipe_Tailoring</soundWorking>
+            <recipeUsers>
+                <li>Miho_TableMachining</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>4</Crafting>
+            </skillRequirements>
+            <displayPriority>500</displayPriority>
+        </recipeMaker>
+
+        <costList>
+            <Steel>10</Steel>
+            <Gold>20</Gold>
+        </costList>
+
+        <stackLimit>1</stackLimit>
+        <thingCategories>
+            <li>ResourcesRaw</li>
+        </thingCategories>
+        <tradeability>All</tradeability>
+        <tradeTags>
+            <li>ExoticMisc</li>
+        </tradeTags>
+        <soundInteract>Standard_Drop</soundInteract>
+        <soundDrop>Standard_Drop</soundDrop>
+    </ThingDef>
+</Defs>

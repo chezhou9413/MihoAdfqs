@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- Pzb38 反坦克步枪（电荷弹，单发） -->
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>Weapon_type10Gun</defName>
+        <label>10式狙击步枪</label>
+        <description>一把10式狙击步枪，使用电荷技术将单发弹丸加速并充能，以极高动能贯穿目标装甲。单发装填，瞄准时间较长，适合超远距离精确打击。</description>
+
+        <techLevel>Spacer</techLevel>
+
+        <weaponTags>
+            <li>ThirdEmpireHighWeapon</li>
+            <li>LongShots</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+
+        <!-- 贴图路径：先占位，你可替换为自己的纹理 -->
+        <graphicData>
+            <texPath>Weapon/type10Gun</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+            <color>(1,1,1,1)</color>
+        </graphicData>
+
+        <soundInteract>Interact_ChargeLance</soundInteract>
+
+        <!-- 制作成本 -->
+        <costList>
+            <Plasteel>225</Plasteel>
+            <Steel>45</Steel>
+            <ComponentSpacer>6</ComponentSpacer>
+        </costList>
+
+        <!-- 基础数值 -->
+        <statBases>
+            <WorkToMake>40000</WorkToMake>
+            <Mass>10</Mass>
+
+            <!-- 你给的命中度（注意：RimWorld 的 Accuracy* 是 0~1 之间） -->
+            <AccuracyShort>0.60</AccuracyShort>
+            <AccuracyMedium>0.95</AccuracyMedium>
+            <AccuracyLong>1.0</AccuracyLong>
+
+            <RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
+            <Flammability>0.2</Flammability>
+            <MarketValue>4200</MarketValue>
+        </statBases>
+
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <researchPrerequisite Inherit="False" />
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <recipeUsers>
+                <li>FabricationBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+
+        <tradeTags>
+            <li>WeaponRanged</li>
+            <li>MihoThirdEmpireGoods</li>
+        </tradeTags>
+
+        <equippedAngleOffset>45</equippedAngleOffset>
+
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+
+                <!-- 使用原版电荷标枪子弹（我们用它的贴图/特效） -->
+                <defaultProjectile>Bullet_type10Gun_Charge</defaultProjectile>
+
+                <!-- 单发 -->
+                <burstShotCount>1</burstShotCount>
+
+                <!-- 瞄准时间 4.5 秒 -->
+                <warmupTime>2.5</warmupTime>
+
+                <!-- 射程 75 格 -->
+                <range>80</range>
+
+                <soundCast>ChargeLance_Fire</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>枪托</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>枪管</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- 复用原版 Bullet_ChargeLance 的贴图/特效，但伤害按需求改为 60 -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_type10Gun_Charge</defName>
+        <label>type10Gun电荷弹</label>
+        <graphicData>
+            <texPath>Things/Projectile/ChargeLanceShot</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+            <drawSize>1.5</drawSize>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>140</damageAmountBase>
+            <armorPenetrationBase>0.9</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+            <speed>120</speed>
+        </projectile>
+    </ThingDef>
+</Defs>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<FacialAnimation.MouthTypeDef>
+		<defName>MihoAdfqsMouth</defName>
+		<texPath>FacialAnimation/Adfqs/Mouth</texPath>
+		<shader>Map/Transparent</shader>
+		<enableUnisexTexPath>True</enableUnisexTexPath>
+		<raceName>Alien_Miho</raceName>
+		<targetGeneDefs>
+			<li>Gene_MihoThirdEmpireFuhrer</li>
+		</targetGeneDefs>
+	</FacialAnimation.MouthTypeDef>
+</Defs>

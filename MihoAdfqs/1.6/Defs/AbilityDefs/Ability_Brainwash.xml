@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <AbilityDef>
+        <defName>Ability_Brainwash</defName>
+        <label>洗脑</label>
+        <description>对殖民者、奴隶或囚犯进行洗脑。
+效果：
+1. 清除所有记忆和人际关系（亲属/恋人）。
+2. 强制将文化信仰转换为殖民地主流文化。
+3. 获得“洗脑极乐”心情增益（+40，持续30天）。
+4. 囚犯将立即被招募并加入殖民地。
+5. 需要施法者走向目标并进行持续吟唱。</description>
+
+        <!-- <iconPath>UI/Abilities/PsychicReset</iconPath> -->
+
+        <cooldownTicksRange>180000</cooldownTicksRange>
+
+        <hostile>false</hostile>
+
+        <verbProperties>
+            <verbClass>MihoAdfqs.MihoAdfqsVerb.Verb_Brainwash</verbClass>
+
+            <label>洗脑</label>
+            <violent>false</violent>
+
+            <warmupTime>0</warmupTime>
+
+            <range>40</range>
+
+            <requireLineOfSight>true</requireLineOfSight>
+
+            <targetParams>
+                <canTargetSelf>false</canTargetSelf>
+                <canTargetPawns>true</canTargetPawns>
+                <canTargetBuildings>false</canTargetBuildings>
+                <canTargetLocations>false</canTargetLocations>
+                <canTargetHumans>true</canTargetHumans>
+                <canTargetMechs>false</canTargetMechs>
+                <canTargetAnimals>false</canTargetAnimals>
+            </targetParams>
+        </verbProperties>
+    </AbilityDef>
+</Defs>

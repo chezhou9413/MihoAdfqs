@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef>
+        <defName>BowlerHat</defName>
+        <label>圆顶帽子</label>
+        <description>一顶经典的圆顶帽子。佩戴后略显更有魅力。</description>
+
+        <!-- 基本属性 -->
+        <thingClass>Apparel</thingClass>
+        <category>Item</category>
+        <techLevel>Industrial</techLevel>
+        <selectable>true</selectable>
+        <drawerType>MapMeshOnly</drawerType>
+        <useHitPoints>true</useHitPoints>
+        <altitudeLayer>Item</altitudeLayer>
+        <alwaysHaulable>true</alwaysHaulable>
+        <drawGUIOverlay>true</drawGUIOverlay>
+        <rotatable>false</rotatable>
+
+        <!-- 外观：为避免贴图缺失，沿用原文件贴图（若后续提供新贴图可再替换） -->
+        <graphicData>
+            <texPath>apparel/BowlerHat/BowlerHat</texPath>
+            <graphicClass>Graphic_Multi</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+            <color>(1,1,1,1)</color>
+        </graphicData>
+
+        <!-- 成本：任意布料x40 -->
+        <costStuffCount>40</costStuffCount>
+        <stuffCategories>
+            <li>Fabric</li>
+        </stuffCategories>
+
+        <!-- 制作：裁缝台 -->
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Tailor</effectWorking>
+            <soundWorking>Recipe_Tailor</soundWorking>
+            <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+            <recipeUsers>
+                <li>HandTailoringBench</li>
+                <li>ElectricTailoringBench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>5</Crafting>
+            </skillRequirements>
+            <displayPriority>240</displayPriority>
+        </recipeMaker>
+
+        <!-- 常用组件：品质、可禁用、可染色（若不需要可移除） -->
+        <comps>
+            <li>
+                <compClass>CompQuality</compClass>
+            </li>
+            <li Class="ChezhouLib.Comp.CompProperties_KindLocked">
+                <requiredPawnKindDefName>
+                    <li>Miho_adfqs</li>
+                </requiredPawnKindDefName>
+            </li>
+            <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+                <targetRaces>
+                    <li>Alien_Miho</li>
+                </targetRaces>
+                <bodyAddonDefs>
+                    <li>
+                        <name>miho_BowlerHat</name>
+                        <userCustomizable>true</userCustomizable>
+                        <linkVariantIndexWithPrevious>true</linkVariantIndexWithPrevious>
+                        <path>apparel/BowlerHat/BowlerHat</path>
+                        <colorChannel>apparel</colorChannel>
+                        <inFrontOfBody>true</inFrontOfBody>
+                        <layerInvert>false</layerInvert>
+                        <angle>0</angle>
+                        <drawSize>0.85</drawSize>
+                        <scaleWithPawnDrawsize>true</scaleWithPawnDrawsize>
+                        <!-- <shaderType>HairSwayCutoutRim_Falloff</shaderType> -->
+                        <defaultOffset>Center</defaultOffset>
+                        <alignWithHead>true</alignWithHead>
+                        <conditions>
+                            <BodyPart>
+                                <bodyPart>Head</bodyPart>
+                            </BodyPart>
+                            <Apparel />
+                            <Posture>
+                                <drawnStanding>true</drawnStanding>
+                                <drawnLaying>true</drawnLaying>
+                                <drawnInBed>true</drawnInBed>
+                            </Posture>
+                        </conditions>
+                        <offsets>
+                            <west>
+                                <layerOffset>-0.2668</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </west>
+                            <south>
+                                <layerOffset>0</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </south>
+                            <north>
+                                <layerOffset>0</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </north>
+                            <east>
+                                <layerOffset>-0.164</layerOffset>
+                                <offset>(0, 0)</offset>
+                            </east>
+                        </offsets>
+                    </li>
+                </bodyAddonDefs>
+            </li>
+            <!-- 可被禁止/放弃 -->
+            <li Class="CompProperties_Forbiddable" />
+            <!-- 禁用材料染色（忽略布料/皮革的颜色） -->
+            <li Class="ChezhouLib.ClThingComp.ThingCompProperties_DisableStuffColor"/>
+        </comps>
+
+        <!-- 物品基础数值（可按需微调） -->
+        <statBases>
+            <MaxHitPoints>120</MaxHitPoints>
+            <WorkToMake>10000</WorkToMake>
+            <Mass>0.6</Mass>
+            <Flammability>1.0</Flammability>
+            <DeteriorationRate>1</DeteriorationRate>
+            <Beauty>3</Beauty>
+            <MarketValue>260</MarketValue>
+        </statBases>
+
+        <!-- 佩戴者属性增益：魅力 +1 -->
+        <equippedStatOffsets>
+            <PawnBeauty>1</PawnBeauty>
+        </equippedStatOffsets>
+
+        <!-- 物品分类/交易标签 -->
+        <thingCategories>
+            <li>Apparel</li>
+        </thingCategories>
+        <tradeTags>
+            <li>MihoThirdEmpireCoat</li>
+        </tradeTags>
+
+        <!-- 服装定义 -->
+        <apparel>
+            <!-- 覆盖部位与穿戴层：标准帽子，仅头部，Overhead 层 -->
+            <bodyPartGroups>
+                <li>UpperHead</li>
+            </bodyPartGroups>
+            <layers>
+                <li>Overhead</li>
+            </layers>
+            <wornGraphicPath>AlienRace/adfqs/Null/Null</wornGraphicPath>
+            <!-- 标签/行为 -->
+            <tags>
+                <li>Social</li>
+                <li>Headgear</li>
+            </tags>
+            <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+            <countsAsClothingForNudity>true</countsAsClothingForNudity>
+            <defaultOutfitTags>
+                <li>Civil</li>
+                <li>Worker</li>
+            </defaultOutfitTags>
+        </apparel>
+    </ThingDef>
+</Defs>

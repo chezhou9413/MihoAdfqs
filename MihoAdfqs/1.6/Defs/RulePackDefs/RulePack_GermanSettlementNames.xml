@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- 德国城市据点命名规则：供 FactionDef 的 settlementNameMaker 使用 -->
+  <RulePackDef>
+    <defName>MihoThirdEmpire_SettlementNames_GermanCities</defName>
+    <rulePack>
+      <rulesStrings>
+        <!-- 输出就是城市名本身 -->
+        <li>root->[city]</li>
+
+        <!-- 城市池（中文名，可继续扩充） -->
+        <li>city->柏林</li>
+        <li>city->汉堡</li>
+        <li>city->慕尼黑</li>
+        <li>city->科隆</li>
+        <li>city->法兰克福</li>
+        <li>city->斯图加特</li>
+        <li>city->杜塞尔多夫</li>
+        <li>city->多特蒙德</li>
+        <li>city->埃森</li>
+        <li>city->莱比锡</li>
+        <li>city->不来梅</li>
+        <li>city->德累斯顿</li>
+        <li>city->汉诺威</li>
+        <li>city->纽伦堡</li>
+        <li>city->杜伊斯堡</li>
+        <li>city->波鸿</li>
+        <li>city->伍珀塔尔</li>
+        <li>city->比勒费尔德</li>
+        <li>city->波恩</li>
+        <li>city->曼海姆</li>
+        <li>city->卡尔斯鲁厄</li>
+        <li>city->奥格斯堡</li>
+        <li>city->威斯巴登</li>
+        <li>city->盖尔森基兴</li>
+        <li>city->门兴格拉德巴赫</li>
+        <li>city->不伦瑞克</li>
+        <li>city->开姆尼茨</li>
+        <li>city->基尔</li>
+        <li>city->亚琛</li>
+        <li>city->哈勒</li>
+        <li>city->马格德堡</li>
+        <li>city->弗赖堡</li>
+        <li>city->克雷费尔德</li>
+        <li>city->吕贝克</li>
+        <li>city->奥伯豪森</li>
+        <li>city->爱尔福特</li>
+        <li>city->美因茨</li>
+        <li>city->罗斯托克</li>
+        <li>city->卡塞尔</li>
+        <li>city->萨尔布吕肯</li>
+        <li>city->波茨坦</li>
+        <li>city->明斯特</li>
+
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>
+

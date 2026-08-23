@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef ParentName="MihoMilBase">
+    <defName>Miho_adfqs</defName>
+    <label>阿道夫-秋霜</label>
+    <defaultFactionType>MihoThirdEmpire</defaultFactionType>
+    <fixedGender>Female</fixedGender>
+    <minGenerationAge>23</minGenerationAge>
+    <maxGenerationAge>27</maxGenerationAge>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>MihoThirdEmpire_Fuhrer</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <weaponMoney>
+      <min>2800</min>
+      <max>20000</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>ThirdEmpireFuhrer</li>
+    </weaponTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>0</max>
+    </apparelMoney>
+    <apparelTags Inherit="False"/>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>0</max>
+    </techHediffsMoney>
+    <techHediffsTags Inherit="False"/>
+    <techHediffsChance>0</techHediffsChance>
+    <!-- 清空继承的强制/必备/起始装备（如父类有的话） -->
+    <apparelRequired>
+      <li>Apparel_WhiteLingerie</li>
+      <li>Apparel_FuhrerHelmet</li>
+      <li>Apparel_FuhrerCoat</li>
+    </apparelRequired>
+    <inventoryOptions Inherit="False"/>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Xeno_MihoThirdEmpire>1</Xeno_MihoThirdEmpire>
+      </xenotypeChances>
+    </xenotypeSet>
+    <modExtensions>
+      <li Class="ChezhouLib.Extension.kindRule">
+        <kindName>阿道夫-秋霜</kindName>
+        <addAbility>
+          <li>Ability_RequestSSReinforcements</li>
+          <li>Ability_Brainwash</li>
+        </addAbility>
+        <skillSettings>
+          <li>
+            <skillDef>Melee</skillDef>
+            <minLevel>5</minLevel>
+            <maxLevel>5</maxLevel>
+            <passion>None</passion>
+          </li>
+          <li>
+            <skillDef>Shooting</skillDef>
+            <minLevel>5</minLevel>
+            <maxLevel>5</maxLevel>
+            <passion>None</passion>
+          </li>
+
+          <li>
+            <skillDef>Crafting</skillDef>
+            <minLevel>15</minLevel>
+            <maxLevel>15</maxLevel>
+            <passion>Major</passion>
+          </li>
+          <li>
+            <skillDef>Artistic</skillDef>
+            <minLevel>20</minLevel>
+            <maxLevel>20</maxLevel>
+            <passion>Major</passion>
+          </li>
+          <li>
+            <skillDef>Social</skillDef>
+            <minLevel>20</minLevel>
+            <maxLevel>20</maxLevel>
+            <passion>Major</passion>
+          </li>
+          <li>
+            <skillDef>Intellectual</skillDef>
+            <minLevel>10</minLevel>
+            <maxLevel>10</maxLevel>
+            <passion>Minor</passion>
+          </li>
+          <li>
+            <skillDef>Cooking</skillDef>
+            <minLevel>9</minLevel>
+            <maxLevel>9</maxLevel>
+            <passion>None</passion>
+          </li>
+          <li>
+            <skillDef>Medicine</skillDef>
+            <minLevel>5</minLevel>
+            <maxLevel>5</maxLevel>
+            <passion>None</passion>
+          </li>
+
+          <li>
+            <skillDef>Construction</skillDef>
+            <minLevel>0</minLevel>
+            <maxLevel>0</maxLevel>
+            <passion>None</passion>
+          </li>
+          <li>
+            <skillDef>Mining</skillDef>
+            <minLevel>0</minLevel>
+            <maxLevel>0</maxLevel>
+            <passion>None</passion>
+          </li>
+          <li>
+            <skillDef>Plants</skillDef>
+            <minLevel>0</minLevel>
+            <maxLevel>0</maxLevel>
+            <passion>None</passion>
+          </li>
+          <li>
+            <skillDef>Animals</skillDef>
+            <minLevel>0</minLevel>
+            <maxLevel>0</maxLevel>
+            <passion>None</passion>
+          </li>
+        </skillSettings>
+        <kindDesName></kindDesName>
+        <kindAge>24</kindAge>
+        <BodyTypeName>AlienRace/adfqs/body/body</BodyTypeName>
+      </li>
+      <li Class="ChezhouLib.HAR.Extension.kindRuleHAR">
+        <bodyAddonRules>
+          <li>
+            <BodyAddonName>MihoEarRight</BodyAddonName>
+            <ReplacePath>AlienRace/adfqs/Ear/ear</ReplacePath>
+            <fixedColor>(1, 1, 1, 1)</fixedColor>
+            <offset>
+              <north>
+                <layerOffset>-0.275</layerOffset>
+                <bodyTypes>
+                  <Thin>(0,0)</Thin>
+                  <Female>(0,0)</Female>
+                  <Male>(0,0)</Male>
+
+                  <Child>(0,0.065)</Child>
+                  <Baby>(0,0.065)</Baby>
+                </bodyTypes>
+                <offset>(0,0)</offset>
+              </north>
+              <south>
+                <layerOffset>-0.271</layerOffset>
+                <bodyTypes>
+                  <Thin>(-0,-0.0)</Thin>
+                  <Female>(-0,-0.0)</Female>
+                  <Male>(0,0)</Male>
+
+                  <Child>(0,0.065)</Child>
+                  <Baby>(0,0.065)</Baby>
+                </bodyTypes>
+                <offset>(0,0)</offset>
+              </south>
+              <east>
+                <layerOffset>-0.09</layerOffset>
+                <bodyTypes>
+                  <Thin>(0.0,-0.01)</Thin>
+                  <Female>(0.0,-0.01)</Female>
+                  <Male>(0,0)</Male>
+
+                  <Child>(0.01,0.035)</Child>
+                  <Baby>(0.01,0.035)</Baby>
+                </bodyTypes>
+                <offset>(0,0)</offset>
+              </east>
+              <west>
+                <layerOffset>-0.2</layerOffset>
+                <bodyTypes>
+                  <Thin>(0,0)</Thin>
+                  <Female>(0,0)</Female>
+                  <Male>(0,0)</Male>
+
+                  <Child>(-0.022,0.065)</Child>
+                  <Baby>(-0.022,0.065)</Baby>
+                </bodyTypes>
+                <offset>(0,0)</offset>
+              </west>
+            </offset>
+          </li>
+          <li>
+            <BodyAddonName>MihoEarLeft</BodyAddonName>
+            <ReplacePath>AlienRace/adfqs/Earback/earback</ReplacePath>
+            <fixedColor>(1, 1, 1, 1)</fixedColor>
+          </li>
+          <li>
+            <BodyAddonName>MihoHairFront</BodyAddonName>
+            <ReplacePath>AlienRace/adfqs/hair/hair</ReplacePath>
+            <fixedColor>(1, 1, 1, 1)</fixedColor>
+          </li>
+          <li>
+            <BodyAddonName>MihoHead</BodyAddonName>
+            <ReplacePath>AlienRace/adfqs/head/head</ReplacePath>
+            <fixedColor>(1, 1, 1, 1)</fixedColor>
+          </li>
+          <li>
+            <BodyAddonName>MihoTail</BodyAddonName>
+            <ReplacePath>AlienRace/adfqs/Tail/Tail</ReplacePath>
+            <fixedColor>(1, 1, 1, 1)</fixedColor>
+          </li>
+          <li>
+            <BodyAddonName>MihoTailMoving</BodyAddonName>
+            <ReplacePath>AlienRace/adfqs/Tail/Tail</ReplacePath>
+            <fixedColor>(1, 1, 1, 1)</fixedColor>
+          </li>
+          <li>
+            <BodyAddonName>MihoHairBack</BodyAddonName>
+            <ReplacePath>AlienRace/adfqs/hairback/hairback</ReplacePath>
+            <fixedColor>(1, 1, 1, 1)</fixedColor>
+          </li>
+          <li>
+            <BodyAddonName>MihoBodySkin</BodyAddonName>
+            <ReplacePath>AlienRace/adfqs/Null/Null</ReplacePath>
+            <fixedColor>(1, 1, 1, 1)</fixedColor>
+          </li>
+        </bodyAddonRules>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+</Defs>

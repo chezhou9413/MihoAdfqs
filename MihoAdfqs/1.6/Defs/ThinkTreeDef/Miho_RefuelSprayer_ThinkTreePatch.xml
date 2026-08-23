@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThinkTreeDef>
+        <defName>Miho_RefuelSprayer_ThinkTreePatch</defName>
+        <insertTag>Humanlike_PostDuty</insertTag>
+        <insertPriority>100</insertPriority>
+        <thinkRoot Class="MihoAdfqs.MihoAdfJobGive.JobGiver_RefuelSprayer" />
+    </ThinkTreeDef>
+</Defs>

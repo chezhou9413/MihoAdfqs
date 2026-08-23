@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- 元首服：任意布料/皮革x150 + 黄金x10；魅力+3；护甲（示例棉布）：锐60% 钝60% 热20% -->
+  <ThingDef>
+    <defName>Apparel_FuhrerCoat</defName>
+    <label>元首服</label>
+    <description>威严而富有气场的服装，穿戴者更具魅力与领导风范。</description>
+
+    <!-- 基本属性 -->
+    <thingClass>Apparel</thingClass>
+    <category>Item</category>
+    <techLevel>Industrial</techLevel>
+    <selectable>true</selectable>
+    <drawerType>MapMeshOnly</drawerType>
+    <useHitPoints>true</useHitPoints>
+    <altitudeLayer>Item</altitudeLayer>
+    <alwaysHaulable>true</alwaysHaulable>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <rotatable>false</rotatable>
+
+    <!-- 外观（占位路径，可替换为你的贴图） -->
+    <graphicData>
+      <texPath>apparel/Fuhrer/FuhrerCoat</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+      <color>(1,1,1,1)</color>
+    </graphicData>
+
+    <!-- 成本：任意布料或皮革x150 + 黄金x10 -->
+    <costStuffCount>150</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <costList>
+      <Gold>10</Gold>
+    </costList>
+
+    <!-- 制作：裁缝台 -->
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Tailor</effectWorking>
+      <soundWorking>Recipe_Tailor</soundWorking>
+      <unfinishedThingDef>UnfinishedApparel</unfinishedThingDef>
+      <recipeUsers>
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+      <displayPriority>240</displayPriority>
+    </recipeMaker>
+
+    <!-- 组件 -->
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+        <targetRaces>
+          <li>Alien_Miho</li>
+        </targetRaces>
+      </li>
+      <li Class="ChezhouLib.Comp.CompProperties_KindLocked">
+        <requiredPawnKindDefName>
+          <li>Miho_adfqs</li>
+        </requiredPawnKindDefName>
+      </li>
+      <!-- 可被禁止/放弃（修复 SetForbidden 报错） -->
+      <li Class="CompProperties_Forbiddable" />
+      <!-- 禁用材料染色（忽略布料/皮革的颜色） -->
+      <li Class="ChezhouLib.ClThingComp.ThingCompProperties_DisableStuffColor"/>
+    </comps>
+
+    <!-- 基础数值 -->
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <WorkToMake>15000</WorkToMake>
+      <Mass>2.2</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+      <Beauty>4</Beauty>
+      <MarketValue>520</MarketValue>
+      <!-- 护甲（设定为固定值，避免受材料过度影响） -->
+      <ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.2</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+      <Insulation_Heat>50</Insulation_Heat>
+      <Insulation_Cold>50</Insulation_Cold>
+    </statBases>
+
+    <!-- 佩戴者属性增益：魅力 +3 -->
+    <equippedStatOffsets>
+      <PawnBeauty>3</PawnBeauty>
+    </equippedStatOffsets>
+
+    <!-- 分类/交易 -->
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <tradeTags>
+      <li>MihoThirdEmpireCoat</li>
+    </tradeTags>
+
+    <!-- 服装定义：外套，覆盖上身/手臂/腿（类似风衣） -->
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/Fuhrer/FuhrerCoat</wornGraphicPath>
+      <tags>
+        <li>Social</li>
+        <li>Clothing</li>
+      </tags>
+      <canBeDesiredForIdeo>true</canBeDesiredForIdeo>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <defaultOutfitTags>
+        <li>Civil</li>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+</Defs>
+

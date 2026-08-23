@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef>
+        <defName>Gene_MihoThirdEmpireFuhrer</defName>
+        <label>元首血统</label>
+        <description>拥有元首血统的美狐</description>
+        <iconPath>Fc/enp</iconPath>
+        <displayCategory>Miscellaneous</displayCategory>
+        <biostatCpx>0</biostatCpx>
+        <biostatMet>0</biostatMet>
+        <selectionWeight>0</selectionWeight>
+    </GeneDef>
+    <XenotypeDef>
+        <defName>Xeno_MihoThirdEmpire</defName>
+        <label>美狐第三帝国血统</label>
+        <description>拥有美狐第三帝国血脉的美狐</description>
+        <iconPath>Fc/enp</iconPath>
+        <inheritable>true</inheritable>
+        <genes>
+            <li>Skin_SheerWhite</li>
+            <li>Hair_InkBlack</li>
+            <li>Hair_Miho_Pink</li>
+            <li>Hair_Miho_Orange</li>
+            <li>Hair_Miho_Red</li>
+            <li>Hair_Blonde</li>
+            <li>Hair_Grayless</li>
+            <li>Beauty_Pretty</li>
+            <li>Gene_Miho_AdvancedAuditory</li>
+            <li>WoundHealing_Slow</li>
+            <li>Libido_High</li>
+            <li>Aggression_Aggressive</li>
+            <li>Gene_CelestialMiho</li>
+            <li>AptitudeStrong_Social</li>
+            <li>AptitudeTerrible_Animals</li>
+            <li>Gene_MihoThirdEmpireFuhrer</li>
+        </genes>
+    </XenotypeDef>
+</Defs>

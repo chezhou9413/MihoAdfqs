@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- HK416 电荷步枪 -->
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>Gun_Stg44_Charge</defName>
+        <label>stg44突击步枪</label>
+        <description>一把经过改造的HK416步枪，配备了先进的电荷发射系统。采用十连发设计，能够快速连续射击电荷弹药，在中近距离战斗中表现出色。</description>
+
+        <!-- 基本属性 -->
+        <techLevel>Spacer</techLevel>
+        <weaponTags>
+            <li>ThirdEmpireWeapon</li>
+            <li>LongShots</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+
+        <!-- 外观 -->
+        <graphicData>
+            <texPath>Weapon/stg44</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.8, 0.8)</drawSize>
+            <color>(1,1,1,1)</color>
+        </graphicData>
+
+        <soundInteract>Interact_ChargeRifle</soundInteract>
+
+        <!-- 制作成本：钢铁x225，零部件x5，高级零部件x2 -->
+        <costList>
+            <Steel>145</Steel>
+            <ComponentIndustrial>6</ComponentIndustrial>
+        </costList>
+
+        <!-- 基础数值 -->
+        <statBases>
+            <WorkToMake>45000</WorkToMake>
+            <Mass>3.8</Mass>
+            <AccuracyTouch>0.60</AccuracyTouch>
+            <AccuracyShort>0.80</AccuracyShort>
+            <AccuracyMedium>0.9</AccuracyMedium>
+            <AccuracyLong>0.60</AccuracyLong>
+            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
+            <DeteriorationRate>0.5</DeteriorationRate>
+            <Flammability>0.2</Flammability>
+            <MarketValue>2800</MarketValue>
+        </statBases>
+
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <researchPrerequisite Inherit="False" />
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+
+        <!-- 交易标签 -->
+        <tradeTags>
+            <li>WeaponRanged</li>
+            <li>MihoThirdEmpireGoods</li>
+        </tradeTags>
+
+        <!-- 装备设置 -->
+        <equippedAngleOffset>45</equippedAngleOffset>
+
+        <!-- 武器属性 -->
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>Bullet_Stg44_Charge</defaultProjectile>
+                <warmupTime>1.5</warmupTime>
+                <range>26</range>
+                <burstShotCount>5</burstShotCount>
+                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+                <soundCast>Shot_ChargeRifle</soundCast>
+                <soundCastTail>GunTail_Medium</soundCastTail>
+                <muzzleFlashScale>9</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>枪托</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>枪管</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>9</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+
+    <!-- 自定义电荷弹药（伤害15，使用原版电荷步枪的外观和穿透数据） -->
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_Stg44_Charge</defName>
+        <label>电荷弹</label>
+        <graphicData>
+            <texPath>Things/Projectile/Charge_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>15</damageAmountBase>
+            <speed>60</speed>
+            <!-- 使用原版电荷步枪的穿透数据 -->
+            <armorPenetrationBase>0.75</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+        </projectile>
+    </ThingDef>
+</Defs>

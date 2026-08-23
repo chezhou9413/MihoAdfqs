@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<!-- =======================================================================================雪凛之狐 -->
+	<FacialAnimation.LidTypeDef>
+		<defName>MihoAdfqsLid</defName>
+		<texPath>FacialAnimation/Adfqs/Lids</texPath>
+		<shader>Map/Transparent</shader>
+		<enableUnisexTexPath>True</enableUnisexTexPath>
+		<raceName>Alien_Miho</raceName>
+		<targetGeneDefs>
+			<li>Gene_MihoThirdEmpireFuhrer</li>
+		</targetGeneDefs>
+	</FacialAnimation.LidTypeDef>
+</Defs>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThoughtDef>
+        <defName>Miho_RejectedCourtship_Patriotism</defName>
+        <durationDays>3</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>拒绝求爱</label>
+                <description>抱歉，我所挂念的，只有祖国，抱歉，对于你的爱念，也许，需要等到和平来临的一刻。</description>
+                <baseMoodEffect>0</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+    <ThoughtDef>
+        <defName>Miho_AcceptedCourtship_DelayIdeal</defName>
+        <durationDays>5</durationDays>
+        <stackLimit>1</stackLimit>
+        <stages>
+            <li>
+                <label>接受求爱</label>
+                <description>唔，可惜，我的理想恐怕要暂时延期一段时间了。</description>
+                <baseMoodEffect>5</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+</Defs>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>Thought_PregnantRealization</defName>
+    <durationDays>10</durationDays> <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>怀孕</label>
+        <description>抱歉，孩子，摆在你的面前，可能是残酷的现实。</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

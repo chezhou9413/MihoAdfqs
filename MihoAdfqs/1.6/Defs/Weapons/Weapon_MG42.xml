@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <!-- MG42 通用机枪（电荷弹，30连发） -->
+    <ThingDef ParentName="BaseHumanMakeableGun">
+        <defName>Gun_MG42_Charge</defName>
+        <label>MG42通用机枪</label>
+        <description>一把重型通用机枪，采用电荷弹药供能并以极高射速倾泻火力。适合中距离压制与持续火力输出。</description>
+
+        <!-- 基本属性 -->
+        <techLevel>Spacer</techLevel>
+        <weaponTags>
+            <li>ThirdEmpireWeapon</li>
+            <li>LongShots</li>
+        </weaponTags>
+        <weaponClasses>
+            <li>RangedHeavy</li>
+        </weaponClasses>
+
+        <!-- 外观：目前先复用原版速射机枪贴图路径；你可以替换为自己的纹理 -->
+        <graphicData>
+            <texPath>Weapon/mg42</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(1, 1)</drawSize>
+            <color>(1,1,1,1)</color>
+        </graphicData>
+
+        <soundInteract>Interact_Minigun</soundInteract>
+
+        <!-- 制作成本：钢铁x265，零部件x12 -->
+        <costList>
+            <Steel>265</Steel>
+            <ComponentIndustrial>12</ComponentIndustrial>
+        </costList>
+
+        <!-- 基础数值 -->
+        <statBases>
+            <WorkToMake>30000</WorkToMake>
+            <Mass>12</Mass>
+            <AccuracyTouch>1.00</AccuracyTouch>
+            <AccuracyShort>1.00</AccuracyShort>
+            <AccuracyMedium>0.90</AccuracyMedium>
+            <AccuracyLong>0.40</AccuracyLong>
+            <RangedWeapon_Cooldown>2.5</RangedWeapon_Cooldown>
+            <DeteriorationRate>0.5</DeteriorationRate>
+            <Flammability>0.2</Flammability>
+            <MarketValue>4200</MarketValue>
+        </statBases>
+
+        <!-- 制作 -->
+        <recipeMaker>
+            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+            <researchPrerequisite Inherit="False" />
+            <workSkill>Crafting</workSkill>
+            <effectWorking>Smith</effectWorking>
+            <soundWorking>Recipe_Machining</soundWorking>
+            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+            <recipeUsers>
+                <li>TableMachining</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Crafting>9</Crafting>
+            </skillRequirements>
+        </recipeMaker>
+
+        <tradeTags>
+            <li>WeaponRanged</li>
+            <li>MihoThirdEmpireGoods</li>
+        </tradeTags>
+
+        <equippedAngleOffset>45</equippedAngleOffset>
+
+        <!-- 武器属性 -->
+        <verbs>
+            <li>
+                <verbClass>Verb_Shoot</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <ticksBetweenBurstShots>3</ticksBetweenBurstShots>
+                <defaultProjectile>Bullet_MG42_Charge</defaultProjectile>
+                <!-- 瞄准时间 2.5 秒 -->
+                <warmupTime>2.5</warmupTime>
+                <!-- 射程 40 格 -->
+                <range>40</range>
+                <!-- 连射 30 发后停止 -->
+                <burstShotCount>30</burstShotCount>
+                <!-- 使用原版速射机枪音效 -->
+                <soundCast>Shot_Minigun</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>12</muzzleFlashScale>
+            </li>
+        </verbs>
+
+        <tools>
+            <li>
+                <label>枪托</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+            <li>
+                <label>枪管</label>
+                <capacities>
+                    <li>Blunt</li>
+                    <li>Poke</li>
+                </capacities>
+                <power>12</power>
+                <cooldownTime>2</cooldownTime>
+            </li>
+        </tools>
+    </ThingDef>
+    <ThingDef ParentName="BaseBullet">
+        <defName>Bullet_MG42_Charge</defName>
+        <label>机枪弹</label>
+        <graphicData>
+            <!-- 原版速射机枪 Bullet_Minigun 使用的子弹贴图 -->
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <projectile>
+            <damageDef>Bullet</damageDef>
+            <damageAmountBase>18</damageAmountBase>
+            <speed>70</speed>
+            <armorPenetrationBase>0.55</armorPenetrationBase>
+            <stoppingPower>1.5</stoppingPower>
+        </projectile>
+    </ThingDef>
+</Defs>
+

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThoughtDef>
+    <defName>Thought_FuhrerPromise</defName>
+    <workerClass>MihoAdfqs.MihoAdfThoughtWorker.ThoughtWorker_FuhrerPromise</workerClass>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>元首的承诺</label>
+        <description>我们的领袖与我们同在，为了未来的荣耀！</description>
+        <baseMoodEffect>12</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

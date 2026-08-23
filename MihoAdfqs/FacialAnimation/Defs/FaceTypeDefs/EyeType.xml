@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+    <FacialAnimation.EyeballTypeDef>
+        <defName>MihoAdfqsEye</defName>
+        <texPath>FacialAnimation/Adfqs/Eyes</texPath>
+        <shader>Map/CutoutSkinOverlay</shader>
+        <raceName>Alien_Miho</raceName>
+        <enableUnisexTexPath>True</enableUnisexTexPath>
+        <minColor>RGB(255,255,255)</minColor>
+        <maxColor>RGB(255,255,255)</maxColor>
+        <targetGeneDefs>
+            <li>Gene_MihoThirdEmpireFuhrer</li>
+        </targetGeneDefs>
+    </FacialAnimation.EyeballTypeDef>
+</Defs>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- 修复 Miho_TurretGun_Flame 中 Verb_ShootBeam 的非法 beamWidth=-1，避免 Verb_ShootBeam.BurstingTick() NRE -->
+
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/ThingDef[defName="Miho_TurretGun_Flame"]/verbs/li[verbClass="Verb_ShootBeam"]/beamWidth</xpath>
+    <value>
+      <beamWidth>6</beamWidth>
+    </value>
+  </Operation>
+</Patch>
+
