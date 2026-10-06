@@ -13,11 +13,14 @@ using Verse.AI;
 namespace MihoAdfqs.Patches
 {
 
+    //在主线程加载问号图标，为可招募的米元首绘制提示。
+    [StaticConstructorOnStartup]
     [HarmonyPatch(typeof(Pawn), "DrawGUIOverlay")]
     public static class Patch_Pawn_DrawGUIOverlay
     {
         private static readonly Texture2D QuestionMarkTex = ContentFinder<Texture2D>.Get("UI/Overlays/QuestionMark", true);
 
+        //仅在当前地图的可见元首头顶显示招募提示。
         public static void Postfix(Pawn __instance)
         {
             if (__instance.kindDef != MihoDefRef.Miho_adfqs) return;

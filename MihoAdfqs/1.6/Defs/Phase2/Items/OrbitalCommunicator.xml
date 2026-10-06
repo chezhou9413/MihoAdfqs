@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="ResourceBase">
+    <defName>MihoPhase2_OrbitalCommunicator</defName>
+    <label>轨道呼叫用通讯器</label>
+    <description>制作配方由元首告知的便携通讯工具，用于联络第三帝国秘书卡黛尔，接受任务和兑换轨道援助。</description>
+    <thingClass>ThingWithComps</thingClass>
+    <stackLimit>1</stackLimit>
+    <graphicData><texPath>Thing/MihoPhase2/Utility/MihoPhase2_OrbitalCommunicator</texPath><graphicClass>Graphic_Single</graphicClass></graphicData>
+    <statBases><MaxHitPoints>100</MaxHitPoints><Mass>1</Mass><MarketValue>500</MarketValue><WorkToMake>1200</WorkToMake></statBases>
+    <costList><Steel>200</Steel><Plasteel>100</Plasteel><ComponentSpacer>2</ComponentSpacer></costList>
+    <recipeMaker><recipeUsers><li>FabricationBench</li></recipeUsers></recipeMaker>
+    <comps>
+      <li Class="CompProperties_Usable"><useJob>UseItem</useJob><useLabel>联络第三帝国</useLabel><useDuration>60</useDuration></li>
+      <li Class="CompProperties_UseEffect"><compClass>MihoAdfqs.Phase2.Communications.CompUseEffect_ImperialCommunicator</compClass></li>
+    </comps>
+  </ThingDef>
+  <ThoughtDef>
+    <defName>MihoPhase2_ChallengeLost</defName>
+    <workerClass>MihoAdfqs.Phase2.Orbital.ThoughtWorker_OrbitalMobilization</workerClass>
+    <stages><li><label>一点都没有挑战性！</label><description>渣渣！一点都没有挑战性！这帮讨厌的家伙！</description><baseMoodEffect>-10</baseMoodEffect></li></stages>
+  </ThoughtDef>
+</Defs>

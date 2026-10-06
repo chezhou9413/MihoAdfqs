@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <PawnKindDef ParentName="Milira_PawnBase">
+    <defName>MihoPhase2_Tiana</defName>
+    <label>提亚娜</label>
+    <defaultFactionType>MihoThirdEmpire</defaultFactionType>
+    <fixedGender>Female</fixedGender>
+    <minGenerationAge>233</minGenerationAge>
+    <maxGenerationAge>233</maxGenerationAge>
+    <combatPower>120</combatPower>
+    <isFighter>false</isFighter>
+    <fixedChildBackstories Inherit="False">
+      <li>MihoPhase2_Childhood_Tiana</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories Inherit="False">
+      <li>MihoPhase2_Adulthood_Tiana</li>
+    </fixedAdultBackstories>
+    <weaponMoney>
+      <min>0</min>
+      <max>0</max>
+    </weaponMoney>
+    <weaponTags Inherit="False" />
+    <apparelMoney>
+      <min>0</min>
+      <max>0</max>
+    </apparelMoney>
+    <apparelTags Inherit="False" />
+    <apparelRequired Inherit="False">
+      <li>MihoPhase2_TianaChant</li>
+    </apparelRequired>
+    <inventoryOptions Inherit="False" />
+    <techHediffsChance>0</techHediffsChance>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances Inherit="False">
+        <Xeno_MihoPhase2_Tiana>1</Xeno_MihoPhase2_Tiana>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <modExtensions>
+      <li Class="ChezhouLib.Extension.kindRule">
+        <BodyTypeName>Milira/Pawn/Body/Naked_Female</BodyTypeName>
+      </li>
+      <li Class="ChezhouLib.HAR.Extension.kindRuleHAR">
+        <bodyAddonRules>
+          <li>
+            <BodyAddonName>milira hair</BodyAddonName>
+            <ReplacePath>SpecialPawn/MihoPhase2/Tiana/Hair/MihoPhase2_TianaHair</ReplacePath>
+            <fixedColor>(1,1,1,1)</fixedColor>
+          </li>
+          <li>
+            <BodyAddonName>milira hair BG</BodyAddonName>
+            <ReplacePath>SpecialPawn/MihoPhase2/Tiana/HairBack/MihoPhase2_TianaHairBack</ReplacePath>
+            <fixedColor>(1,1,1,1)</fixedColor>
+          </li>
+          <li>
+            <BodyAddonName>milira halo</BodyAddonName>
+            <ReplacePath>SpecialPawn/MihoPhase2/Tiana/Halo/MihoPhase2_TianaHalo</ReplacePath>
+            <fixedColor>(1,1,1,1)</fixedColor>
+          </li>
+        </bodyAddonRules>
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+  <BackstoryDef>
+    <defName>MihoPhase2_Childhood_Tiana</defName>
+    <title>米莉拉懒虫</title>
+    <titleShort>米莉拉懒虫</titleShort>
+    <baseDesc>提亚娜幼年时活泼却懒惰，不喜欢受困于教育，把许多事情交给米莉安完成。</baseDesc>
+    <slot>Childhood</slot>
+    <shuffleable>false</shuffleable>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <skillGains>
+      <Intellectual>-3</Intellectual>
+      <Social>5</Social>
+      <Crafting>3</Crafting>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef>
+    <defName>MihoPhase2_Adulthood_Tiana</defName>
+    <title>首位米莉拉公民</title>
+    <titleShort>首位公民</titleShort>
+    <baseDesc>提亚娜是帝国首位获得正式公民身份的米莉拉。</baseDesc>
+    <slot>Adulthood</slot>
+    <shuffleable>false</shuffleable>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+      <Crafting>10</Crafting>
+    </skillGains>
+  </BackstoryDef>
+
+
+</Defs>

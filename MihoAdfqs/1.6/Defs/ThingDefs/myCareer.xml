@@ -25,7 +25,7 @@
             <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
             <workSkill>Crafting</workSkill>
             <effectWorking>Tailor</effectWorking>
-            <soundWorking>Recipe_Tailoring</soundWorking>
+            <soundWorking>Recipe_Tailor</soundWorking>
             <recipeUsers>
                 <li>Miho_TableMachining</li>
             </recipeUsers>

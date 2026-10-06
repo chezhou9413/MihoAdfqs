@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef>
+    <defName>MihoPhase2_ApparelAutoTend</defName>
+    <label>帝国装备自动止血</label>
+    <description>装备内置的急救系统会自动包扎新出现的流血伤口。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="MihoAdfqs.Health.HediffCompProperties_ApparelAutoTend" />
+    </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <defName>MihoPhase2_ApparelRegeneration</defName>
+    <label>超新星装备再生</label>
+    <description>轨道空降装备的生命维持系统每秒为每个受伤身体部位恢复2点伤害。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="MihoAdfqs.Health.HediffCompProperties_ApparelRegeneration">
+        <healPerBodyPartPerSecond>2</healPerBodyPartPerSecond>
+      </li>
+    </comps>
+  </HediffDef>
+</Defs>

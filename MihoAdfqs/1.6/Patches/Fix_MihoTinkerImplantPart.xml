@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- 远程修复植入物使用原版指定的大脑部位，让HAR背景生成通过健康系统完成安装。 -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/HediffDef[defName="RemoteRepairerImplant"]/defaultInstallPart</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/HediffDef[defName="RemoteRepairerImplant"]</xpath>
+      <value>
+        <defaultInstallPart>Brain</defaultInstallPart>
+      </value>
+    </nomatch>
+  </Operation>
+</Patch>

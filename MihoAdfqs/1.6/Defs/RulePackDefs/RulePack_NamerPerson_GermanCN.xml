@@ -6,8 +6,9 @@
     <defName>NamerPerson_MihoThirdEmpire_GermanCN</defName>
     <rulePack>
       <rulesStrings>
-        <!-- 标准人名入口 -->
-        <li>r_name->[given]·[family]</li>
+        <!-- 按原版姓名解析格式分别提供名、昵称和姓，昵称保留中文全名风格。 -->
+        <li>r_name->[given] '[nickname]' [family]</li>
+        <li>nickname->[given]·[family]</li>
 
         <!-- 名（可继续扩充） -->
         <li>given->阿道夫</li>

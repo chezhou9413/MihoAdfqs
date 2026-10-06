@@ -1,0 +1,96 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelArmorBase">
+    <defName>MihoPhase2_SupernovaDropArmor</defName>
+    <label>超新星轨道空降部队盔甲</label>
+    <description>由帝国“卡列维”科研站开发的顶级护甲，针对战场上任何可能出现的情况，均具有应对方式。据说，其形象源自帝国某个热度很高的网络游戏，只是相比游戏中近乎没有任何防御力的盔甲，防御力要高上十几倍。拥有3000点抵消值，命中覆盖部位时先消耗抵消值，耗尽后再损耗装备耐久；抵消值不会自行恢复，只能使用卡列维军用防弹插板修复，每块恢复250点。穿戴后自动包扎伤口，每秒为每个受伤部件恢复2点伤势。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/SupernovaDropArmor/MihoPhase2_SupernovaDropArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>6750</MaxHitPoints>
+      <WorkToMake>5600</WorkToMake>
+      <Mass>8</Mass>
+      <ArmorRating_Sharp>2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>2</ArmorRating_Blunt>
+      <ArmorRating_Heat>2</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>300</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>200</MihoPhase2_Polyethylene>
+      <ComponentIndustrial>20</ComponentIndustrial>
+      <ComponentSpacer>16</ComponentSpacer>
+      <MihoPhase2_NovaMaterial>2</MihoPhase2_NovaMaterial>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_Nova</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>TableMachining</li>
+        <li>FabricationBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="MihoAdfqs.Combat.Armor.CompProperties_ArmorReserve">
+        <capacity>3000</capacity>
+      </li>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_ApparelRegeneration</hediff>
+      </li>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_SupernovaDropArmorEffect</hediff>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MeleeDodgeChance>10</MeleeDodgeChance>
+      <MoveSpeed>4</MoveSpeed>
+      <VacuumResistance>1</VacuumResistance>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/SupernovaDropArmor/MihoPhase2_SupernovaDropArmor</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Orbital</li>
+      </tags>
+    </apparel>
+    <costStuffCount>800</costStuffCount>
+    <stuffCategories Inherit="False">
+      <li>Metallic</li>
+    </stuffCategories>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Steel</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <HediffDef>
+    <defName>MihoPhase2_SupernovaDropArmorEffect</defName>
+    <label>超新星轨道空降部队盔甲</label>
+    <description>空降护甲辅助瞄准，将瞄准时间缩短至原来的25%。脱下护甲后效果消失。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <AimingDelayFactor>0.25</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

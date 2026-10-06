@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_SupernovaHeavyLauncher</defName>
+    <label>超新星重炮发射器</label>
+    <description>由帝国科学院自行研发并配发给最精锐部队的武器。弹仓2发，每次点射消耗1发，打空后自动装弹4秒；基础轮次冷却1秒，装备与基因加速仍生效。默认穿甲弹造成单体200伤害、200%穿透；可切换6×6高爆40伤害、5×5纳米逐部位持续伤害或4×4辐射毒性弹。切换弹种也会装弹。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2NovaWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_SupernovaHeavyLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.1, 1.1)</drawSize>
+    </graphicData>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>100</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>50</MihoPhase2_Polyethylene>
+      <MihoPhase2_NovaMaterial>1</MihoPhase2_NovaMaterial>
+    </costList>
+    <statBases>
+      <Mass>18</Mass>
+      <MarketValue>20000</MarketValue>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_Nova</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_SupernovaHeavyAP</defaultProjectile>
+        <weaponType>Shell</weaponType>
+        <warmupTime>0.8</warmupTime>
+        <range>120</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>14</muzzleFlashScale>
+        <magazineSize>2</magazineSize>
+        <reloadSeconds>4</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <fireModes>
+          <li>点射</li>
+        </fireModes>
+        <guaranteedAccuracy>true</guaranteedAccuracy>
+        <canGoWild>false</canGoWild>
+        <ammunition>
+          <li>MihoPhase2_Projectile_SupernovaHeavyAP</li>
+          <li>MihoPhase2_Projectile_SupernovaHeavyHE</li>
+          <li>MihoPhase2_Projectile_SupernovaNanite</li>
+          <li>MihoPhase2_Projectile_SupernovaRadiation</li>
+        </ammunition>
+        <preciseBurstTicks>60.0</preciseBurstTicks>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_HeavyBulletBase">
+    <defName>MihoPhase2_Projectile_SupernovaHeavyAP</defName>
+    <label>超新星脱壳穿甲弹</label>
+    <description>对单个命中目标结算200点弹丸伤害，基础穿透200%；实际伤口受护甲、护盾、承伤倍率及命中部位生命值影响。</description>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Projectiles/ImperialShell</texPath>
+      <drawSize>(0.65, 1.3)</drawSize>
+      <color>(0.82, 0.9, 1, 1)</color>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>200</damageAmountBase>
+      <armorPenetrationBase>2</armorPenetrationBase>
+      <stoppingPower>4</stoppingPower>
+      <speed>150</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_SupernovaLaserRifle</defName>
+    <label>超新星激光步枪</label>
+    <description>由帝国科学院自行研发并配发给最精锐部队的武器。它通常配合动力甲，以高频激光持续灼烧目标。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2NovaWeapon</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_SupernovaLaserRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>80</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>60</MihoPhase2_Polyethylene>
+      <MihoPhase2_NovaMaterial>1</MihoPhase2_NovaMaterial>
+    </costList>
+    <statBases>
+      <Mass>10</Mass>
+      <MarketValue>18000</MarketValue>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_Nova</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_SupernovaLaser</defaultProjectile>
+        <weaponType>Laser</weaponType>
+        <warmupTime>0.2</warmupTime>
+        <range>50</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>10</muzzleFlashScale>
+        <magazineSize>300</magazineSize>
+        <reloadSeconds>3</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>全自动</li>
+        </fireModes>
+        <guaranteedAccuracy>true</guaranteedAccuracy>
+        <canGoWild>false</canGoWild>
+        <preciseBurstTicks>6.0</preciseBurstTicks>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_BulletBase">
+    <defName>MihoPhase2_Projectile_SupernovaLaser</defName>
+    <label>超新星激光束</label>
+    <graphicData Inherit="False">
+      <texPath>Thing/MihoPhase2/Projectiles/EnergyCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(0.45, 0.9)</drawSize>
+      <color>(1, 0.18, 0.08, 1)</color>
+    </graphicData>
+    <projectile>
+      <damageDef>Burn</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <armorPenetrationBase>1</armorPenetrationBase>
+      <stoppingPower>0.5</stoppingPower>
+      <speed>200</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

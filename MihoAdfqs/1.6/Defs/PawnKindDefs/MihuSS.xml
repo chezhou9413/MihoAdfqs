@@ -2,6 +2,10 @@
 <Defs>
     <PawnKindDef ParentName="MihoMilBase">
         <defName>Miho_SS</defName>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances><Xeno_MihoPhase2_ImperialMiho>1</Xeno_MihoPhase2_ImperialMiho></xenotypeChances>
+        </xenotypeSet>
+        <useFactionXenotypes>false</useFactionXenotypes>
         <label>美狐第三帝国党卫军</label>
         <combatPower>200</combatPower>
         <defaultFactionType>MihoThirdEmpire</defaultFactionType>
@@ -39,6 +43,7 @@
         <techHediffsTags Inherit="False"/>
         <techHediffsChance>0</techHediffsChance>
         <apparelRequired>
+            <li>Miho_Apparel_Under_Industrial</li>
             <li>Miho_Apparel_Middle_MilitiaVest</li>
             <li>Apparel_SSArmor</li>
             <li>Apparel_SSHelmet</li>
@@ -48,6 +53,10 @@
     <PawnKindDef ParentName="MihoMilBase">
         <trader>true</trader>
         <defName>Miho_SSTrader</defName>
+        <xenotypeSet Inherit="False">
+            <xenotypeChances><Xeno_MihoPhase2_ImperialMiho>1</Xeno_MihoPhase2_ImperialMiho></xenotypeChances>
+        </xenotypeSet>
+        <useFactionXenotypes>false</useFactionXenotypes>
         <label>美狐第三帝国商队护卫队</label>
         <combatPower>20</combatPower>
         <defaultFactionType>MihoThirdEmpire</defaultFactionType>
@@ -85,6 +94,7 @@
         <techHediffsTags Inherit="False"/>
         <techHediffsChance>0</techHediffsChance>
         <apparelRequired>
+            <li>Miho_Apparel_Under_Industrial</li>
             <li>Miho_Apparel_Middle_MilitiaVest</li>
             <li>Apparel_SSArmor</li>
             <li>Apparel_SSHelmet</li>

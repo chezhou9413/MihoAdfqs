@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>MihoSupport_CallIn</defName>
+    <context>Any</context>
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>true</onCamera>
+        <volumeRange>44.2~48</volumeRange>
+        <pitchRange>0.980~1.020</pitchRange>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/CallIn_StratagemBall</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>MihoSupport_Incoming</defName>
+    <context>MapOnly</context>
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <volumeRange>41.4~45</volumeRange>
+        <pitchRange>0.980~1.020</pitchRange>
+        <distRange>10~100</distRange>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/Incoming_972359172</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>MihoSupport_Barrage120</defName>
+    <context>MapOnly</context>
+    <maxVoices>6</maxVoices>
+    <maxSimultaneous>6</maxSimultaneous>
+    <subSounds>
+      <li>
+        <volumeRange>64.4~70</volumeRange>
+        <pitchRange>1.107~1.153</pitchRange>
+        <distRange>10~100</distRange>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/Barrage120_154940815</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/Barrage120_1024807697</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>MihoSupport_Barrage380</defName>
+    <context>MapOnly</context>
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <volumeRange>73.6~80</volumeRange>
+        <pitchRange>0.843~0.877</pitchRange>
+        <distRange>10~100</distRange>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/Barrage380_1024807697</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/Barrage380_663028978</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>MihoSupport_Napalm</defName>
+    <context>MapOnly</context>
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>4</maxSimultaneous>
+    <subSounds>
+      <li>
+        <volumeRange>66.2~72</volumeRange>
+        <pitchRange>0.931~0.969</pitchRange>
+        <distRange>10~100</distRange>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/Napalm_880412781</clipPath>
+          </li>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/Napalm_102611610</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>MihoSupport_Gas</defName>
+    <context>MapOnly</context>
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <volumeRange>52.4~57</volumeRange>
+        <pitchRange>0.980~1.020</pitchRange>
+        <distRange>10~100</distRange>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/Gas_953878999</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>MihoSupport_EMP</defName>
+    <context>MapOnly</context>
+    <maxVoices>4</maxVoices>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <volumeRange>59.8~65</volumeRange>
+        <pitchRange>0.980~1.020</pitchRange>
+        <distRange>10~100</distRange>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>Combat/HD2/Support/EMP_1040199753</clipPath>
+          </li>
+        </grains>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>

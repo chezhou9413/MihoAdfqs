@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- 帝国模板必须进入种族白名单，否则HAR会阻止生成和医疗舱转换时添加基因。 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Milira_Race"]/alienRace/raceRestriction/whiteXenotypeList</xpath>
+    <value>
+      <li>Xeno_MihoPhase2_ImperialMilira</li>
+      <li>Xeno_MihoPhase2_Tiana</li>
+    </value>
+  </Operation>
+  <!-- 米莉拉只允许白名单中的服装，专用服装必须登记后才能穿戴。 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Milira_Race"]/alienRace/raceRestriction/apparelList</xpath>
+    <value>
+      <li>MihoPhase2_TianaChant</li>
+      <li>MihoPhase2_TianaMaidDress</li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Milira_Race"]/comps</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Milira_Race"]</xpath>
+      <value>
+        <comps />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Milira_Race"]/comps</xpath>
+    <value>
+      <li>
+        <compClass>MihoAdfqs.Phase2.Backgrounds.Comp_BackgroundExposure</compClass>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/RecipeDef[defName="MihoPhase2_RemovePerkBody"]/recipeUsers</xpath>
+    <value><li>Milira_Race</li></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/FactionDef[defName="MihoThirdEmpire"]/pawnGroupMakers/li[kindDef="Settlement"]/options</xpath>
+    <value><MihoPhase2_ImperialMilira>15</MihoPhase2_ImperialMilira></value>
+  </Operation>
+</Patch>

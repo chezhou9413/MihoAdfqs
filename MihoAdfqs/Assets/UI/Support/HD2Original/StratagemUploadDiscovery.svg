@@ -1,0 +1,19 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  
+  <path d="M24,24 H55.5 L24,55.5 V24 Z M231.5,24 H200 L231.5,55.5 V24 Z"
+    fill="#ccbd66"
+    fill-rule="evenodd"
+  />
+  <path d="M24,231.5 H55.5 L24,200 V231.5 Z M231.5,231.5 H200 L231.5,200 V231.5 Z"
+    fill="#ccbd66"
+    fill-rule="evenodd"
+  />
+  <path d="M112,155.5 H40 V172 L55.5,188 H200 L216,172 V155.5 H144 V172 H112 V155.5 Z"
+    fill="#d9d9d9"
+    fill-rule="evenodd"
+  />
+  <path d="M192,68 H64 V148 H192 V68 Z M127.5,76 L169.2,120.2 H144 V141 H112 V120.2 H85.8 L127.5,76 Z"
+    fill="#d9d9d9"
+    fill-rule="evenodd"
+  />
+</svg>

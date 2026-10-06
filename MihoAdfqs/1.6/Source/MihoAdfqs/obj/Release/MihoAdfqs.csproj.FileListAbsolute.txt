@@ -1,0 +1,6 @@
+E:\RimModDev\MihoAdfqs\MihoAdfqs\1.6\Assemblies\MihoAdfqs.dll
+E:\RimModDev\MihoAdfqs\MihoAdfqs\1.6\Assemblies\MihoAdfqs.pdb
+E:\RimModDev\MihoAdfqs\MihoAdfqs\1.6\Source\MihoAdfqs\obj\Release\MihoAdfqs.csproj.AssemblyReference.cache
+E:\RimModDev\MihoAdfqs\MihoAdfqs\1.6\Source\MihoAdfqs\obj\Release\MihoAdfqs.csproj.CoreCompileInputs.cache
+E:\RimModDev\MihoAdfqs\MihoAdfqs\1.6\Source\MihoAdfqs\obj\Release\MihoAdfqs.dll
+E:\RimModDev\MihoAdfqs\MihoAdfqs\1.6\Source\MihoAdfqs\obj\Release\MihoAdfqs.pdb

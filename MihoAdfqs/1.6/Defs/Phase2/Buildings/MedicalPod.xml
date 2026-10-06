@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="BuildingBase">
+    <defName>MihoPhase2_SupernovaMedicalPod</defName><label>超新星级医疗舱</label>
+    <description>先在“医疗舱管理”中选择操作者搬入药物。能行动的殖民者：选中该殖民者，右键医疗舱选择“入舱治疗”；也可在管理面板中选择本人入舱。倒地患者或尸体：在管理面板中选择目标，安排操作者搬运入舱。草药、医药、闪耀医药每份分别换算1、2、8点，最多200点。通电时自动包扎并每秒为每个受伤部件恢复1点伤势，普通治疗不扣药物点数。面板可选择重建一个缺失部件（16点、6小时）、复活（50点、72小时）或转换种族（25点、立即完成）。手术开始时扣费，断电暂停；弹出会取消手术，已支付点数不返还。</description>
+    <thingClass>MihoAdfqs.Buildings.Medical.Building_MedicalPod</thingClass>
+    <tickerType>Normal</tickerType><size>(2,3)</size><rotatable>false</rotatable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <dontPrint>true</dontPrint>
+    <graphicData>
+      <texPath>Building/MihoPhase2/MedicalPod/MihoPhase2_SupernovaMedicalPodCover_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(3.5556,3.2751)</drawSize>
+      <drawOffset>(0,0,0.0032)</drawOffset>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer><passability>Impassable</passability><fillPercent>1</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell><interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <statBases><MaxHitPoints>4000</MaxHitPoints><WorkToBuild>2000</WorkToBuild><Flammability>0</Flammability></statBases>
+    <costList><MihoPhase2_IndustrialSteelPlate>200</MihoPhase2_IndustrialSteelPlate><MihoPhase2_Polyethylene>400</MihoPhase2_Polyethylene><ComponentSpacer>20</ComponentSpacer></costList>
+    <comps><li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>2200</basePowerConsumption></li><li Class="CompProperties_Flickable"/></comps>
+    <building><isPlayerEjectable>true</isPlayerEjectable></building><designationCategory>MihoPhase2_ImperialBuildings</designationCategory>
+    <researchPrerequisites><li>MihoPhase2_Research_HeavyIndustry</li></researchPrerequisites>
+  </ThingDef>
+  <JobDef><defName>MihoPhase2_ServiceMedicalPod</defName><driverClass>MihoAdfqs.Buildings.Medical.JobDriver_ServiceMedicalPod</driverClass><reportString>正在搬运至医疗舱。</reportString><casualInterruptible>false</casualInterruptible></JobDef>
+  <ThoughtDef><defName>MihoPhase2_ConversionPositive</defName><durationDays>30</durationDays><thoughtClass>Thought_Memory</thoughtClass><stackLimit>1</stackLimit><stages><li><label>同化后的新生活</label><description>我怎么会变成这样……也许还能接受。</description><baseMoodEffect>3</baseMoodEffect></li></stages></ThoughtDef>
+  <ThoughtDef><defName>MihoPhase2_ConversionNegative</defName><durationDays>30</durationDays><thoughtClass>Thought_Memory</thoughtClass><stackLimit>1</stackLimit><stages><li><label>陌生的身体</label><description>我怎么会变成这样……这对吗？</description><baseMoodEffect>-3</baseMoodEffect></li></stages></ThoughtDef>
+</Defs>

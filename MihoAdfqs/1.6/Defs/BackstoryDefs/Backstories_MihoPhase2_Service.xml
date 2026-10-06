@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <BackstoryDef Name="MihoPhase2_ImperialMihoServiceBase" Abstract="True">
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <spawnCategories>
+      <li>MihoPhase2_ImperialMihoService</li>
+    </spawnCategories>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_LeaderGuard</defName>
+    <title>元首亲卫</title>
+    <titleShort>元首亲卫</titleShort>
+    <baseDesc>诞生于特殊科学实验的编号实验体，大多会被送上战场并回传实验数据。少数同类中的最优者能够获得正常公民权，并荣幸地成为元首身旁的得力助手。[PAWN_nameDef]正致力于铲除一切威胁。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_LeaderGuardAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>10</Melee>
+      <Shooting>8</Shooting>
+      <Medicine>15</Medicine>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_DefenseRecruit</defName>
+    <title>国防军新兵</title>
+    <titleShort>国防军新兵</titleShort>
+    <baseDesc>[PAWN_nameDef]是一名刚入伍的新兵。部队里持久的训练，以及完全禁止性欲的环境，都令她难以接受。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_DefenseSoldierAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>8</Melee>
+      <Shooting>8</Shooting>
+      <Medicine>3</Medicine>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_DefenseSoldier</defName>
+    <title>国防军士兵</title>
+    <titleShort>国防军士兵</titleShort>
+    <baseDesc>[PAWN_nameDef]经历了几场大规模战斗，成为一名真正的美狐士兵。只是，她不想再次看见同伴在眼前消逝。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_DefenseSoldierAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>12</Melee>
+      <Shooting>12</Shooting>
+      <Medicine>10</Medicine>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <colleagueDeathPenalty>3</colleagueDeathPenalty>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_DefenseVeteran</defName>
+    <title>国防军老兵</title>
+    <titleShort>国防军老兵</titleShort>
+    <baseDesc>[PAWN_nameDef]已经服役近十年，在战场上摸爬滚打，侥幸没有缺胳膊断腿。她一直不愿治疗陈旧的枪伤，似乎是为了纪念什么。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_DefenseSoldierAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>15</Melee>
+      <Shooting>15</Shooting>
+      <Medicine>12</Medicine>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <oldGunshot>true</oldGunshot>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_DefenseNCO</defName>
+    <title>国防军士官</title>
+    <titleShort>国防军士官</titleShort>
+    <baseDesc>作为关键人物，[PAWN_nameDef]总会在战场上被确定为优先目标。她对部下的指挥炉火纯青，是一位非常优秀的指挥官。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_DefenseNCOAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>5</Melee>
+      <Shooting>5</Shooting>
+      <Intellectual>15</Intellectual>
+      <Social>10</Social>
+      <Medicine>3</Medicine>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <commander>true</commander>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_SpecialForcesSoldier</defName>
+    <title>特战部队士兵</title>
+    <titleShort>特战士兵</titleShort>
+    <baseDesc>[PAWN_nameDef]服役于帝国夜战部队，很少参与正面战事，平常负责反恐和后勤工作。不过，一旦接到命令，她所在的部队总能给敌人带来真正的恐惧。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_SpecialForcesAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>15</Melee>
+      <Shooting>15</Shooting>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <shotTime>0.5</shotTime>
+        <aimTime>0.25</aimTime>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_ResearchStaff</defName>
+    <title>帝国科研站工作人员</title>
+    <titleShort>科研站员工</titleShort>
+    <baseDesc>[PAWN_nameDef]曾工作于帝国科研站。因为打翻了某位研究员的重要实验成果，她被对方一边哀嚎着一边踢出了科研站。为了避免报复，她被迫来到边缘世界谋生。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_ResearchStaffAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>5</Intellectual>
+      <Crafting>3</Crafting>
+      <Medicine>3</Medicine>
+      <Plants>3</Plants>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_Scientist</defName>
+    <title>帝国科学家</title>
+    <titleShort>帝国科学家</titleShort>
+    <baseDesc>[PAWN_nameDef]工作于帝国科研站。这次来到边缘世界，本是为了采集实验数据，以及抓捕相关的“实验材料”。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_ScientistAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>15</Intellectual>
+      <Crafting>4</Crafting>
+      <Medicine>2</Medicine>
+      <Plants>3</Plants>
+      <Social>-5</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoServiceBase">
+    <defName>MihoPhase2_Adulthood_OrbitalDropTrooper</defName>
+    <title>帝国轨道空降部队士兵</title>
+    <titleShort>轨道空降兵</titleShort>
+    <baseDesc>[PAWN_nameDef]是帝国的骄傲、帝国的精锐，也是帝国解决问题的最终手段。</baseDesc>
+    <spawnCategories>
+      <li>MihoPhase2_OrbitalDropTrooperAdulthood</li>
+    </spawnCategories>
+    <skillGains>
+      <Intellectual>3</Intellectual>
+      <Shooting>20</Shooting>
+      <Melee>20</Melee>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <shotTime>0.25</shotTime>
+        <aimTime>0.25</aimTime>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+</Defs>

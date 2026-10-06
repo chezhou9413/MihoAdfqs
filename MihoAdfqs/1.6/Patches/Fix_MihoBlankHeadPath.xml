@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- 前置米狐的两个头型引用了不存在的Average_Normal，使用其已有的透明Normal头图。 -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/HeadTypeDef[defName="Average_MihoAM" or defName="Average_MihoAF"]/graphicPath</xpath>
+    <value>
+      <graphicPath>Miho/HeadBlank/Normal</graphicPath>
+    </value>
+  </Operation>
+</Patch>

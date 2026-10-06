@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- 按完整 512×512 原图配置枪口；坐标包含透明边缘，随库统一计算姿态和显示尺寸。 -->
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Weapon_AshTwelve"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.89453125,0.06835938)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Weapon_BeamFlamethrower"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.94726562,0.05273438)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_HKFourOneSix"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.93750000,0.05273438)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_LugerP08_Charge"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.91601562,0.06835938)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_MG42_Charge"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.96289062,0.03906250)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_AA12_Def"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.91210938,0.06054688)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.93750000,0.06835938)</position>
+      </li>
+      <li Class="MihoAdfqs.Combat.Muzzles.UnderbarrelMuzzleExtension">
+        <offset>(-0.05859375,0.21679688)</offset>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.93750000,0.06835938)</position>
+      </li>
+      <li Class="MihoAdfqs.Combat.Muzzles.UnderbarrelMuzzleExtension">
+        <offset>(-0.02343750,0.16601562)</offset>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMPrecisionRifle"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.90234375,0.08593750)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMMarksmanRifle"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.90820312,0.08203125)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaHeavyLauncher"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.89648438,0.10156250)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaLaserRifle"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.85937500,0.09375000)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USPSuppressed"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.93554688,0.05078125)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USP"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.61328125,0.32031250)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_G36_Def"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.96289062,0.05859375)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_MP7_Def"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.88867188,0.04882812)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR1_Def"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.84375000,0.14648438)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR50_Def"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.97070312,0.04882812)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_Panzerfaust"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.93554688,0.06054688)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_Pzb38_Charge"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.95117188,0.04492188)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Weapon_Q11Improved"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.93750000,0.06835938)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Gun_Stg44_Charge"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.96093750,0.07421875)</position>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Weapon_type10Gun"]</xpath>
+    <value>
+      <li Class="WeaponMuzzleFramework.Configuration.MuzzleExtension">
+        <position>(0.94140625,0.04492188)</position>
+      </li>
+    </value>
+  </Operation>
+</Patch>

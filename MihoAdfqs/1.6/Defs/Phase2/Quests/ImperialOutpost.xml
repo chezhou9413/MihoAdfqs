@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SitePartDef ParentName="Outpost">
+    <defName>MihoPhase2_ImperialOutpost</defName>
+    <label>第三帝国前哨</label>
+    <description>需要殖民地协助防御的第三帝国据点。</description>
+    <approachOrderString>协防{0}</approachOrderString>
+    <approachingReportString>正在前往协防{0}。</approachingReportString>
+    <arrivedLetter>你已到达第三帝国前哨。联合进攻部队正在逼近，请协助守军防御。</arrivedLetter>
+    <arrivedLetterDef>NeutralEvent</arrivedLetterDef>
+    <considerEnteringAsAttack>false</considerEnteringAsAttack>
+    <tags Inherit="False"><li>MihoPhase2_ImperialOutpost</li></tags>
+  </SitePartDef>
+  <GenStepDef>
+    <defName>MihoPhase2_ImperialOutpost</defName>
+    <linkWithSite>MihoPhase2_ImperialOutpost</linkWithSite>
+    <order>400</order><genStep Class="GenStep_Outpost" />
+  </GenStepDef>
+  <GenStepDef>
+    <defName>MihoPhase2_ImperialOutpostPower</defName>
+    <linkWithSite>MihoPhase2_ImperialOutpost</linkWithSite>
+    <order>401</order><genStep Class="GenStep_Power" />
+  </GenStepDef>
+</Defs>

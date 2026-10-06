@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DesignationCategoryDef>
+    <defName>MihoPhase2_ImperialBuildings</defName>
+    <label>美狐第三帝国建筑</label>
+    <description>美狐第三帝国的生产、农业、医疗与防御建筑。</description>
+    <order>750</order>
+  </DesignationCategoryDef>
+</Defs>

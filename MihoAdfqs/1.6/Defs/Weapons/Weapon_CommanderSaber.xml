@@ -21,7 +21,7 @@
             <drawSize>(0.8, 0.8)</drawSize>
         </graphicData>
 
-        <soundInteract>Interact_Melee</soundInteract>
+        <soundInteract>Metal_Drop</soundInteract>
 
         <!-- 制作成本 -->
         <costList>

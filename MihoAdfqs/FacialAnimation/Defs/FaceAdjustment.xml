@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <FacialAnimation.FaceAdjustmentDef>
+    <defName>MihoPhase2_FaceAdjustment</defName>
+    <RaceName>Alien_Miho</RaceName>
+    <!-- 与米狐 HAR 头部附件的 0.75 × 1.5 网格尺寸一致。 -->
+    <Size>(1.125,1.125)</Size>
+  </FacialAnimation.FaceAdjustmentDef>
+</Defs>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <MessageTypeDef><defName>MihoPhase2_SilentSupport</defName></MessageTypeDef>
+  <JobDef>
+    <defName>MihoPhase2_EvadeFire</defName>
+    <driverClass>MihoAdfqs.Phase2.CombatAI.JobDriver_ImperialEvade</driverClass>
+    <reportString>正在避开来袭火力。</reportString>
+    <casualInterruptible>false</casualInterruptible>
+    <checkOverrideOnDamage>Never</checkOverrideOnDamage>
+    <alwaysShowWeapon>true</alwaysShowWeapon>
+  </JobDef>
+  <ThingDef ParentName="PawnFlyerBase">
+    <defName>MihoPhase2_ImperialRoll</defName>
+    <label>翻滚中的帝国士兵</label>
+    <thingClass>MihoAdfqs.Phase2.Helmer.PawnFlyer_HelmerRoll</thingClass>
+    <pawnFlyer><flightDurationMin>0.5</flightDurationMin><flightSpeed>12</flightSpeed><heightFactor>0</heightFactor></pawnFlyer>
+  </ThingDef>
+  <ThingDef ParentName="DropPodIncoming">
+    <defName>MihoPhase2_CombatSupportIncoming</defName>
+    <label>帝国战备空投</label>
+    <thingClass>MihoAdfqs.Phase2.Orbital.Skyfaller_ImperialCombatDrop</thingClass>
+    <skyfaller><ticksToImpactRange>120</ticksToImpactRange><hitRoof>false</hitRoof></skyfaller>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_Fortress30Base">
+    <defName>MihoPhase2_CombatFortress30mm</defName>
+    <label>战备帝国堡垒（30毫米）</label>
+    <description>战备空投堡垒，自供能，携带500发总弹药；首个弹仓已装填，后续装填耗时5秒。落地120秒后撤收，不能补给、拆卸、回收或换炮。</description>
+    <thingClass>MihoAdfqs.Buildings.Defense.Building_CombatFortress</thingClass>
+    <designationCategory IsNull="True"/><minifiedDef IsNull="True"/>
+    <comps Inherit="False">
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>战备弹药</fuelLabel><fuelGizmoLabel>战备弹药</fuelGizmoLabel><outOfFuelMessage>弹药耗尽</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter><fuelCapacity>500</fuelCapacity><initialFuelPercent>1</initialFuelPercent><fuelMultiplier>1</fuelMultiplier>
+        <minimumFueledThreshold>1</minimumFueledThreshold><consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelConsumptionRate>0</fuelConsumptionRate><initialAllowAutoRefuel>false</initialAllowAutoRefuel>
+      </li>
+    </comps>
+    <building><deconstructible>false</deconstructible><claimable>false</claimable></building>
+    <costList Inherit="False"/><researchPrerequisites Inherit="False"/>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_Fortress88Base">
+    <defName>MihoPhase2_CombatFortress88mm</defName>
+    <label>战备帝国堡垒（88毫米）</label>
+    <description>战备空投堡垒，自供能，携带500发总弹药；50发弹仓，后续装填耗时5秒。落地120秒后撤收，不能补给、拆卸、回收或换炮。</description>
+    <thingClass>MihoAdfqs.Buildings.Defense.Building_CombatFortress</thingClass>
+    <designationCategory IsNull="True"/><minifiedDef IsNull="True"/>
+    <comps Inherit="False">
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>战备弹药</fuelLabel><fuelGizmoLabel>战备弹药</fuelGizmoLabel><outOfFuelMessage>弹药耗尽</outOfFuelMessage>
+        <fuelFilter><thingDefs><li>Steel</li></thingDefs></fuelFilter><fuelCapacity>500</fuelCapacity><initialFuelPercent>1</initialFuelPercent><fuelMultiplier>1</fuelMultiplier>
+        <minimumFueledThreshold>1</minimumFueledThreshold><consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelConsumptionRate>0</fuelConsumptionRate><initialAllowAutoRefuel>false</initialAllowAutoRefuel>
+      </li>
+    </comps>
+    <building><deconstructible>false</deconstructible><claimable>false</claimable></building>
+    <costList Inherit="False"/><researchPrerequisites Inherit="False"/>
+  </ThingDef>
+</Defs>

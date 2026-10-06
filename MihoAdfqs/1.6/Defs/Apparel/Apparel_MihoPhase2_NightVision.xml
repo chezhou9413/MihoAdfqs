@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelHeadArmorBase">
+    <defName>MihoPhase2_PSOStandardNVGHelmet</defName>
+    <label>PSO量产型夜视仪头盔</label>
+    <description>主要应用于密林或夜战环境的特战部队通用头盔。它由“TU10”系统简化而来，以部分视距性能换取稳定量产。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/PSOStandardNVGHelmet/MihoPhase2_PSOStandardNVGHelmet</texPath>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForces</researchPrerequisite>
+      <workAmount>1800</workAmount>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>80</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>5</MihoPhase2_Polyethylene>
+      <ComponentIndustrial>8</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>1200</MaxHitPoints>
+      <Mass>2</Mass>
+      <ArmorRating_Sharp>1.40</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.10</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.40</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+    <comps>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_ApparelAutoTend</hediff>
+        <part>Head</part>
+      </li>
+    </comps>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/PSOStandardNVGHelmet/MihoPhase2_PSOStandardNVGHelmet</wornGraphicPath>
+      <tags>
+        <li>MihoPhase2_SpecialForces</li>
+        <li>MihoPhase2_Guard</li>
+      </tags>
+    </apparel>
+    <costStuffCount>200</costStuffCount>
+    <stuffCategories Inherit="False">
+      <li>Metallic</li>
+    </stuffCategories>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Steel</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_ApparelHeadArmorBase">
+    <defName>MihoPhase2_PSOSpecialNVGHelmet</defName>
+    <label>PSO专用型夜视仪头盔</label>
+    <description>专为“卡列维”小队定制的二代夜视系统，集成生物电神经直连以降低视差延迟。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/PSOSpecialNVGHelmet/MihoPhase2_PSOSpecialNVGHelmet</texPath>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForces</researchPrerequisite>
+      <workAmount>2600</workAmount>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>100</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>20</MihoPhase2_Polyethylene>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>4</ComponentSpacer>
+    </costList>
+    <statBases>
+      <MaxHitPoints>2800</MaxHitPoints>
+      <Mass>2</Mass>
+      <ArmorRating_Sharp>1.50</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.20</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.20</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <equippedStatOffsets>
+      <MeleeDodgeChance>3</MeleeDodgeChance>
+      <ShootingAccuracyPawn>5</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+    <comps>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_ApparelAutoTend</hediff>
+        <part>Head</part>
+      </li>
+      <li Class="MihoAdfqs.Combat.Armor.CompProperties_ArmorReserve">
+        <capacity>500</capacity>
+      </li>
+    </comps>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/PSOSpecialNVGHelmet/MihoPhase2_PSOSpecialNVGHelmet</wornGraphicPath>
+      <tags>
+        <li>MihoPhase2_SpecialForces</li>
+        <li>MihoPhase2_Guard</li>
+      </tags>
+    </apparel>
+    <costStuffCount>400</costStuffCount>
+    <stuffCategories Inherit="False">
+      <li>Metallic</li>
+    </stuffCategories>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Steel</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

@@ -104,7 +104,8 @@
     <tradeTags>
       <li>MihoThirdEmpireCoat</li>
     </tradeTags>
-    <apparel>
+        <apparel>
+            <shellRenderedBehindHead>true</shellRenderedBehindHead>
       <bodyPartGroups>
         <li>Torso</li>
         <li>Shoulders</li>
@@ -127,4 +128,3 @@
     </apparel>
   </ThingDef>
 </Defs>
-

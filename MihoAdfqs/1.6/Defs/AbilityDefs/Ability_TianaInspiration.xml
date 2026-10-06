@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityDef>
+    <defName>MihoPhase2_TianaInspirationAbility</defName>
+    <gizmoClass>MihoAdfqs.Phase2.UI.Command_ImperialAbility</gizmoClass>
+    <label>我有个主意！</label>
+    <description>米……诶，脑子里，突然冒出了一些奇奇怪怪的想法！开启后持续一天：提亚娜的工作速度变为两倍，期间制作出的服装和武器固定为传奇品质。</description>
+    <iconPath>UI/MihoPhase2/Abilities/MihoPhase2_TianaInspiration</iconPath>
+    <targetRequired>false</targetRequired>
+    <displayGizmoWhileUndrafted>true</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>false</disableGizmoWhileUndrafted>
+    <cooldownTicksRange>420000</cooldownTicksRange>
+    <statBases>
+      <Ability_Duration>60000</Ability_Duration>
+    </statBases>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <warmupTime>0</warmupTime>
+      <range>-1</range>
+      <onlyManualCast>true</onlyManualCast>
+      <targetParams>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class="CompProperties_AbilityGiveHediff">
+        <compClass>CompAbilityEffect_GiveHediff</compClass>
+        <hediffDef>MihoPhase2_TianaInspiration</hediffDef>
+        <onlyApplyToSelf>true</onlyApplyToSelf>
+        <replaceExisting>true</replaceExisting>
+      </li>
+    </comps>
+  </AbilityDef>
+</Defs>

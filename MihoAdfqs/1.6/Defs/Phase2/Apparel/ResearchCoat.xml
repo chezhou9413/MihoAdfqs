@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelClothingBase">
+    <defName>MihoPhase2_ResearchCoat</defName>
+    <label>科学院专用研究服</label>
+    <description>科学院专用研究服。帝国民用服装。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/ResearchCoat/MihoPhase2_ResearchCoat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>700</MaxHitPoints>
+      <WorkToMake>400</WorkToMake>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList>
+      <RawPosFlower>40</RawPosFlower>
+    </costList>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>220</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_ResearchCoatEffect</hediff>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <CarryingCapacity>10</CarryingCapacity>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups Inherit="False">
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/ResearchCoat/MihoPhase2_ResearchCoat</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Civilian</li>
+        <li>MihoPhase2_Research</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Cloth</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <HediffDef>
+    <defName>MihoPhase2_ResearchCoatEffect</defName>
+    <label>科学院专用研究服</label>
+    <description>研究服提高全局工作速度和研究速度。脱下服装后效果消失。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+          <ResearchSpeed>2</ResearchSpeed>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

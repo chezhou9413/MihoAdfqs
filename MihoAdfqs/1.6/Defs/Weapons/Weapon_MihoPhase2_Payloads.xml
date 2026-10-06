@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <DamageDef>
+    <defName>MihoPhase2_NaniteDamage</defName>
+    <label>纳米侵蚀</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <hediff>MihoPhase2_NaniteInjury</hediff>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+  </DamageDef>
+  <HediffDef ParentName="InjuryBase">
+    <defName>MihoPhase2_NaniteInjury</defName>
+    <label>纳米侵蚀伤</label>
+    <labelNoun>纳米侵蚀伤</labelNoun>
+    <description>纳米机械造成的组织损伤。同一部位的持续侵蚀合并到这一处伤口；再次侵蚀会破坏包扎。毒气消退后，伤口仍需治疗或自然愈合。</description>
+    <hediffClass>MihoAdfqs.Combat.Projectiles.Hediff_NaniteInjury</hediffClass>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>已包扎</labelTendedWell><labelTendedWellInner>已缝合</labelTendedWellInner><labelSolidTendedWell>已处理</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter"><infectionChance>0.15</infectionChance></li>
+      <li Class="HediffCompProperties_GetsPermanent"><permanentLabel>侵蚀疤痕</permanentLabel></li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity><averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.06</bleedRate><canMerge>true</canMerge>
+      <destroyedLabel>侵蚀殆尽</destroyedLabel><destroyedOutLabel>侵蚀殆尽</destroyedOutLabel>
+    </injuryProps>
+  </HediffDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MihoPhase2_Projectile_SupernovaHeavyHE</defName><label>超新星高爆弹</label>
+    <description>在落点6×6区域内对每个目标结算40点爆炸伤害。范围内友军同样会受伤。</description>
+    <thingClass>MihoAdfqs.Combat.Projectiles.Projectile_AreaPayload</thingClass>
+    <graphicData><texPath>Thing/MihoPhase2/Projectiles/ImperialShell</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>TransparentPostLight</shaderType><drawSize>(0.8, 1.15)</drawSize></graphicData>
+    <projectile><damageDef>Bomb</damageDef><damageAmountBase>40</damageAmountBase><armorPenetrationBase>1.5</armorPenetrationBase><speed>100</speed></projectile>
+    <modExtensions><li Class="MihoAdfqs.Combat.Projectiles.AreaPayload"><width>6</width></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MihoPhase2_Projectile_SupernovaNanite</defName><label>纳米毒气弹</label>
+    <description>落点5×5区域内的人员受到30秒纳米侵蚀，每秒对所有仍存在的身体部件造成2点伤害，无视护甲；没有瞬间爆炸伤害。</description>
+    <thingClass>MihoAdfqs.Combat.Projectiles.Projectile_AreaPayload</thingClass>
+    <graphicData><texPath>Thing/MihoPhase2/Projectiles/ImperialShell</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>TransparentPostLight</shaderType><drawSize>(0.8, 1.15)</drawSize><color>(0.45, 1, 0.55, 1)</color></graphicData>
+    <projectile><damageDef>Deterioration</damageDef><damageAmountBase>0</damageAmountBase><speed>100</speed></projectile>
+    <modExtensions><li Class="MihoAdfqs.Combat.Projectiles.AreaPayload"><width>5</width><hediff>MihoPhase2_NaniteExposure</hediff></li></modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MihoPhase2_Projectile_SupernovaRadiation</defName><label>辐射尘埃弹</label>
+    <description>落点4×4区域内的人员受到30秒辐射尘埃沾染，每秒增加1%毒性积累，无视护甲；没有瞬间爆炸伤害。</description>
+    <thingClass>MihoAdfqs.Combat.Projectiles.Projectile_AreaPayload</thingClass>
+    <graphicData><texPath>Thing/MihoPhase2/Projectiles/ImperialShell</texPath><graphicClass>Graphic_Single</graphicClass><shaderType>TransparentPostLight</shaderType><drawSize>(0.8, 1.15)</drawSize><color>(1, 0.88, 0.35, 1)</color></graphicData>
+    <projectile><damageDef>Deterioration</damageDef><damageAmountBase>0</damageAmountBase><speed>100</speed></projectile>
+    <modExtensions><li Class="MihoAdfqs.Combat.Projectiles.AreaPayload"><width>4</width><hediff>MihoPhase2_RadiationExposure</hediff></li></modExtensions>
+  </ThingDef>
+  <HediffDef>
+    <defName>MihoPhase2_RadiationExposure</defName><label>辐射尘埃沾染</label>
+    <description>沾染的尘埃在三十秒内每秒增加1%毒性积累，无视护甲。</description>
+    <hediffClass>MihoAdfqs.Combat.Projectiles.Hediff_RadiationExposure</hediffClass><initialSeverity>1</initialSeverity><isBad>true</isBad>
+    <comps><li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>1800</disappearsAfterTicks></li></comps>
+  </HediffDef>
+  <HediffDef>
+    <defName>MihoPhase2_NaniteExposure</defName><label>纳米毒气侵蚀</label><description>三十秒内每秒对所有仍存在的身体部件造成两点伤害。同一部位的侵蚀伤合并累计；重复中弹刷新持续时间，不叠加每秒伤害。</description>
+    <hediffClass>MihoAdfqs.Combat.Projectiles.Hediff_NaniteExposure</hediffClass><initialSeverity>1</initialSeverity><maxSeverity>1</maxSeverity><isBad>true</isBad>
+    <comps><li Class="HediffCompProperties_Disappears"><disappearsAfterTicks>1800</disappearsAfterTicks></li></comps>
+  </HediffDef>
+</Defs>

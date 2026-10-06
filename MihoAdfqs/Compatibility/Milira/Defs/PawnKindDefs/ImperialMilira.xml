@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 帝国米莉拉沿用米莉拉种族基础生成规则，并切换为第三帝国姓名、背景与异种型。 -->
+  <PawnKindDef Name="MihoPhase2_ImperialMiliraKindBase" ParentName="Milira_PawnBase">
+    <defName>MihoPhase2_ImperialMilira</defName>
+    <label>帝国米莉拉</label>
+    <combatPower>120</combatPower>
+    <itemQuality>Good</itemQuality>
+    <isFighter>false</isFighter>
+    <defaultFactionType>MihoThirdEmpire</defaultFactionType>
+    <fixedChildBackstories>
+      <li>MihoPhase2_Childhood_ImperialMilira</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_CivilianMilira</li>
+      <li>MihoPhase2_Adulthood_FoolishMilira</li>
+      <li>MihoPhase2_Adulthood_MiliraChef</li>
+      <li>MihoPhase2_Adulthood_MiliraHomebody</li>
+    </fixedAdultBackstories>
+    <nameMaker>NamerPerson_MihoThirdEmpire_GermanCN</nameMaker>
+    <nameMakerFemale>NamerPerson_MihoThirdEmpire_GermanCN</nameMakerFemale>
+    <weaponMoney>
+      <min>0</min>
+      <max>0</max>
+    </weaponMoney>
+    <weaponTags Inherit="False" />
+    <apparelMoney>
+      <min>1000</min>
+      <max>10000</max>
+    </apparelMoney>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_Civilian</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.35</apparelAllowHeadgearChance>
+    <inventoryOptions Inherit="False" />
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Xeno_MihoPhase2_ImperialMilira>1</Xeno_MihoPhase2_ImperialMilira>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MihoPhase2_ImperialMiliraKindBase">
+    <defName>MihoPhase2_ImperialMiliraRaider</defName>
+    <label>帝国米莉拉战士</label>
+    <combatPower>1500</combatPower>
+    <isFighter>true</isFighter>
+    <itemQuality>Excellent</itemQuality>
+  </PawnKindDef>
+</Defs>

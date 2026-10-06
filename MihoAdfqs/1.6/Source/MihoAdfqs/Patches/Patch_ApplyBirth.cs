@@ -5,25 +5,15 @@ using Verse;
 
 namespace MihoAdfqs.Patches
 {
+    //新生儿请求使用美狐原版出生定义，避开元首的年龄和身份设置。
     [HarmonyPatch(typeof(PawnGenerator), nameof(PawnGenerator.GeneratePawn), new Type[] { typeof(PawnGenerationRequest) })]
     public static class Patch_BirthKindFix
     {
+        //只替换新生儿的种类，保留原版零岁、遗传基因与亲子关系请求。
         public static void Prefix(ref PawnGenerationRequest request)
         {
-            // 检查是否为新生儿
-            if (request.AllowedDevelopmentalStages == DevelopmentalStage.Newborn)
-            {
-                // 检查当前的 KindDef
-                if (request.KindDef != null && request.KindDef == MihoDefRef.Miho_adfqs)
-                {
-                    // 替换为目标 KindDef
-                    var targetKind = DefDatabase<PawnKindDef>.GetNamed("Miho_PlayerColonist", false);
-                    if (targetKind != null)
-                    {
-                        request.KindDef = targetKind;
-                    }
-                }
-            }
+            if (request.AllowedDevelopmentalStages.Newborn() && request.KindDef == MihoDefRef.Miho_adfqs)
+                request.KindDef = DefDatabase<PawnKindDef>.GetNamed("Miho_PlayerColonistBorn");
         }
     }
 }

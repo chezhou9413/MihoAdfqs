@@ -109,6 +109,7 @@
 
         <!-- 服装定义：重型盔甲，覆盖躯干、肩膀、手臂和腿部 -->
         <apparel>
+            <shellRenderedBehindHead>true</shellRenderedBehindHead>
             <bodyPartGroups>
                 <li>Torso</li>
                 <li>Neck</li>

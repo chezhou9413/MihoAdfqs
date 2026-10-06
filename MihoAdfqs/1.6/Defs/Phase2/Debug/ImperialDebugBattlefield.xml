@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <WorldObjectDef>
+    <defName>MihoPhase2_DebugBattlefield</defName>
+    <label>帝国战斗测试场</label>
+    <description>用于观察第三帝国精英部队与原版帝国士兵交战的独立空白地图，战备支援兵仅属于第三帝国。</description>
+    <worldObjectClass>MapParent</worldObjectClass>
+    <texture>World/WorldObjects/Ambush</texture>
+    <mapGenerator>MihoPhase2_DebugBattlefieldGenerator</mapGenerator>
+  </WorldObjectDef>
+  <MapGeneratorDef>
+    <defName>MihoPhase2_DebugBattlefieldGenerator</defName>
+    <genSteps>
+      <li>MihoPhase2_DebugFlatGround</li>
+    </genSteps>
+  </MapGeneratorDef>
+  <GenStepDef>
+    <defName>MihoPhase2_DebugFlatGround</defName>
+    <order>210</order>
+    <genStep Class="MihoAdfqs.Phase2.DebugTools.GenStep_ImperialDebugField" />
+  </GenStepDef>
+</Defs>

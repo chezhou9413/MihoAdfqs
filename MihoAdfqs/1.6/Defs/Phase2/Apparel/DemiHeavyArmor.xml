@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelArmorBase">
+    <defName>MihoPhase2_DemiHeavyArmor</defName>
+    <label>德米重型全身防弹盔甲</label>
+    <description>德米重型全身防弹盔甲。帝国制式装备。抵消值750，仅可使用插板修复。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/DemiHeavyArmor/MihoPhase2_DemiHeavyArmor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>3600</MaxHitPoints>
+      <WorkToMake>3400</WorkToMake>
+      <Mass>8</Mass>
+      <ArmorRating_Sharp>1.6</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.4</ArmorRating_Blunt>
+      <ArmorRating_Heat>1.4</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>200</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>60</MihoPhase2_Polyethylene>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForces</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>FabricationBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="MihoAdfqs.Combat.Armor.CompProperties_ArmorReserve">
+        <capacity>750</capacity>
+      </li>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_ApparelAutoTend</hediff>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MeleeDodgeChance>5</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/DemiHeavyArmor/MihoPhase2_DemiHeavyArmor</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Guard</li>
+      </tags>
+    </apparel>
+    <costStuffCount>400</costStuffCount>
+    <stuffCategories Inherit="False">
+      <li>Metallic</li>
+    </stuffCategories>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Steel</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

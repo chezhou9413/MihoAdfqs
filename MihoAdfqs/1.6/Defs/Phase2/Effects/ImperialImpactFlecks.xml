@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 尘团先快速向外喷射，再减速扩散消失。 -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>MihoPhase2_OrbitalDust</defName>
+    <graphicData>
+      <texPath>Things/Mote/DustPuff</texPath>
+      <renderInstanced>true</renderInstanced>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <fadeInTime>0.025</fadeInTime>
+    <solidTime>0.35</solidTime>
+    <fadeOutTime>1.2</fadeOutTime>
+    <growthRate>1.2</growthRate>
+    <speedPerTime>-2</speedPerTime>
+  </FleckDef>
+  <!-- 碎石沿抛物线飞起，落地后短暂滑行并淡出。 -->
+  <FleckDef ParentName="FleckBase_Thrown">
+    <defName>MihoPhase2_OrbitalDebris</defName>
+    <graphicData>
+      <texPath>Things/Mote/Stone</texPath>
+    </graphicData>
+    <altitudeLayer>MoteOverhead</altitudeLayer>
+    <solidTime>0.75</solidTime>
+    <fadeOutTime>0.45</fadeOutTime>
+    <archHeight>0.6~1.6</archHeight>
+    <archDuration>0.65</archDuration>
+    <speedPerTime>-3</speedPerTime>
+    <collide>true</collide>
+  </FleckDef>
+</Defs>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 二期帝国美狐单位共用生成规则，具体职业只负责装备池与成年背景。 -->
+  <PawnKindDef Name="MihoPhase2_ImperialMihoKindBase" ParentName="MihoMilBase" Abstract="True">
+    <defaultFactionType>MihoThirdEmpire</defaultFactionType>
+    <fixedGender>Female</fixedGender>
+    <minGenerationAge>23</minGenerationAge>
+    <maxGenerationAge>60</maxGenerationAge>
+    <backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+    <fixedChildBackstories>
+      <li>MihoPhase2_Childhood_CountryMiho</li>
+      <li>MihoPhase2_Childhood_WarOrphan</li>
+      <li>MihoPhase2_Childhood_UrbanPlanet</li>
+      <li>MihoPhase2_Childhood_WealthyDaughter</li>
+      <li>MihoPhase2_Childhood_TaxiBorn</li>
+      <li>MihoPhase2_Childhood_IdolLoveChild</li>
+      <li>MihoPhase2_Childhood_FoolishMiho</li>
+      <li>MihoPhase2_Childhood_PainfulPast</li>
+      <li>MihoPhase2_Childhood_BrattyMiho</li>
+      <li>MihoPhase2_Childhood_GiftedMiho</li>
+      <li>MihoPhase2_Childhood_NeighborMiho</li>
+    </fixedChildBackstories>
+    <nameMaker>NamerPerson_MihoThirdEmpire_GermanCN</nameMaker>
+    <nameMakerFemale>NamerPerson_MihoThirdEmpire_GermanCN</nameMakerFemale>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <!-- 内衬属于每套帝国美狐服装的必穿部分，不参与随机预算抽取。 -->
+    <apparelRequired Inherit="False">
+      <li>Miho_Apparel_Under_Industrial</li>
+    </apparelRequired>
+    <techHediffsMoney>
+      <min>0</min>
+      <max>0</max>
+    </techHediffsMoney>
+    <techHediffsTags Inherit="False" />
+    <techHediffsChance>0</techHediffsChance>
+    <inventoryOptions Inherit="False" />
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Xeno_MihoPhase2_ImperialMiho>1</Xeno_MihoPhase2_ImperialMiho>
+      </xenotypeChances>
+    </xenotypeSet>
+    <useFactionXenotypes>false</useFactionXenotypes>
+  </PawnKindDef>
+
+  <!-- 军事单位共用制式武器预算，具体兵种覆盖服装或超新星武器池。 -->
+  <PawnKindDef Name="MihoPhase2_ImperialMihoMilitaryKindBase" ParentName="MihoPhase2_ImperialMihoKindBase" Abstract="True">
+    <isFighter>true</isFighter>
+    <weaponMoney>
+      <min>1000</min>
+      <max>20000</max>
+    </weaponMoney>
+    <weaponTags Inherit="False">
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+    </weaponTags>
+    <apparelMoney>
+      <min>3000</min>
+      <max>20000</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+  </PawnKindDef>
+</Defs>

@@ -1,125 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
-    <FactionDef ParentName="OutlanderFactionBase">
-        <defName>MihoThirdEmpire</defName>
-        <label>美狐第三帝国</label>
-        <fixedName>美狐第三帝国</fixedName>
-        <description>一个组织严密、军事化程度极高的势力，会在星球上建立据点并与玩家保持友好关系。</description>
-
-        <!-- 参考原版帝国（第三帝国/贵族体系）风格：高科技、会生成据点 -->
-        <techLevel>Industrial</techLevel>
-
-        <!-- 必定存在且会生成据点 -->
-        <requiredCountAtGameStart>1</requiredCountAtGameStart>
-        <canMakeRandomly>true</canMakeRandomly>
-        <hidden>false</hidden>
-
-        <!-- 让派系在“世界创建-派系选择/数量”界面可见且可调 -->
-        <displayInFactionSelection>true</displayInFactionSelection>
-        <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
-        <configurationListOrderPriority>70</configurationListOrderPriority>
-        <categoryTag>Outlander</categoryTag>
-        <listOrderPriority>30</listOrderPriority>
-
-        <factionIconPath>Fc/enp</factionIconPath>
-        <!-- 避免世界生成派系时 NameGenerator 取不到命名器导致空引用 -->
-        <factionNameMaker>NamerFactionOutlander</factionNameMaker>
-
-        <!-- 让该派系商队携带自定义武器清单（总计 5~10 把） -->
-        <caravanTraderKinds>
-            <li>Caravan_MihoThirdEmpire_Weapons</li>
-            <li>Caravan_MihoThirdEmpire_SoapRecruit</li>
-        </caravanTraderKinds>
-
-        <!-- 让该派系“据点/基地”交易也出售同一批武器（总计 5~10 把） -->
-        <baseTraderKinds>
-            <li>Base_MihoThirdEmpire_Weapons</li>
-        </baseTraderKinds>
-
-        <!-- 生成据点/在世界地图扩张 -->
-        <settlementGenerationWeight>1</settlementGenerationWeight>
-        <maxCountAtGameStart>1</maxCountAtGameStart>
-
-        <!-- 据点命名：使用自定义规则包（RulePackDef） -->
-        <settlementNameMaker>MihoThirdEmpire_SettlementNames_GermanCities</settlementNameMaker>
-
-        <!-- 外交倾向：尽量避免与玩家敌对 -->
-        <permanentEnemy>false</permanentEnemy>
-
-        <!-- 1.6 要求：类人派系必须提供背景故事类别 -->
-        <humanlikeFaction>true</humanlikeFaction>
-        <backstoryFilters>
-            <li>
-                <categories>
-                    <li>Outlander</li>
-                </categories>
-            </li>
-        </backstoryFilters>
-
-        <!-- 1.6 要求：只要有 pawnGroupMakers，就必须提供 maxPawnCostPerTotalPointsCurve -->
-        <maxPawnCostPerTotalPointsCurve>
-            <points>
-                <li>(0, 700)</li>
-                <li>(1000, 1000)</li>
-                <li>(2000, 2000)</li>
-                <li>(10000, 10000)</li>
-            </points>
-        </maxPawnCostPerTotalPointsCurve>
-
-        <raidLootValueFromPointsCurve>
-            <points>
-                <li>(35, 15)</li>
-                <li>(100, 120)</li>
-                <li>(1000, 500)</li>
-                <li>(2000, 800)</li>
-                <li>(4000, 1000)</li>
-            </points>
-        </raidLootValueFromPointsCurve>
-
-        <leaderTitle>元首</leaderTitle>
-        <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
-        <fixedLeaderKinds>
-            <li>Miho_SpecialForces</li>
-        </fixedLeaderKinds>
-
-        <pawnGroupMakers Inherit="False">
-            <!-- 据点生成/驻军 -->
-            <li>
-                <kindDef>Settlement</kindDef>
-                <commonality>100</commonality>
-                <options>
-                    <Miho_SSTrader>3</Miho_SSTrader>
-                    <Miho_SpecialForces>10</Miho_SpecialForces>
-                </options>
-            </li>
-            <li>
-                <kindDef>Combat</kindDef>
-                <commonality>100</commonality>
-                <options>
-                    <Miho_SS>10</Miho_SS>
-                    <Miho_SpecialForces>3</Miho_SpecialForces>
-                </options>
-            </li>
-            <li>
-                <kindDef>Trader</kindDef>
-                <commonality>100</commonality>
-                <traders>
-                    <Miho_SSTrader>4</Miho_SSTrader>
-                </traders>
-                <carriers>
-                    <Muffalo>10</Muffalo>
-                </carriers>
-                <guards>
-                    <Miho_SSTrader>12</Miho_SSTrader>
-                    <Miho_SpecialForces>6</Miho_SpecialForces>
-                </guards>
-            </li>
-        </pawnGroupMakers>
-
-        <!-- 颜色与交易商队类型字段在你当前版本的 FactionDef 中不存在：已移除以避免报错 -->
-
-    </FactionDef>
-
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>MihoThirdEmpire</defName>
+    <label>美狐第三帝国</label>
+    <fixedName>美狐第三帝国</fixedName>
+    <description>一个组织严密、军事化程度极高的美狐星际帝国。帝国与美狐势力保持非敌对关系，并敌视其他非美狐势力；对玩家的最终态度取决于元首的选择。</description>
+    <techLevel>Industrial</techLevel>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <hidden>false</hidden>
+    <displayInFactionSelection>true</displayInFactionSelection>
+    <maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>70</configurationListOrderPriority>
+    <categoryTag>MihoThirdEmpire</categoryTag>
+    <listOrderPriority>30</listOrderPriority>
+    <factionIconPath>UI/MihoPhase2/Factions/MihoPhase2_ThirdEmpire</factionIconPath>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <caravanTraderKinds Inherit="False">
+      <li>Caravan_Outlander_BulkGoods</li>
+      <li>Caravan_Outlander_CombatSupplier</li>
+      <li>Caravan_Outlander_Exotic</li>
+      <li>MihoPhase2_Trader_Slaver</li>
+      <li>MihoPhase2_Trader_SoapRecovery</li>
+      <li>MihoPhase2_Trader_CropAssociation</li>
+      <li>MihoPhase2_Trader_InterriverCommerce</li>
+    </caravanTraderKinds>
+    <baseTraderKinds>
+      <li>MihoPhase2_Trader_EmpireSettlement</li>
+    </baseTraderKinds>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <maxCountAtGameStart>1</maxCountAtGameStart>
+    <settlementNameMaker>MihoThirdEmpire_SettlementNames_GermanCities</settlementNameMaker>
+    <permanentEnemy>false</permanentEnemy>
+    <humanlikeFaction>true</humanlikeFaction>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0, 700)</li>
+        <li>(1000, 1000)</li>
+        <li>(2000, 2000)</li>
+        <li>(10000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <raidLootValueFromPointsCurve>
+      <points>
+        <li>(35, 15)</li>
+        <li>(100, 120)</li>
+        <li>(1000, 500)</li>
+        <li>(2000, 800)</li>
+        <li>(4000, 1000)</li>
+      </points>
+    </raidLootValueFromPointsCurve>
+    <leaderTitle>元首</leaderTitle>
+    <leaderForceGenerateNewPawn>true</leaderForceGenerateNewPawn>
+    <fixedLeaderKinds>
+      <li>MihoPhase2_Scientist</li>
+    </fixedLeaderKinds>
+    <pawnGroupMakers Inherit="False">
+      <li>
+        <kindDef>Settlement</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <MihoPhase2_ImperialCivilian>64</MihoPhase2_ImperialCivilian>
+          <Villager>5</Villager>
+          <MihoPhase2_ResearchStaff>12</MihoPhase2_ResearchStaff>
+          <MihoPhase2_Scientist>4</MihoPhase2_Scientist>
+        </options>
+      </li>
+      <li>
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <MihoPhase2_DefenseSoldier>50</MihoPhase2_DefenseSoldier>
+          <MihoPhase2_DefenseNCO>10</MihoPhase2_DefenseNCO>
+          <MihoPhase2_SpecialForcesSoldier>20</MihoPhase2_SpecialForcesSoldier>
+          <MihoPhase2_OrbitalDropTrooper>8</MihoPhase2_OrbitalDropTrooper>
+          <MihoPhase2_StratagemSupportSoldier>10</MihoPhase2_StratagemSupportSoldier>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <commonality>100</commonality>
+        <traders>
+          <MihoPhase2_ImperialTrader>1</MihoPhase2_ImperialTrader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Alpaca>2</Alpaca>
+          <Elephant>1</Elephant>
+        </carriers>
+        <guards>
+          <MihoPhase2_DefenseSoldier>10</MihoPhase2_DefenseSoldier>
+          <MihoPhase2_DefenseNCO>2</MihoPhase2_DefenseNCO>
+          <MihoPhase2_SpecialForcesSoldier>1</MihoPhase2_SpecialForcesSoldier>
+        </guards>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
 </Defs>
-

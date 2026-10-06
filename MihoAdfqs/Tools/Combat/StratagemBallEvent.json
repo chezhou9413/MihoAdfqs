@@ -1,0 +1,31 @@
+{
+  "参数来源": "https://github.com/shalzuth/HelldiversData/blob/master/data/entities/StratagemBallComponentData.json",
+  "原始Bank": "E:\\ModdevMics\\Assets\\Helldivers2\\StratagemBall\\content\\audio\\foley_player.bnk",
+  "BankSHA256": "611393e60389fbb171f77e2b21baf408a7b55c1adf6a793a1c648648dcc6ffcb",
+  "红色启动事件": 747886,
+  "蓝色启动事件": 1032351623,
+  "公共展开层": 706071705,
+  "红色播放动作": 1003338319,
+  "蓝色播放动作": 226268198,
+  "媒体": [
+    {
+      "ID": 465632577,
+      "延迟秒": 0.3,
+      "增益dB": 0,
+      "WemSHA256": "aadb84aedeed2ce091fb47a26ae0974fa16e37ab3a1d5e097b9d2a512273582f"
+    },
+    {
+      "ID": 612965449,
+      "延迟秒": 0.45,
+      "增益dB": -4,
+      "WemSHA256": "56a0c90229933f63d323fc4486eca70f981a6fa41a3498ca2c6cba102a12f9b2"
+    },
+    {
+      "ID": 497066532,
+      "延迟秒": 0.2,
+      "增益dB": -2,
+      "WemSHA256": "b49bf20a2a548b4a9fba04e6c732a5decba5bbda81f551eac912285724c4ebc7"
+    }
+  ],
+  "说明": "从本机Bank事件图提取公共展开层。随机延迟采用中间值，随机媒体组各固定一个变体；不包含红蓝专属持续提示层或Wwise插件生成的声音。"
+}

@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <BackstoryDef>
+    <defName>MihoPhase2_Childhood_ImperialMilira</defName>
+    <title>第三帝国米莉拉</title>
+    <titleShort>帝国米莉拉</titleShort>
+    <baseDesc>[PAWN_nameDef]是出生在第三帝国的米莉拉。与米莉拉帝国不同，她出生在糊狐的国度，并在帝国的怀柔政策下接受正常教育、成长并度过幼年。只是，她似乎也学到了周围糊狐们的某些爱好。</baseDesc>
+    <slot>Childhood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <spawnCategories>
+      <li>MihoPhase2_ImperialMiliraChildhood</li>
+    </spawnCategories>
+    <skillGains>
+      <Social>10</Social>
+      <Intellectual>15</Intellectual>
+      <Artistic>8</Artistic>
+      <Cooking>9</Cooking>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <factors>
+          <Fertility>1.5</Fertility>
+        </factors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef Name="MihoPhase2_ImperialMiliraAdulthoodBase" Abstract="True">
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <spawnCategories>
+      <li>MihoPhase2_ImperialMiliraAdulthood</li>
+    </spawnCategories>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMiliraAdulthoodBase">
+    <defName>MihoPhase2_Adulthood_CivilianMilira</defName>
+    <title>平民米莉拉</title>
+    <titleShort>平民米莉拉</titleShort>
+    <baseDesc>[PAWN_nameDef]接受了第三帝国的完整教育。与卡利多不同，这里的米莉拉似乎社交性更强，也更会做饭。</baseDesc>
+    <skillGains>
+      <Shooting>10</Shooting>
+      <Melee>10</Melee>
+      <Construction>10</Construction>
+      <Mining>10</Mining>
+      <Cooking>3</Cooking>
+      <Plants>10</Plants>
+      <Animals>10</Animals>
+      <Crafting>10</Crafting>
+      <Artistic>10</Artistic>
+      <Medicine>10</Medicine>
+      <Social>16</Social>
+      <Intellectual>15</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <factors>
+          <FoodPoisonChance>0.35</FoodPoisonChance>
+        </factors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMiliraAdulthoodBase">
+    <defName>MihoPhase2_Adulthood_FoolishMilira</defName>
+    <title>米莉拉笨蛋</title>
+    <titleShort>米莉拉笨蛋</titleShort>
+    <baseDesc>良好的保胎技术与帝国鼓励人口增长的政策，打破了“米莉拉人人智慧超群”的结论。或者说，[PAWN_nameDef]才是万中无一的存在？</baseDesc>
+    <skillGains>
+      <Intellectual>-10</Intellectual>
+      <Crafting>3</Crafting>
+      <Social>5</Social>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <mentalImmune>true</mentalImmune>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMiliraAdulthoodBase">
+    <defName>MihoPhase2_Adulthood_MiliraChef</defName>
+    <title>被糊狐教会的米莉拉大厨</title>
+    <titleShort>米莉拉大厨</titleShort>
+    <baseDesc>“别人制作这道菜需要二十分钟，而我经过充分思考和计算，只需要三分钟。”[PAWN_nameDef]在气病自己的老师之后，终于摆脱了米莉拉一定会炸掉厨房的魔咒。</baseDesc>
+    <skillGains>
+      <Cooking>8</Cooking>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <factors>
+          <FoodPoisonChance>0.25</FoodPoisonChance>
+        </factors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMiliraAdulthoodBase">
+    <defName>MihoPhase2_Adulthood_MiliraHomebody</defName>
+    <title>米莉拉死宅</title>
+    <titleShort>米莉拉死宅</titleShort>
+    <baseDesc>[PAWN_nameDef]是在帝国环境下培养出的独特存在。经历各种二次元文化熏陶后，她成功变成了一名死宅，依靠自己的手艺以及存在于基因里的智慧维持正常生活。</baseDesc>
+    <skillGains>
+      <Crafting>6</Crafting>
+      <Intellectual>12</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <homebody>true</homebody>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+</Defs>

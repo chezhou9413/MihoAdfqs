@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelClothingBase">
+    <defName>MihoPhase2_HelmerZogCasual</defName>
+    <label>常服</label>
+    <description>常服。帝国民用服装。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/HelmerZogCasual/MihoPhase2_HelmerZogCasual</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1.4</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList>
+      <MihoPhase2_Polyethylene>50</MihoPhase2_Polyethylene>
+    </costList>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_HelmerZogCasualEffect</hediff>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MeleeDodgeChance>3</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups Inherit="False">
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/HelmerZogCasual/MihoPhase2_HelmerZogCasual</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Civilian</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Cloth</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <HediffDef>
+    <defName>MihoPhase2_HelmerZogCasualEffect</defName>
+    <label>常服</label>
+    <description>常服提供行动保护，使穿戴者免受踉跄影响。脱下服装后效果消失。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

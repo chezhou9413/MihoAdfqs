@@ -2,15 +2,16 @@
 <Defs>
     <AbilityDef>
         <defName>Ability_RequestSSReinforcements</defName>
-        <label>召唤党卫军</label>
-        <description>召唤五个身着（党卫军盔甲+美狐防弹衣）的美狐种族乘坐空降舱空投到殖民地中心（不会破坏建筑），召唤的美狐属性（射击和近战均大于10），武器在Hk416，Mg42通用机枪，单发式铁拳火箭筒，Stg44步枪，Pzb38反坦克步枪，火焰喷射器中随机选择。</description>
-        <!-- <iconPath>Eff/GoldSpireRiftIcon</iconPath> -->
+        <gizmoClass>MihoAdfqs.Phase2.UI.Command_ImperialAbility</gizmoClass>
+        <label>召唤亲卫</label>
+        <description>呱，召唤四个大只佬，和一位更大的大只佬，她们会把敌人殴打在地，拖回去做星怒啊口牙！施放时可以决定是否让亲卫队长赫尔默·佐格一同支援。</description>
+        <iconPath>UI/MihoPhase2/Abilities/MihoPhase2_RequestBodyguards</iconPath>
         <cooldownTicksRange>180000</cooldownTicksRange>
-        <hostile>true</hostile>
+        <hostile>false</hostile>
         <casterMustBeCapableOfViolence>true</casterMustBeCapableOfViolence>
         <verbProperties>
             <verbClass>MihoAdfqs.MihoAdfqsVerb.Verb_RequestSSReinforcements</verbClass>
-            <label>召唤党卫军</label>
+            <label>召唤亲卫</label>
             <violent>true</violent>
             <warmupTime>0.2</warmupTime>
             <range>40</range>

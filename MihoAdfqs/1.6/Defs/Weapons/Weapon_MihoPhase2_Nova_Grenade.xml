@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BaseMakeableGrenade">
+    <defName>MihoPhase2_SupernovaFusionGrenade</defName>
+    <label>超新星聚变手雷</label>
+    <description>由帝国科学院自行研发并配发给最精锐部队的聚变手雷。它能在极小体积内释放足以摧毁重型目标的爆炸。</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Projectiles/FusionGrenade</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.6, 0.6)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_Grenade</soundInteract>
+    <weaponTags>
+      <li>GrenadeDestructive</li>
+    </weaponTags>
+    <thingCategories>
+      <li>Grenades</li>
+    </thingCategories>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>20</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>5</MihoPhase2_Polyethylene>
+      <MihoPhase2_NovaMaterial>2</MihoPhase2_NovaMaterial>
+    </costList>
+    <statBases>
+      <Mass>3</Mass>
+      <MarketValue>30000</MarketValue>
+      <WorkToMake>50000</WorkToMake>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_Nova</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <label>投掷超新星聚变手雷</label>
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <range>35</range>
+        <forcedMissRadius>0</forcedMissRadius>
+        <warmupTime>1.5</warmupTime>
+        <noiseRadius>12</noiseRadius>
+        <ai_IsBuildingDestroyer>true</ai_IsBuildingDestroyer>
+        <soundCast>ThrowGrenade</soundCast>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <defaultProjectile>MihoPhase2_Projectile_SupernovaFusionGrenade</defaultProjectile>
+        <rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+        <magazineSize>1</magazineSize>
+        <weaponType>Grenade</weaponType>
+        <reloadSeconds>45</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <fireModes>
+          <li>点射</li>
+        </fireModes>
+        <guaranteedAccuracy>true</guaranteedAccuracy>
+        <canGoWild>false</canGoWild>
+        <preciseBurstTicks>60.0</preciseBurstTicks>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseGrenadeProjectile">
+    <defName>MihoPhase2_Projectile_SupernovaFusionGrenade</defName>
+    <label>超新星聚变手雷</label>
+    <thingClass>MihoAdfqs.Combat.Projectiles.Projectile_AreaPayload</thingClass>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Projectiles/FusionGrenade</texPath>
+      <drawSize>(0.75, 0.75)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>300</damageAmountBase>
+      <armorPenetrationBase>3</armorPenetrationBase>
+      <soundExplode>Explosion_Bomb</soundExplode>
+    </projectile>
+    <modExtensions>
+      <li Class="MihoAdfqs.Combat.Projectiles.AreaPayload">
+        <width>5</width>
+        <centerWidth>3</centerWidth>
+        <centerDamage>1500</centerDamage>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

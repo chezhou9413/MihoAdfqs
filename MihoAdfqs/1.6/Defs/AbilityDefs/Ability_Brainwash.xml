@@ -2,6 +2,7 @@
 <Defs>
     <AbilityDef>
         <defName>Ability_Brainwash</defName>
+        <gizmoClass>MihoAdfqs.Phase2.UI.Command_ImperialAbility</gizmoClass>
         <label>洗脑</label>
         <description>对殖民者、奴隶或囚犯进行洗脑。
 效果：
@@ -11,7 +12,7 @@
 4. 囚犯将立即被招募并加入殖民地。
 5. 需要施法者走向目标并进行持续吟唱。</description>
 
-        <!-- <iconPath>UI/Abilities/PsychicReset</iconPath> -->
+        <iconPath>UI/MihoPhase2/Abilities/MihoPhase2_Brainwash</iconPath>
 
         <cooldownTicksRange>180000</cooldownTicksRange>
 

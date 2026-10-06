@@ -40,6 +40,7 @@
         <techHediffsTags Inherit="False"/>
         <techHediffsChance>0</techHediffsChance>
         <apparelRequired>
+            <li>Miho_Apparel_Under_Industrial</li>
             <li>Apparel_WerewolfArmor</li>
             <li>Apparel_WerewolfHelmet</li>
         </apparelRequired>

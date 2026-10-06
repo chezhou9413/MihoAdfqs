@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_USPSuppressed</defName>
+    <label>USP消声手枪</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装。该型号配发特战部队，适合在室内环境进行短距离格斗和射击，并加装了消声器。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+    </weaponTags>
+    <weaponClasses Inherit="False">
+      <li>RangedLight</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_USPSuppressed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.55, 0.55)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>80</Steel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <statBases>
+      <Mass>1.1</Mass>
+      <MarketValue>1300</MarketValue>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForcesWeapons</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_USPSuppressed</defaultProjectile>
+        <warmupTime>0.2</warmupTime>
+        <range>25</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>9</ticksBetweenBurstShots>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>4</muzzleFlashScale>
+        <magazineSize>15</magazineSize>
+        <reloadSeconds>1.5</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <preciseBurstTicks>9.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 1)</li>
+            <li>(25, 1)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_BulletBase">
+    <defName>MihoPhase2_Projectile_USPSuppressed</defName>
+    <label>USP消声电荷弹</label>
+    <projectile>
+      <damageAmountBase>12</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_USP</defName>
+    <label>USP手枪</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装。该型号配发特战部队，适合在室内环境进行短距离格斗和射击。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+    </weaponTags>
+    <weaponClasses Inherit="False">
+      <li>RangedLight</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_USP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.5, 0.5)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>70</Steel>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <statBases>
+      <Mass>1.1</Mass>
+      <MarketValue>1200</MarketValue>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForcesWeapons</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_USP</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>25</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>Shot_Autopistol</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>5</muzzleFlashScale>
+        <magazineSize>15</magazineSize>
+        <reloadSeconds>2</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <preciseBurstTicks>8.181818181818182</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 1)</li>
+            <li>(25, 1)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_BulletBase">
+    <defName>MihoPhase2_Projectile_USP</defName>
+    <label>USP电荷弹</label>
+    <projectile>
+      <damageAmountBase>13</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_G36_Def</defName>
+    <label>G36突击步枪</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装，使其适应多用途与各种战场环境，也是特战部队列装的主要武器。红外瞄准配件能够有效提高命中率。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_G36</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>240</Steel>
+      <ComponentSpacer>6</ComponentSpacer>
+      <Uranium>10</Uranium>
+    </costList>
+    <statBases>
+      <Mass>3.8</Mass>
+      <MarketValue>4800</MarketValue>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForcesWeapons</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_G36_Def</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>70</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>8</muzzleFlashScale>
+        <magazineSize>30</magazineSize>
+        <reloadSeconds>2.5</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <preciseBurstTicks>4.8</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 0.95)</li>
+            <li>(20, 0.95)</li>
+            <li>(40, 0.9)</li>
+            <li>(70, 0.95)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_BulletBase">
+    <defName>MihoPhase2_Projectile_G36_Def</defName>
+    <label>G36电荷弹</label>
+    <projectile>
+      <damageAmountBase>28</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_MP7_Def</defName>
+    <label>MP7冲锋枪</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装，使其适应各种战场环境，也是特战部队列装的主要武器。它与USP、G36配合，在巷战中表现优异。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+    </weaponTags>
+    <weaponClasses Inherit="False">
+      <li>RangedLight</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_MP7</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.65, 0.65)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>280</Steel>
+      <ComponentSpacer>4</ComponentSpacer>
+      <Uranium>5</Uranium>
+    </costList>
+    <statBases>
+      <Mass>2.2</Mass>
+      <MarketValue>4000</MarketValue>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForcesWeapons</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_MP7_Def</defaultProjectile>
+        <warmupTime>0.2</warmupTime>
+        <range>35</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shot_AssaultRifle</soundCast>
+        <soundCastTail>GunTail_Light</soundCastTail>
+        <muzzleFlashScale>6</muzzleFlashScale>
+        <magazineSize>45</magazineSize>
+        <reloadSeconds>1.5</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <preciseBurstTicks>3.6</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 1)</li>
+            <li>(10, 1)</li>
+            <li>(20, 0.9)</li>
+            <li>(35, 0.95)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_BulletBase">
+    <defName>MihoPhase2_Projectile_MP7_Def</defName>
+    <label>MP7电荷弹</label>
+    <projectile>
+      <damageAmountBase>12</damageAmountBase>
+    </projectile>
+  </ThingDef>
+</Defs>

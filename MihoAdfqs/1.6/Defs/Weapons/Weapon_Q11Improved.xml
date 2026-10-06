@@ -1,120 +1,131 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-
-    <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>Weapon_Q11Improved</defName>
-        <label>Q11改进版</label>
-        <description>Q11的改进版本，能够进行6连发范围爆炸打击。</description>
-
-        <techLevel>Spacer</techLevel>
-
-        <weaponTags>
-            <li>ThirdEmpireHighWeapon</li>
-            <li>LongShots</li>
-        </weaponTags>
-        <weaponClasses>
-            <li>RangedHeavy</li>
-        </weaponClasses>
-
-        <tradeTags>
-            <li>MihoThirdEmpireGoods</li>
-        </tradeTags>
-
-        <graphicData>
-            <texPath>Weapon/Q11</texPath>            <!-- 你需要提供这个贴图 -->
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(1, 1)</drawSize>
-        </graphicData>
-
-        <soundInteract>Interact_ChargeLance</soundInteract>
-        <equippedAngleOffset>45</equippedAngleOffset>
-        <!-- 制作成本 -->
-        <costList>
-            <Plasteel>300</Plasteel>
-            <Steel>125</Steel>
-            <ComponentSpacer>10</ComponentSpacer>
-        </costList>
-
-        <!-- 基础数值 -->
-        <statBases>
-            <WorkToMake>40000</WorkToMake>
-            <Mass>12</Mass>
-            <AccuracyShort>0.90</AccuracyShort>
-            <AccuracyMedium>0.85</AccuracyMedium>
-            <AccuracyLong>0.90</AccuracyLong>
-            <RangedWeapon_Cooldown>2.0</RangedWeapon_Cooldown>
-            <MarketValue>5500</MarketValue>
-        </statBases>
-
-        <recipeMaker>
-            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-            <researchPrerequisite Inherit="False" />
-            <workSkill>Crafting</workSkill>
-            <effectWorking>Smith</effectWorking>
-            <soundWorking>Recipe_Machining</soundWorking>
-            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-            <recipeUsers>
-                <li>FabricationBench</li>
-            </recipeUsers>
-            <skillRequirements>
-                <Crafting>9</Crafting>
-            </skillRequirements>
-        </recipeMaker>
-
-        <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_Q11Improved_Explosive</defaultProjectile>
-                <burstShotCount>6</burstShotCount>
-                <warmupTime>3.5</warmupTime>
-                <range>75</range>
-                <forcedMissRadius>1.5</forcedMissRadius>
-                <soundCast>ChargeLance_Fire</soundCast>
-                <soundCastTail>GunTail_Heavy</soundCastTail>
-                <muzzleFlashScale>9</muzzleFlashScale>
-            </li>
-        </verbs>
-
-        <tools>
-            <li>
-                <label>枪托</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>12</power>
-                <cooldownTime>2</cooldownTime>
-            </li>
-            <li>
-                <label>枪管</label>
-                <capacities>
-                    <li>Blunt</li>
-                    <li>Poke</li>
-                </capacities>
-                <power>12</power>
-                <cooldownTime>2</cooldownTime>
-            </li>
-        </tools>
-    </ThingDef>
-
-    <ThingDef ParentName="BaseBullet">
-        <defName>Bullet_Q11Improved_Explosive</defName>
-        <label>Q11改进型爆炸弹</label>
-        <graphicData>
-            <texPath>Things/Projectile/Rocket_Big</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>TransparentPostLight</shaderType>
-            <drawSize>(0.35, 0.35)</drawSize>
-        </graphicData>
-        <thingClass>Projectile_Explosive</thingClass>
-        <projectile>
-            <damageDef>Bomb</damageDef>
-            <damageAmountBase>60</damageAmountBase>
-            <armorPenetrationBase>0.9</armorPenetrationBase>
-            <speed>60</speed>
-            <explosionRadius>1.5</explosionRadius>            <!-- 近似3x3范围 -->
-            <soundExplode>MortarBomb_Explode</soundExplode>
-        </projectile>
-    </ThingDef>
-
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Weapon_Q11Improved</defName>
+    <label>Q11改进版</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装，使其适应多用途与各种战场环境，同时也是国防军列装的主要武器。作为步兵小队的杀伤人员武器，它能够造成恐怖的毁伤效果。</description>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <tradeTags>
+      <li>MihoThirdEmpireGoods</li>
+    </tradeTags>
+    <graphicData>
+      <texPath>Weapon/Q11</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <costList>
+      <Plasteel>300</Plasteel>
+      <Steel>125</Steel>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>40000</WorkToMake>
+      <Mass>12</Mass>
+      <AccuracyTouch>0.90</AccuracyTouch>
+      <AccuracyShort>0.90</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.25</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+      <MarketValue>5500</MarketValue>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <researchPrerequisite>MihoPhase2_Research_ServiceWeapons</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Q11Improved_Explosive</defaultProjectile>
+        <burstShotCount>1</burstShotCount>
+        <warmupTime>0.3</warmupTime>
+        <range>50</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <magazineSize>6</magazineSize>
+        <weaponType>Shell</weaponType>
+        <reloadSeconds>10</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <fireModes>
+          <li>点射</li>
+        </fireModes>
+        <preciseBurstTicks>60.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 0.9)</li>
+            <li>(20, 0.9)</li>
+            <li>(40, 0.7)</li>
+            <li>(50, 0.25)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>枪托</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>枪管</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Q11Improved_Explosive</defName>
+    <label>Q11改进型爆炸弹</label>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Projectiles/ImperialShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(0.7, 0.95)</drawSize>
+    </graphicData>
+    <thingClass>MihoAdfqs.Combat.Projectiles.Projectile_AreaPayload</thingClass>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <speed>60</speed>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+    </projectile>
+    <modExtensions>
+      <li Class="MihoAdfqs.Combat.Projectiles.AreaPayload">
+        <width>3</width>
+        <centerWidth>1</centerWidth>
+        <centerDamage>140</centerDamage>
+      </li>
+    </modExtensions>
+  </ThingDef>
 </Defs>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 二期军用身体护甲的公共制作、分类与固定护甲规则。 -->
+  <ThingDef Name="MihoPhase2_ApparelArmorBase" ParentName="ArmorMachineableBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>TableMachining</li>
+        <li>FabricationBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <statBases>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <thingCategories>
+      <li>ApparelArmor</li>
+    </thingCategories>
+    <tradeTags>
+      <li>Armor</li>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <apparel>
+      <!-- 身体护甲保持在头部后方，避免背向时盖住帽盔。 -->
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef>
+
+  <!-- 二期军用头部护甲的公共制作、分类与固定护甲规则。 -->
+  <ThingDef Name="MihoPhase2_ApparelHeadArmorBase" ParentName="ArmorHelmetMakeableBase" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <!-- 制式帽盔贴图自带耳形，隐藏美狐原有左右耳以避免穿透。 -->
+    <comps>
+      <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+        <targetRaces>
+          <li>Alien_Miho</li>
+        </targetRaces>
+        <bodyAddonHidden>
+          <li>MihoEarRight</li>
+          <li>MihoEarLeft</li>
+        </bodyAddonHidden>
+      </li>
+    </comps>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <unfinishedThingDef>UnfinishedTechArmor</unfinishedThingDef>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <recipeUsers Inherit="False">
+        <li>TableMachining</li>
+        <li>FabricationBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>8</Crafting>
+      </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <statBases>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <tradeTags>
+      <li>Armor</li>
+      <li>HiTechArmor</li>
+    </tradeTags>
+    <apparel>
+      <parentTagDef>ApparelHead</parentTagDef>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+      <useDeflectMetalEffect>true</useDeflectMetalEffect>
+    </apparel>
+  </ThingDef>
+
+  <!-- 二期民用服装的公共裁缝配方与原色显示规则。 -->
+  <ThingDef Name="MihoPhase2_ApparelClothingBase" ParentName="ApparelMakeableBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>4</Crafting>
+      </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <comps>
+      <li Class="ChezhouLib.ClThingComp.ThingCompProperties_DisableStuffColor" />
+    </comps>
+    <statBases>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <thingCategories>
+      <li>Apparel</li>
+    </thingCategories>
+    <apparel>
+      <!-- 外衣保持在头部后方，避免背向时衣领覆盖帽盔。 -->
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
+      <countsAsClothingForNudity>true</countsAsClothingForNudity>
+      <defaultOutfitTags>
+        <li>Civil</li>
+        <li>Worker</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+
+  <!-- 二期民用帽饰的公共裁缝配方与原色显示规则。 -->
+  <ThingDef Name="MihoPhase2_ApparelHatBase" ParentName="HatMakeableBase" Abstract="True">
+    <techLevel>Industrial</techLevel>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>3</Crafting>
+      </skillRequirements>
+      <useIngredientsForColor>false</useIngredientsForColor>
+    </recipeMaker>
+    <comps>
+      <li Class="ChezhouLib.ClThingComp.ThingCompProperties_DisableStuffColor" />
+    </comps>
+    <statBases>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+  </ThingDef>
+</Defs>

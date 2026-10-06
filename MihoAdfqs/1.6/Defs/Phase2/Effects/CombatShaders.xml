@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ChezhouLib.LibDef.ClFeatureDeclarationDef>
+    <defName>MihoCombat_UnityAssets</defName>
+    <feature>UnityAssets</feature>
+    <targetPackageIds><li>chezhou.Kind.MihoAdfqs</li></targetPackageIds>
+  </ChezhouLib.LibDef.ClFeatureDeclarationDef>
+  <ChezhouLib.LibDef.UnityShaderLord>
+    <defName>MihoCombat_ShaderLord</defName>
+    <AbPath>/1.6/AssetBundles/miho_combat.ab</AbPath>
+    <ShaderFolderName>/Shader/</ShaderFolderName>
+    <ImageFolderName>/image/</ImageFolderName>
+  </ChezhouLib.LibDef.UnityShaderLord>
+  <ChezhouLib.LibDef.ClShaderMaterial>
+    <defName>MihoCombat_BeamMaterial</defName>
+    <shaderName>Miho/CombatBeam</shaderName>
+    <resModID>chezhou.Kind.MihoAdfqs</resModID>
+  </ChezhouLib.LibDef.ClShaderMaterial>
+  <ChezhouLib.LibDef.ClShaderMaterial>
+    <defName>MihoCombat_BurstMaterial</defName>
+    <shaderName>Miho/CombatBurst</shaderName>
+    <resModID>chezhou.Kind.MihoAdfqs</resModID>
+  </ChezhouLib.LibDef.ClShaderMaterial>
+  <ChezhouLib.LibDef.ClShaderMaterial>
+    <defName>MihoCombat_SmokeMaterial</defName>
+    <shaderName>Miho/CombatSmoke</shaderName>
+    <resModID>chezhou.Kind.MihoAdfqs</resModID>
+  </ChezhouLib.LibDef.ClShaderMaterial>
+  <ChezhouLib.LibDef.ClShaderMaterial>
+    <defName>MihoCombat_ShieldMaterial</defName>
+    <shaderName>Miho/ImperialShield</shaderName>
+    <resModID>chezhou.Kind.MihoAdfqs</resModID>
+  </ChezhouLib.LibDef.ClShaderMaterial>
+</Defs>

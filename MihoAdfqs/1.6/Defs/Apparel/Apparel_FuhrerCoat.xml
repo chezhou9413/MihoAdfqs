@@ -107,6 +107,7 @@
 
     <!-- 服装定义：外套，覆盖上身/手臂/腿（类似风衣） -->
     <apparel>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
       <bodyPartGroups>
         <li>Torso</li>
         <li>Shoulders</li>

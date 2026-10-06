@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>MihoPhase2_Supernova3DPrinter</defName>
+    <label>超新星3D打印机</label>
+    <description>在原版“账单”页添加生产订单。殖民者按订单搬入材料并完成100工作量装料，之后设备通电自动加工，每2400配方工作量对应1天运行时间。断电或故障暂停，完成后在操作口附近产出普通品质成品。一台设备同时加工一批，后续订单等待该批完成；选中建筑可查看批次进度。</description>
+    <thingClass>MihoAdfqs.Buildings.Production.Building_AutomatedProcessor</thingClass>
+    <graphicData>
+      <texPath>Building/MihoPhase2/MihoPhase2_Supernova3DPrinter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(4.5714,4.785)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <size>(4,4)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-3)</interactionCellOffset>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>1300</MaxHitPoints>
+      <WorkToBuild>1200</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>600</Mass>
+    </statBases>
+    <costList>
+      <Steel>400</Steel>
+      <ComponentIndustrial>60</ComponentIndustrial>
+      <MihoPhase2_IndustrialSteelPlate>200</MihoPhase2_IndustrialSteelPlate>
+      <ComponentSpacer>10</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>500</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <designationCategory>MihoPhase2_ImperialBuildings</designationCategory>
+    <constructionSkillPrerequisite>6</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>MihoPhase2_Research_HeavyIndustry</li>
+    </researchPrerequisites>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+  <ThingDef ParentName="BenchBase">
+    <defName>MihoPhase2_NovaAggregator</defName>
+    <label>新星聚合器</label>
+    <description>在原版“账单”页添加新星材料订单。殖民者按订单搬入材料并完成100工作量装料，之后设备通电自动加工，每2400配方工作量对应1天运行时间。断电或故障暂停，完成后在操作口附近放出产物。一台设备同时加工一批，后续订单等待该批完成；选中建筑可查看批次进度。</description>
+    <thingClass>MihoAdfqs.Buildings.Production.Building_AutomatedProcessor</thingClass>
+    <graphicData>
+      <texPath>Building/MihoPhase2/MihoPhase2_NovaAggregator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(7.4419,5.3895)</drawSize>
+      <drawOffset>(0,0,0.0263)</drawOffset>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <size>(5,5)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-3)</interactionCellOffset>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>5000</MaxHitPoints>
+      <WorkToBuild>4000</WorkToBuild>
+      <Flammability>0</Flammability>
+      <Mass>1200</Mass>
+    </statBases>
+    <costList>
+      <Steel>800</Steel>
+      <ComponentIndustrial>200</ComponentIndustrial>
+      <MihoPhase2_IndustrialSteelPlate>400</MihoPhase2_IndustrialSteelPlate>
+      <ComponentSpacer>60</ComponentSpacer>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>2000</basePowerConsumption>
+        <shortCircuitInRain>true</shortCircuitInRain>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+      <workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor>
+    </building>
+    <designationCategory>MihoPhase2_ImperialBuildings</designationCategory>
+    <constructionSkillPrerequisite>10</constructionSkillPrerequisite>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>MihoPhase2_Research_Nova</li>
+    </researchPrerequisites>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+</Defs>

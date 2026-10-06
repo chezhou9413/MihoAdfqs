@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>MihoPhase2_MakeSupernovaTreatmentInjector</defName>
+    <label>制作超新星治疗用注射器</label>
+    <description>合成一支超新星治疗用注射器。</description>
+    <jobString>正在制作超新星治疗用注射器。</jobString>
+    <workAmount>240</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <researchPrerequisite>MihoPhase2_Research_AOM</researchPrerequisite>
+    <recipeUsers><li>MihoPhase2_SupernovaDrugFabricator</li></recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>MedicineIndustrial</li></thingDefs></filter><count>2</count></li>
+      <li><filter><thingDefs><li>HemogenPack</li></thingDefs></filter><count>1</count></li>
+      <li><filter><thingDefs><li>MedicineHerbal</li></thingDefs></filter><count>10</count></li>
+      <li><filter><thingDefs><li>MihoPhase2_IndustrialSteelPlate</li></thingDefs></filter><count>1</count></li>
+    </ingredients>
+    <products><MihoPhase2_SupernovaTreatmentInjector>1</MihoPhase2_SupernovaTreatmentInjector></products>
+  </RecipeDef>
+
+  <RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>MihoPhase2_MakeSupernovaActivationInjector</defName>
+    <label>制作超新星激发用注射器</label>
+    <description>合成一支超新星激发用注射器。</description>
+    <jobString>正在制作超新星激发用注射器。</jobString>
+    <workAmount>340</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <researchPrerequisite>MihoPhase2_Research_AOM</researchPrerequisite>
+    <recipeUsers><li>MihoPhase2_SupernovaDrugFabricator</li></recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>MedicineIndustrial</li></thingDefs></filter><count>2</count></li>
+      <li><filter><thingDefs><li>HemogenPack</li></thingDefs></filter><count>1</count></li>
+      <li><filter><thingDefs><li>SmokeleafLeaves</li></thingDefs></filter><count>5</count></li>
+      <li><filter><thingDefs><li>MihoPhase2_IndustrialSteelPlate</li></thingDefs></filter><count>1</count></li>
+    </ingredients>
+    <products><MihoPhase2_SupernovaActivationInjector>1</MihoPhase2_SupernovaActivationInjector></products>
+  </RecipeDef>
+
+  <RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>MihoPhase2_MakeSupernovaAnalgesicInjector</defName>
+    <label>制作超新星止痛用注射器</label>
+    <description>合成一支超新星止痛用注射器。</description>
+    <jobString>正在制作超新星止痛用注射器。</jobString>
+    <workAmount>240</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <researchPrerequisite>MihoPhase2_Research_AOM</researchPrerequisite>
+    <recipeUsers><li>MihoPhase2_SupernovaDrugFabricator</li></recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>MedicineIndustrial</li></thingDefs></filter><count>2</count></li>
+      <li><filter><thingDefs><li>HemogenPack</li></thingDefs></filter><count>1</count></li>
+      <li><filter><thingDefs><li>MedicineHerbal</li></thingDefs></filter><count>10</count></li>
+      <li><filter><thingDefs><li>MihoPhase2_IndustrialSteelPlate</li></thingDefs></filter><count>1</count></li>
+    </ingredients>
+    <products><MihoPhase2_SupernovaAnalgesicInjector>1</MihoPhase2_SupernovaAnalgesicInjector></products>
+  </RecipeDef>
+
+  <RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>MihoPhase2_MakeSupernovaStimulantInjector</defName>
+    <label>制作超新星兴奋用注射器</label>
+    <description>合成一支具有成瘾性的超新星兴奋用注射器。</description>
+    <jobString>正在制作超新星兴奋用注射器。</jobString>
+    <workAmount>440</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <researchPrerequisite>MihoPhase2_Research_AOM</researchPrerequisite>
+    <recipeUsers><li>MihoPhase2_SupernovaDrugFabricator</li></recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>MedicineIndustrial</li></thingDefs></filter><count>2</count></li>
+      <li><filter><thingDefs><li>HemogenPack</li></thingDefs></filter><count>1</count></li>
+      <li><filter><thingDefs><li>SmokeleafLeaves</li></thingDefs></filter><count>10</count></li>
+      <li><filter><thingDefs><li>MihoPhase2_IndustrialSteelPlate</li></thingDefs></filter><count>1</count></li>
+    </ingredients>
+    <products><MihoPhase2_SupernovaStimulantInjector>1</MihoPhase2_SupernovaStimulantInjector></products>
+  </RecipeDef>
+
+  <RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>MihoPhase2_MakeSupernovaEmergencyInjector</defName>
+    <label>制作超新星紧急用注射器</label>
+    <description>合成一支超新星紧急用注射器。</description>
+    <jobString>正在制作超新星紧急用注射器。</jobString>
+    <workAmount>540</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <researchPrerequisite>MihoPhase2_Research_AOM</researchPrerequisite>
+    <recipeUsers><li>MihoPhase2_SupernovaDrugFabricator</li></recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>MedicineIndustrial</li></thingDefs></filter><count>5</count></li>
+      <li><filter><thingDefs><li>HemogenPack</li></thingDefs></filter><count>2</count></li>
+      <li><filter><thingDefs><li>MedicineHerbal</li></thingDefs></filter><count>15</count></li>
+      <li><filter><thingDefs><li>MihoPhase2_IndustrialSteelPlate</li></thingDefs></filter><count>1</count></li>
+      <li><filter><thingDefs><li>MedicineUltratech</li></thingDefs></filter><count>1</count></li>
+    </ingredients>
+    <products><MihoPhase2_SupernovaEmergencyInjector>1</MihoPhase2_SupernovaEmergencyInjector></products>
+  </RecipeDef>
+
+  <RecipeDef MayRequire="Ludeon.RimWorld.Biotech">
+    <defName>MihoPhase2_MakeHumaneConversionInjector</defName>
+    <label>制作“人道处理”用注射器</label>
+    <description>合成一支用于启动同化流程的“人道处理”用注射器。</description>
+    <jobString>正在制作“人道处理”用注射器。</jobString>
+    <workAmount>100</workAmount>
+    <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+    <workSkill>Intellectual</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Drug</soundWorking>
+    <researchPrerequisite>MihoPhase2_Research_AOM</researchPrerequisite>
+    <recipeUsers><li>MihoPhase2_SupernovaDrugFabricator</li></recipeUsers>
+    <ingredients>
+      <li><filter><thingDefs><li>MedicineIndustrial</li></thingDefs></filter><count>5</count></li>
+      <li><filter><thingDefs><li>HemogenPack</li></thingDefs></filter><count>1</count></li>
+      <li><filter><thingDefs><li>MedicineHerbal</li></thingDefs></filter><count>1</count></li>
+      <li><filter><thingDefs><li>MihoPhase2_IndustrialSteelPlate</li></thingDefs></filter><count>1</count></li>
+    </ingredients>
+    <products><MihoPhase2_HumaneConversionInjector>1</MihoPhase2_HumaneConversionInjector></products>
+  </RecipeDef>
+</Defs>

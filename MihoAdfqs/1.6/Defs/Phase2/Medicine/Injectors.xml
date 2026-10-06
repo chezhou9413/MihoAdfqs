@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef Name="MihoPhase2_InjectorBase" ParentName="DrugBase" Abstract="True">
+    <rotatable>false</rotatable>
+    <stackLimit>25</stackLimit>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>0.8</drawSize>
+    </graphicData>
+    <statBases>
+      <Mass>0.1</Mass>
+      <Flammability>0.3</Flammability>
+    </statBases>
+    <ingestible>
+      <foodType>Processed, Fluid</foodType>
+      <drugCategory>Medical</drugCategory>
+      <baseIngestTicks>80</baseIngestTicks>
+      <ingestSound>Ingest_Inject</ingestSound>
+      <ingestCommandString>注射{0}</ingestCommandString>
+      <ingestReportString>正在注射{0}。</ingestReportString>
+      <useEatingSpeedStat>false</useEatingSpeedStat>
+      <chairSearchRadius>0</chairSearchRadius>
+    </ingestible>
+    <tradeability>All</tradeability>
+  </ThingDef>
+  <!-- 医疗注射剂共用药物政策组件，兴奋剂使用自身的成瘾与过量配置。 -->
+  <ThingDef Name="MihoPhase2_MedicalInjectorBase" ParentName="MihoPhase2_InjectorBase" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Drug">
+        <listOrder>210</listOrder>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_MedicalInjectorBase">
+    <defName>MihoPhase2_SupernovaTreatmentInjector</defName>
+    <label>超新星治疗用注射器</label>
+    <description>帝国阿尔法实验室中诞生的军用医药。其便携性与快速使用能力拯救了许多受伤士兵的性命。</description>
+    <descriptionHyperlinks>
+      <HediffDef>MihoPhase2_TreatmentInjectorEffect</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Medicine/MihoPhase2_SupernovaTreatmentInjector</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>240</WorkToMake>
+      <MarketValue>120</MarketValue>
+    </statBases>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MihoPhase2_TreatmentInjectorEffect</hediffDef>
+          <severity>1</severity>
+        </li>
+        <li Class="MihoAdfqs.Phase2.Medicine.IngestionOutcomeDoer_Phase2">
+          <heal>true</heal>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_MedicalInjectorBase">
+    <defName>MihoPhase2_SupernovaActivationInjector</defName>
+    <label>超新星激发用注射器</label>
+    <description>短时间激发神经协调性与战场反应速度的军用注射剂。</description>
+    <descriptionHyperlinks>
+      <HediffDef>MihoPhase2_ActivationInjectorEffect</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Medicine/MihoPhase2_SupernovaActivationInjector</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>340</WorkToMake>
+      <MarketValue>170</MarketValue>
+    </statBases>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MihoPhase2_ActivationInjectorEffect</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_MedicalInjectorBase">
+    <defName>MihoPhase2_SupernovaAnalgesicInjector</defName>
+    <label>超新星止痛用注射器</label>
+    <description>能够快速抑制疼痛、凝血并维持清醒的军用注射剂。</description>
+    <descriptionHyperlinks>
+      <HediffDef>MihoPhase2_AnalgesicInjectorEffect</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Medicine/MihoPhase2_SupernovaAnalgesicInjector</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>240</WorkToMake>
+      <MarketValue>120</MarketValue>
+    </statBases>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MihoPhase2_AnalgesicInjectorEffect</hediffDef>
+          <severity>1</severity>
+        </li>
+        <li Class="MihoAdfqs.Phase2.Medicine.IngestionOutcomeDoer_Phase2" />
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_InjectorBase">
+    <defName>MihoPhase2_SupernovaStimulantInjector</defName>
+    <label>超新星兴奋用注射器</label>
+    <description>强制提高身体协调性和神经反应速度的战斗兴奋剂。它的效果强烈，但具有成瘾性。</description>
+    <descriptionHyperlinks>
+      <HediffDef>MihoPhase2_StimulantInjectorEffect</HediffDef>
+      <HediffDef>MihoPhase2_SupernovaStimulantAddiction</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Medicine/MihoPhase2_SupernovaStimulantInjector</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>440</WorkToMake>
+      <MarketValue>220</MarketValue>
+    </statBases>
+    <ingestible>
+      <drugCategory>Hard</drugCategory>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MihoPhase2_StimulantInjectorEffect</hediffDef>
+          <severity>1</severity>
+        </li>
+        <li Class="MihoAdfqs.Phase2.Medicine.IngestionOutcomeDoer_Phase2">
+          <heal>true</heal>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Drug">
+        <chemical>MihoPhase2_SupernovaStimulantChemical</chemical>
+        <addictiveness>0.026</addictiveness>
+        <existingAddictionSeverityOffset>0.20</existingAddictionSeverityOffset>
+        <needLevelOffset>0.9</needLevelOffset>
+        <isCombatEnhancingDrug>true</isCombatEnhancingDrug>
+        <listOrder>220</listOrder>
+        <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+        <largeOverdoseChance>0.005</largeOverdoseChance>
+      </li>
+    </comps>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_MedicalInjectorBase">
+    <defName>MihoPhase2_SupernovaEmergencyInjector</defName>
+    <label>超新星紧急用注射器</label>
+    <description>用于紧急维持生命并推动肢体修复流程的军用注射剂。代谢负担会令使用者极快消耗营养。</description>
+    <descriptionHyperlinks>
+      <HediffDef>MihoPhase2_EmergencyInjectorEffect</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Medicine/MihoPhase2_SupernovaEmergencyInjector</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>540</WorkToMake>
+      <MarketValue>270</MarketValue>
+    </statBases>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MihoPhase2_EmergencyInjectorEffect</hediffDef>
+          <severity>1</severity>
+        </li>
+        <li Class="MihoAdfqs.Phase2.Medicine.IngestionOutcomeDoer_Phase2">
+          <heal>true</heal>
+          <restore>true</restore>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_MedicalInjectorBase">
+    <defName>MihoPhase2_HumaneConversionInjector</defName>
+    <label>超新星“人道处理”用注射器</label>
+    <description>帝国阿尔法实验室制造的“人道主义”药剂，用于启动针对目标的同化流程。</description>
+    <descriptionHyperlinks>
+      <HediffDef>MihoPhase2_HumaneConversionInjectorEffect</HediffDef>
+    </descriptionHyperlinks>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Medicine/MihoPhase2_HumaneConversionInjector</texPath>
+    </graphicData>
+    <statBases>
+      <WorkToMake>100</WorkToMake>
+      <MarketValue>100</MarketValue>
+    </statBases>
+    <ingestible>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>MihoPhase2_HumaneConversionInjectorEffect</hediffDef>
+          <severity>1</severity>
+        </li>
+        <li Class="MihoAdfqs.Phase2.Medicine.IngestionOutcomeDoer_Phase2">
+          <convert>true</convert>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+</Defs>

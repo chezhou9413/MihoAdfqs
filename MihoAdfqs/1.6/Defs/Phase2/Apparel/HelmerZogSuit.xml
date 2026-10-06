@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelClothingBase">
+    <defName>MihoPhase2_HelmerZogSuit</defName>
+    <label>西服</label>
+    <description>西服。帝国民用服装。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/HelmerZogSuit/MihoPhase2_HelmerZogSuit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>1000</MaxHitPoints>
+      <WorkToMake>800</WorkToMake>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>1</ArmorRating_Sharp>
+      <ArmorRating_Blunt>1</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.6</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList>
+      <MihoPhase2_Polyethylene>100</MihoPhase2_Polyethylene>
+    </costList>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>140</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_HelmerZogSuitEffect</hediff>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <PawnBeauty>3</PawnBeauty>
+      <MeleeDodgeChance>3</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/HelmerZogSuit/MihoPhase2_HelmerZogSuit</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Civilian</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Cloth</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <HediffDef>
+    <defName>MihoPhase2_HelmerZogSuitEffect</defName>
+    <label>西服</label>
+    <description>西装提供行动保护，使穿戴者免受踉跄影响。脱下服装后效果消失。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <StaggerDurationFactor>0</StaggerDurationFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

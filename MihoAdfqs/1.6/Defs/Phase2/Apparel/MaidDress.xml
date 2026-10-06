@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelClothingBase">
+    <defName>MihoPhase2_MaidDress</defName>
+    <label>女仆装</label>
+    <description>女仆装。帝国民用服装。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/MaidDress/MihoPhase2_MaidDress</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList />
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>120</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="CompProperties_CauseHediff_Apparel">
+        <hediff>MihoPhase2_MaidDressEffect</hediff>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MoveSpeed>1</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups Inherit="False">
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/MaidDress/MihoPhase2_MaidDress</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Civilian</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Cloth</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <HediffDef>
+    <defName>MihoPhase2_MaidDressEffect</defName>
+    <label>女仆装</label>
+    <description>女仆装将全局工作速度提高至原来的120%。脱下服装后效果消失。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <comps>
+      <li Class="HediffCompProperties_RemoveIfApparelDropped" />
+    </comps>
+    <stages>
+      <li>
+        <statFactors>
+          <WorkSpeedGlobal>1.2</WorkSpeedGlobal>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+</Defs>

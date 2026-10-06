@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_LugerP08_Charge"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Gun_LugerP08_Charge</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_LugerP08_Charge"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_LugerP08_Charge"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_LugerP08_Charge"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_Gun_LugerP08_Charge</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_LugerP08_Charge"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_Gun_LugerP08_Charge_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USP"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_USP</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USP"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USP"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USP"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_USP</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USP"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_USP_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USPSuppressed"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_USPSuppressed</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USPSuppressed"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USPSuppressed"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USPSuppressed"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_USPSuppressed</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_USPSuppressed"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_USPSuppressed_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_HKFourOneSix"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Gun_HKFourOneSix</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_HKFourOneSix"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_HKFourOneSix"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_HKFourOneSix"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_Gun_HKFourOneSix</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_HKFourOneSix"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_Gun_HKFourOneSix_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_HK416GrenadeLauncher</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_HK416GrenadeLauncher</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_HK416GrenadeLauncher_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[2]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_HK416GrenadeLauncher_Underbarrel</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[2]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[2]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[2]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_HK416GrenadeLauncher_Underbarrel</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416GrenadeLauncher"]/verbs/li[2]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_HK416GrenadeLauncher_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_HK416Shotgun</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_HK416Shotgun</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_HK416Shotgun_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[2]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_HK416Shotgun_Underbarrel</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[2]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[2]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[2]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_HK416Shotgun_Underbarrel</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_HK416Shotgun"]/verbs/li[2]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_HK416Shotgun_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_Stg44_Charge"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Gun_Stg44_Charge</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_Stg44_Charge"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_Stg44_Charge"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_Stg44_Charge"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_Gun_Stg44_Charge</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_Stg44_Charge"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_Gun_Stg44_Charge_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_G36_Def"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_G36_Def</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_G36_Def"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_G36_Def"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_G36_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_G36_Def</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_G36_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_G36_Def_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_AshTwelve"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Weapon_AshTwelve</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_AshTwelve"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_AshTwelve"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_AshTwelve"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_Weapon_AshTwelve</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_AshTwelve"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_Weapon_AshTwelve_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_Q11Improved"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Weapon_Q11Improved</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_Q11Improved"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_Q11Improved"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_Q11Improved"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_Weapon_Q11Improved</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_Q11Improved"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_Weapon_Q11Improved_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR1_Def"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_DSR1_Def</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR1_Def"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR1_Def"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR1_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_DSR1_Def</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR1_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_DSR1_Def_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR50_Def"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_DSR50_Def</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR50_Def"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR50_Def"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR50_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_DSR50_Def</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_DSR50_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_DSR50_Def_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_type10Gun"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Weapon_type10Gun</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_type10Gun"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_type10Gun"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_type10Gun"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_Weapon_type10Gun</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Weapon_type10Gun"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_Weapon_type10Gun_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_Pzb38_Charge"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Gun_Pzb38_Charge</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_Pzb38_Charge"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_Pzb38_Charge"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_Pzb38_Charge"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_Gun_Pzb38_Charge</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_Pzb38_Charge"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_Gun_Pzb38_Charge_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_MG42_Charge"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Gun_MG42_Charge</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_MG42_Charge"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_MG42_Charge"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_MG42_Charge"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_Gun_MG42_Charge</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_MG42_Charge"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_Gun_MG42_Charge_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_AA12_Def"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_AA12_Def</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_AA12_Def"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_AA12_Def"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_AA12_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_AA12_Def</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_AA12_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_AA12_Def_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_MP7_Def"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_MP7_Def</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_MP7_Def"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_MP7_Def"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_MP7_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_MP7_Def</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_MP7_Def"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_MP7_Def_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMPrecisionRifle"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_SupernovaEMPrecisionRifle</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMPrecisionRifle"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMPrecisionRifle"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMPrecisionRifle"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_SupernovaEMPrecisionRifle</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMPrecisionRifle"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_SupernovaEMPrecisionRifle_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMMarksmanRifle"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_SupernovaEMMarksmanRifle</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMMarksmanRifle"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMMarksmanRifle"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMMarksmanRifle"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_SupernovaEMMarksmanRifle</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaEMMarksmanRifle"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_SupernovaEMMarksmanRifle_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaHeavyLauncher"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_SupernovaHeavyLauncher</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaHeavyLauncher"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaHeavyLauncher"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaHeavyLauncher"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_SupernovaHeavyLauncher</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaHeavyLauncher"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_SupernovaHeavyLauncher_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_Panzerfaust"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_Gun_Panzerfaust</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="Gun_Panzerfaust"]/verbs/li[1]</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Gun_Panzerfaust"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>1.3</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaLaserRifle"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaLaserRifle"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaLaserRifle"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>0</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaLaserRifle"]/verbs/li[1]</xpath>
+    <value>
+      <reloadSound>MihoCombat_Reload_MihoPhase2_SupernovaLaserRifle</reloadSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaLaserRifle"]/verbs/li[1]</xpath>
+    <value>
+      <reloadCompleteSound>MihoCombat_Reload_MihoPhase2_SupernovaLaserRifle_Complete</reloadCompleteSound>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Weapon_BeamFlamethrower"]/verbs/li[1]/soundCastBeam</xpath>
+    <value>
+      <soundCastBeam>MihoCombat_Fire_Weapon_BeamFlamethrower</soundCastBeam>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Gun_Fortress30mm"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_Gun_Fortress30mm</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Gun_Fortress30mm"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Gun_Fortress30mm"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>0</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Gun_Fortress88mm"]/verbs/li[1]/soundCast</xpath>
+    <value>
+      <soundCast>MihoCombat_Fire_MihoPhase2_Gun_Fortress88mm</soundCast>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Gun_Fortress88mm"]/verbs/li[1]/soundCastTail</xpath>
+    <value>
+      <soundCastTail IsNull="True" />
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Gun_Fortress88mm"]/verbs/li[1]/muzzleFlashScale</xpath>
+    <value>
+      <muzzleFlashScale>0</muzzleFlashScale>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_LugerP08_Charge"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_USP"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_USPSuppressed"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_HK416_Charge"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_HK416Grenade"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>2.5</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>true</smoke>
+        <impactSound>MihoCombat_GrenadeBlast</impactSound>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_HK416Grenade"]/projectile/soundExplode</xpath>
+    <value>
+      <soundExplode>MihoCombat_GrenadeBlast</soundExplode>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_HK416Shotgun"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_Stg44_Charge"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_G36_Def"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_AshTwelve_Charge"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_Q11Improved_Explosive"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>2.5</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>true</smoke>
+        <impactSound>MihoCombat_GrenadeBlast</impactSound>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Bullet_Q11Improved_Explosive"]/projectile/soundExplode</xpath>
+    <value>
+      <soundExplode>MihoCombat_GrenadeBlast</soundExplode>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_DSR1_Def"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.65</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_DSR50_Def"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.65</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_type10Gun_Charge"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.65</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_Pzb38_Charge"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.65</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_MG42_Charge"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_AA12_Def"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_MP7_Def"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaEMPrecision"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(0.35,0.78,1,1)</color>
+        <tracerWidth>0.23</tracerWidth>
+        <tracerLength>3.8</tracerLength>
+        <impactScale>0.65</impactScale>
+        <energy>true</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaEMMarksman"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(0.35,0.78,1,1)</color>
+        <tracerWidth>0.18</tracerWidth>
+        <tracerLength>2.8</tracerLength>
+        <impactScale>0.65</impactScale>
+        <energy>true</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaHeavyAP"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.17</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaHeavyHE"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.17</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>2.5</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>true</smoke>
+        <impactSound>MihoCombat_HeavyBlast</impactSound>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaHeavyHE"]/projectile</xpath>
+    <value>
+      <soundExplode>MihoCombat_HeavyBlast</soundExplode>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaNanite"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(0.38,0.94,0.3,1)</color>
+        <tracerWidth>0.17</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>2.5</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>true</smoke>
+        <smokeColor>(0.16,0.48,0.22,0.65)</smokeColor>
+        <impactSound>MihoCombat_HeavyBlast</impactSound>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaNanite"]/projectile</xpath>
+    <value>
+      <soundExplode>MihoCombat_HeavyBlast</soundExplode>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaRadiation"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(0.7,0.92,0.2,1)</color>
+        <tracerWidth>0.17</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>2.5</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>true</smoke>
+        <smokeColor>(0.5,0.43,0.12,0.6)</smokeColor>
+        <impactSound>MihoCombat_HeavyBlast</impactSound>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaRadiation"]/projectile</xpath>
+    <value>
+      <soundExplode>MihoCombat_HeavyBlast</soundExplode>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="Bullet_PanzerfaustRocket"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <rocketExhaust>true</rocketExhaust>
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.25</tracerWidth>
+        <tracerLength>4.5</tracerLength>
+        <impactScale>3.2</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>true</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="Bullet_PanzerfaustRocket"]/projectile/soundExplode</xpath>
+    <value>
+      <soundExplode>MihoCombat_GrenadeBlast</soundExplode>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaLaser"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <color>(1,0.17,0.06,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>true</energy>
+        <beam>true</beam>
+        <smoke>false</smoke>
+        <loopSound>MihoCombat_Fire_MihoPhase2_SupernovaLaserRifle</loopSound>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Bullet_Fortress30mm"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.17</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>0.4</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>false</smoke>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Shell_Fortress88mm"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(1,0.6,0.18,1)</color>
+        <tracerWidth>0.085</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>2.5</impactScale>
+        <energy>false</energy>
+        <beam>false</beam>
+        <smoke>true</smoke>
+        <impactSound>MihoCombat_GrenadeBlast</impactSound>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Shell_Fortress88mm"]/projectile/soundExplode</xpath>
+    <value>
+      <soundExplode>MihoCombat_GrenadeBlast</soundExplode>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaFusionGrenade"]</xpath>
+    <value>
+      <li Class="MihoAdfqs.Combat.Effects.CombatVisuals">
+        <physicalProjectile>true</physicalProjectile>
+        <color>(1,0.24,0.12,1)</color>
+        <tracerWidth>0</tracerWidth>
+        <tracerLength>1.6</tracerLength>
+        <impactScale>4</impactScale>
+        <energy>true</energy>
+        <beam>false</beam>
+        <smoke>true</smoke>
+        <smokeColor>(0.2,0.12,0.13,0.7)</smokeColor>
+        <impactSound>MihoCombat_HeavyBlast</impactSound>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationReplace">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Projectile_SupernovaFusionGrenade"]/projectile/soundExplode</xpath>
+    <value>
+      <soundExplode>MihoCombat_HeavyBlast</soundExplode>
+    </value>
+  </Operation>
+</Patch>

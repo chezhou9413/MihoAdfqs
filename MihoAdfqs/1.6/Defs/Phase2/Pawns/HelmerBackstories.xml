@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BackstoryDef>
+    <defName>MihoPhase2_Childhood_Helmer</defName>
+    <title>“降临”实验受害者</title>
+    <titleShort>降临幸存者</titleShort>
+    <baseDesc>她出生在普通的农业星球，在“降临”事件中失去父母。孤儿院院长发现了她对原力的特殊适应性，元首为她取了现在的名字。</baseDesc>
+    <slot>Childhood</slot>
+    <shuffleable>false</shuffleable>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Melee>5</Melee>
+      <Social>-3</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef>
+    <defName>MihoPhase2_Adulthood_Helmer</defName>
+    <title>元首亲卫队长</title>
+    <titleShort>亲卫队长</titleShort>
+    <baseDesc>她的来历保存在绝密档案中。她很少出现，始终冷静，在元首面临威胁时承担护卫职责。</baseDesc>
+    <slot>Adulthood</slot>
+    <shuffleable>false</shuffleable>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <skillGains>
+      <Melee>20</Melee>
+      <Shooting>20</Shooting>
+      <Medicine>20</Medicine>
+    </skillGains>
+    <forcedTraits>
+      <Asexual>0</Asexual>
+    </forcedTraits>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <mentalImmune>true</mentalImmune>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+</Defs>

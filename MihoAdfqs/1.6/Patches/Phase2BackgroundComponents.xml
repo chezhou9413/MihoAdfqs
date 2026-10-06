@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationConditional">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/comps</xpath>
+    <nomatch Class="PatchOperationAdd">
+      <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]</xpath>
+      <value>
+        <comps />
+      </value>
+    </nomatch>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/AlienRace.ThingDef_AlienRace[defName="Alien_Miho"]/comps</xpath>
+    <value>
+      <li>
+        <compClass>MihoAdfqs.Phase2.Backgrounds.Comp_BackgroundExposure</compClass>
+      </li>
+    </value>
+  </Operation>
+</Patch>

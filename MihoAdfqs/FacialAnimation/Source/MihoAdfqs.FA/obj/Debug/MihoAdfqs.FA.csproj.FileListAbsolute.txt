@@ -1,0 +1,6 @@
+E:\RimModDev\MihoAdfqs\MihoAdfqs\FacialAnimation\Assemblies\MihoAdfqs.FA.dll
+E:\RimModDev\MihoAdfqs\MihoAdfqs\FacialAnimation\Assemblies\MihoAdfqs.FA.pdb
+E:\RimModDev\MihoAdfqs\MihoAdfqs\FacialAnimation\Source\MihoAdfqs.FA\obj\Debug\MihoAdfqs.FA.csproj.AssemblyReference.cache
+E:\RimModDev\MihoAdfqs\MihoAdfqs\FacialAnimation\Source\MihoAdfqs.FA\obj\Debug\MihoAdfqs.FA.csproj.CoreCompileInputs.cache
+E:\RimModDev\MihoAdfqs\MihoAdfqs\FacialAnimation\Source\MihoAdfqs.FA\obj\Debug\MihoAdfqs.FA.dll
+E:\RimModDev\MihoAdfqs\MihoAdfqs\FacialAnimation\Source\MihoAdfqs.FA\obj\Debug\MihoAdfqs.FA.pdb

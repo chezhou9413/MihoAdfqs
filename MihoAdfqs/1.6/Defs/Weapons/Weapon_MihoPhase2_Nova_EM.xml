@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_SupernovaEMPrecisionRifle</defName>
+    <label>超新星电磁精准步枪</label>
+    <description>由帝国科学院自行研发并配发给最精锐部队的武器。它通常配合动力甲，在极远距离投射高穿透电磁弹丸。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2NovaWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_SupernovaEMPrecisionRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.1, 1.1)</drawSize>
+    </graphicData>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>150</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>100</MihoPhase2_Polyethylene>
+      <MihoPhase2_NovaMaterial>1</MihoPhase2_NovaMaterial>
+    </costList>
+    <statBases>
+      <Mass>12</Mass>
+      <MarketValue>25000</MarketValue>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_Nova</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_SupernovaEMPrecision</defaultProjectile>
+        <warmupTime>0.4</warmupTime>
+        <range>160</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>12</muzzleFlashScale>
+        <magazineSize>25</magazineSize>
+        <reloadSeconds>4.5</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <guaranteedAccuracy>true</guaranteedAccuracy>
+        <canGoWild>false</canGoWild>
+        <preciseBurstTicks>12.0</preciseBurstTicks>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_HeavyBulletBase">
+    <defName>MihoPhase2_Projectile_SupernovaEMPrecision</defName>
+    <label>超新星电磁精准弹</label>
+    <graphicData Inherit="False">
+      <texPath>Thing/MihoPhase2/Projectiles/EnergyCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(0.55, 1.2)</drawSize>
+      <color>(0.35, 0.8, 1, 1)</color>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>75</damageAmountBase>
+      <armorPenetrationBase>3</armorPenetrationBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>180</speed>
+    </projectile>
+  </ThingDef>
+  <!-- 电磁射手步枪采用三发稳定点射近似全自动模式。 -->
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_SupernovaEMMarksmanRifle</defName>
+    <label>超新星电磁射手步枪</label>
+    <description>由帝国科学院自行研发并配发给最精锐部队的武器。它通常配合动力甲，在中远距离连续投射高穿透电磁弹丸。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2NovaWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_SupernovaEMMarksmanRifle</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>120</MihoPhase2_IndustrialSteelPlate>
+      <MihoPhase2_Polyethylene>80</MihoPhase2_Polyethylene>
+      <MihoPhase2_NovaMaterial>1</MihoPhase2_NovaMaterial>
+    </costList>
+    <statBases>
+      <Mass>10</Mass>
+      <MarketValue>22000</MarketValue>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_Nova</researchPrerequisite>
+      <skillRequirements>
+        <Crafting>15</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_SupernovaEMMarksman</defaultProjectile>
+        <warmupTime>0.35</warmupTime>
+        <range>90</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>11</muzzleFlashScale>
+        <magazineSize>35</magazineSize>
+        <reloadSeconds>3.5</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <guaranteedAccuracy>true</guaranteedAccuracy>
+        <canGoWild>false</canGoWild>
+        <preciseBurstTicks>8.0</preciseBurstTicks>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_HeavyBulletBase">
+    <defName>MihoPhase2_Projectile_SupernovaEMMarksman</defName>
+    <label>超新星电磁射手弹</label>
+    <graphicData Inherit="False">
+      <texPath>Thing/MihoPhase2/Projectiles/EnergyCore</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(0.45, 0.9)</drawSize>
+      <color>(0.35, 0.8, 1, 1)</color>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>45</damageAmountBase>
+      <armorPenetrationBase>3</armorPenetrationBase>
+      <stoppingPower>2.5</stoppingPower>
+      <speed>170</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

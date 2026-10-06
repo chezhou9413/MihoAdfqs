@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="MihoPhase2_Tiana"]/modExtensions</xpath>
+    <value>
+      <li Class="ChezhouLib.FA.PawnKindFacialAnimationExtension">
+        <headTypeDef>MihoPhase2_Tiana_Head</headTypeDef>
+        <eyeballTypeDef>MihoPhase2_Tiana_Eyeball</eyeballTypeDef>
+        <lidTypeDef>MihoPhase2_Tiana_Lid</lidTypeDef>
+        <browTypeDef>MihoPhase2_Tiana_Brow</browTypeDef>
+        <mouthTypeDef>MihoPhase2_Tiana_Mouth</mouthTypeDef>
+        <overrideFaceSize>true</overrideFaceSize>
+        <faceSize>(1.5,1.5)</faceSize>
+        <applyNarrowHeadCorrection>false</applyNarrowHeadCorrection>
+      </li>
+    </value>
+  </Operation>
+</Patch>

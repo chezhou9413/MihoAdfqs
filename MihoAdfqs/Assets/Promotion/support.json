@@ -1,0 +1,17 @@
+{
+  "strikes": [
+    {"name":"精准打击","icon":"Bombard","intro":"一发舰炮轰击指定位置，适合集中火力。"},
+    {"name":"120毫米火力网","icon":"Barrage120","intro":"持续炮击一片区域，压制聚集的敌人。"},
+    {"name":"380毫米火力网","icon":"Barrage380","intro":"更猛烈的大范围炮击，适合对付大群敌人。"},
+    {"name":"凝固汽油弹火力网","icon":"Napalm","intro":"用燃烧弹覆盖战场，让敌人难以穿过。"},
+    {"name":"毒气打击","icon":"Gas","intro":"释放毒气，使吸入者积累毒素并陷入恐慌。"},
+    {"name":"EMP打击","icon":"EMP","intro":"以电磁脉冲干扰机械单位，争取交战时间。"}
+  ],
+  "supplies": [
+    {"name":"轨道士兵","icon":"Soldiers","intro":"呼叫一队帝国士兵支援战斗。"},
+    {"name":"药物补给","icon":"Medicine","intro":"将医药和闪耀医药送到殖民地。"},
+    {"name":"新星蓝图","icon":"Blueprint","intro":"换取新星科技所需的研究蓝图。"},
+    {"name":"召唤亲卫","icon":"Guards","intro":"由秋霜召来亲卫，帮助守住殖民地。"},
+    {"name":"永久动员","icon":"Mobilize","intro":"后续袭击时，援军和舰炮会自动参战。"}
+  ]
+}

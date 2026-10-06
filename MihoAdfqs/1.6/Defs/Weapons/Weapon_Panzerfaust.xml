@@ -68,7 +68,7 @@
                 <warmupTime>3</warmupTime>
                 <range>55</range>
                 <burstShotCount>1</burstShotCount>
-                <soundCast>Shot_Rocket</soundCast>
+                <soundCast>InfernoCannon_Fire</soundCast>
                 <forcedMissRadius>2.9</forcedMissRadius>
                 <muzzleFlashScale>14</muzzleFlashScale>
                 <targetParams>
@@ -94,9 +94,10 @@
         <defName>Bullet_PanzerfaustRocket</defName>
         <label>铁拳火箭弹</label>
         <graphicData>
-            <texPath>Things/Projectile/Rocket_Big</texPath>
+            <texPath>Thing/MihoPhase2/Projectiles/ImperialRocket</texPath>
             <graphicClass>Graphic_Single</graphicClass>
             <shaderType>TransparentPostLight</shaderType>
+            <drawSize>(0.8, 1.35)</drawSize>
         </graphicData>
         <thingClass>Projectile_Explosive</thingClass>
         <projectile>

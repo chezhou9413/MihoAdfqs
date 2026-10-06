@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="SkyfallerBase">
+    <defName>MihoPhase2_OrbitalShell</defName>
+    <label>帝国轨道炮弹</label>
+    <thingClass>MihoAdfqs.Phase2.Orbital.Skyfaller_ImperialShell</thingClass>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/OrbitalShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(1.1, 3.2)</drawSize>
+    </graphicData>
+    <skyfaller>
+      <movementType>Accelerate</movementType>
+      <speed>1.6</speed>
+      <ticksToImpactRange>30</ticksToImpactRange>
+      <rotateGraphicTowardsDirection>true</rotateGraphicTowardsDirection>
+      <hitRoof>false</hitRoof>
+      <motesPerCell>0</motesPerCell>
+      <shadowSize>(1.5, 1.5)</shadowSize>
+      <anticipationSound>MihoSupport_Incoming</anticipationSound>
+      <anticipationSoundTicks>29</anticipationSoundTicks>
+    </skyfaller>
+  </ThingDef>
+  <ThingDef ParentName="DropPodIncoming">
+    <defName>MihoPhase2_SupportPodIncoming</defName>
+    <label>帝国支援空投舱</label>
+    <skyfaller><ticksToImpactRange>120</ticksToImpactRange></skyfaller>
+  </ThingDef>
+</Defs>

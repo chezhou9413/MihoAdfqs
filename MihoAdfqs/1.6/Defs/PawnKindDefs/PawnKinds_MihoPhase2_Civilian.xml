@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 二期帝国平民单位共用平民背景和装备标签。 -->
+  <PawnKindDef Name="MihoPhase2_ImperialMihoCivilianKindBase" ParentName="MihoPhase2_ImperialMihoKindBase" Abstract="True">
+    <itemQuality>Normal</itemQuality>
+    <isFighter>false</isFighter>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_CivilianMiho</li>
+      <li>MihoPhase2_Adulthood_CelebrityChef</li>
+      <li>MihoPhase2_Adulthood_MiliraCookingTeacher</li>
+      <li>MihoPhase2_Adulthood_IdolMiho</li>
+      <li>MihoPhase2_Adulthood_FarmerMiho</li>
+      <li>MihoPhase2_Adulthood_UniversityStudent</li>
+      <li>MihoPhase2_Adulthood_UnionPresident</li>
+      <li>MihoPhase2_Adulthood_TailGroomer</li>
+      <li>MihoPhase2_Adulthood_CatLover</li>
+      <li>MihoPhase2_Adulthood_Hannibal</li>
+      <li>MihoPhase2_Adulthood_ShrineMaiden</li>
+      <li>MihoPhase2_Adulthood_Intern</li>
+    </fixedAdultBackstories>
+    <weaponMoney>
+      <min>600</min>
+      <max>5000</max>
+    </weaponMoney>
+    <weaponTags Inherit="False">
+      <li>ThirdEmpirePhase2CivilianWeapon</li>
+    </weaponTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>8000</max>
+    </apparelMoney>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_Civilian</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.35</apparelAllowHeadgearChance>
+    <!-- 在民用外衣池中必选一件，保留款式随机性并保证内外衣齐全。 -->
+    <specificApparelRequirements>
+      <li>
+        <requiredTag>MihoPhase2_Civilian</requiredTag>
+        <apparelLayer>Shell</apparelLayer>
+      </li>
+    </specificApparelRequirements>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoCivilianKindBase">
+    <defName>MihoPhase2_ImperialCivilian</defName>
+    <label>帝国平民糊狐</label>
+    <combatPower>35</combatPower>
+  </PawnKindDef>
+
+  <!-- 普通商队成员按文档要求不携带武器。 -->
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoCivilianKindBase">
+    <defName>MihoPhase2_ImperialTrader</defName>
+    <label>帝国商人糊狐</label>
+    <combatPower>20</combatPower>
+    <trader>true</trader>
+    <weaponMoney>
+      <min>0</min>
+      <max>0</max>
+    </weaponMoney>
+    <weaponTags Inherit="False" />
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoKindBase">
+    <defName>MihoPhase2_ResearchStaff</defName>
+    <apparelRequired>
+      <li>MihoPhase2_ResearchCoat</li>
+    </apparelRequired>
+    <label>帝国科研站工作人员</label>
+    <combatPower>35</combatPower>
+    <itemQuality>Normal</itemQuality>
+    <isFighter>false</isFighter>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_ResearchStaff</li>
+    </fixedAdultBackstories>
+    <weaponMoney>
+      <min>600</min>
+      <max>5000</max>
+    </weaponMoney>
+    <weaponTags Inherit="False">
+      <li>ThirdEmpirePhase2CivilianWeapon</li>
+    </weaponTags>
+    <apparelMoney>
+      <min>1200</min>
+      <max>8000</max>
+    </apparelMoney>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_Research</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoKindBase">
+    <defName>MihoPhase2_Scientist</defName>
+    <apparelRequired>
+      <li>MihoPhase2_ResearchCoat</li>
+    </apparelRequired>
+    <label>帝国科学家</label>
+    <combatPower>45</combatPower>
+    <itemQuality>Good</itemQuality>
+    <isFighter>false</isFighter>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_Scientist</li>
+    </fixedAdultBackstories>
+    <weaponMoney>
+      <min>600</min>
+      <max>5000</max>
+    </weaponMoney>
+    <weaponTags Inherit="False">
+      <li>ThirdEmpirePhase2CivilianWeapon</li>
+    </weaponTags>
+    <apparelMoney>
+      <min>1600</min>
+      <max>10000</max>
+    </apparelMoney>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_Research</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+  </PawnKindDef>
+</Defs>

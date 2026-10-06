@@ -5,23 +5,26 @@ using Verse;
 
 namespace MihoAdfqs.Trader
 {
+    //生成不包含指定种族的奴隶商品。
     public class StockGenerator_Slaves_ExcludeRace : StockGenerator_Slaves
     {
         public ThingDef excludedRaceDef;
+        //专门的奴隶商队保证携带奴隶，不受商队派系随机意识形态的禁奴检查影响。
         public override IEnumerable<Thing> GenerateThings(PlanetTile forTile, Faction faction = null)
         { 
-            foreach (Thing t in base.GenerateThings(forTile, faction))
+            foreach (Thing t in base.GenerateThings(forTile, null))
             {
                 Pawn pawn = t as Pawn;
                 if (pawn != null && pawn.def == excludedRaceDef)
                 {
                     pawn.Destroy();
-                    PawnKindDef replacementKind = PawnKindDefOf.Slave;
+                    //原版Slave会被HAR随机替换种族，改用明确的智人成员避免再次生成美狐。
+                    PawnKindDef replacementKind = PawnKindDefOf.Villager;
                     PawnGenerationRequest request = new PawnGenerationRequest(
                         kind: replacementKind,
-                        faction: null, // <--- 重点：暂时不给派系，避免被种族锁死
+                        faction: null,
                         context: PawnGenerationContext.NonPlayer,
-                        tile: -1,
+                        tile: forTile,
                         forceGenerateNewPawn: true,
                         allowDead: false,
                         allowDowned: false,
@@ -34,15 +37,11 @@ namespace MihoAdfqs.Trader
                     );
 
                     Pawn replacementPawn = PawnGenerator.GeneratePawn(request);
-                    if (replacementPawn.Faction != faction)
+                    if (faction != null && replacementPawn.Faction != faction)
                     {
                         replacementPawn.SetFaction(faction);
                     }
-                    if (replacementPawn.def != excludedRaceDef)
-                    {
-                        yield return replacementPawn;
-                    }
-                    // --- 修正重点结束 ---
+                    yield return replacementPawn;
                 }
                 else
                 {

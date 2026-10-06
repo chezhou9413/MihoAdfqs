@@ -1,0 +1,208 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <BackstoryDef Name="MihoPhase2_ImperialMihoCivilianBase" Abstract="True">
+    <slot>Adulthood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <spawnCategories>
+      <li>MihoPhase2_ImperialMihoCivilian</li>
+    </spawnCategories>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_CivilianMiho</defName>
+    <title>平民糊狐</title>
+    <titleShort>平民糊狐</titleShort>
+    <baseDesc>[PAWN_nameDef]是帝国内普通得不能再普通的一位糊狐。她在帝国内接受教育、成长并度过年幼时光，来到边缘世界也是为了寻找在帝国内向上的机遇。</baseDesc>
+    <skillGains>
+      <Intellectual>1</Intellectual>
+      <Plants>6</Plants>
+      <Crafting>2</Crafting>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_CelebrityChef</defName>
+    <title>大厨糊狐</title>
+    <titleShort>糊狐大厨</titleShort>
+    <baseDesc>[PAWN_nameDef]是帝国内某家星级餐厅的知名厨师。经过她的手艺，哪怕是米莉拉做出的食物也能得到挽救。</baseDesc>
+    <skillGains>
+      <Cooking>12</Cooking>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <factors>
+          <FoodPoisonChance>0</FoodPoisonChance>
+          <CookSpeed>0.5</CookSpeed>
+        </factors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_MiliraCookingTeacher</defName>
+    <title>教会米莉拉学员的烹饪大厨</title>
+    <titleShort>米莉拉烹饪导师</titleShort>
+    <baseDesc>[PAWN_nameDef]曾被米莉拉气出了心脏病。虽然医生没能完全治好她的心脏病，但她引以为傲的是，自己终于教会了一名米莉拉做饭。</baseDesc>
+    <skillGains>
+      <Cooking>8</Cooking>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <factors>
+          <FoodPoisonChance>0</FoodPoisonChance>
+        </factors>
+        <heartDisease>true</heartDisease>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_IdolMiho</defName>
+    <title>爱豆糊狐</title>
+    <titleShort>爱豆糊狐</titleShort>
+    <baseDesc>[PAWN_nameDef]是一名闪耀世界的知名爱抖露糊狐，只是她在第三帝国的知名度似乎并不高。</baseDesc>
+    <skillGains>
+      <Social>20</Social>
+      <Intellectual>5</Intellectual>
+      <Shooting>-10</Shooting>
+      <Melee>-10</Melee>
+      <Construction>-10</Construction>
+      <Mining>-10</Mining>
+      <Cooking>-10</Cooking>
+      <Plants>-10</Plants>
+      <Animals>-10</Animals>
+      <Crafting>-10</Crafting>
+      <Artistic>-10</Artistic>
+      <Medicine>-10</Medicine>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <offsets>
+          <PawnBeauty>6</PawnBeauty>
+        </offsets>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_FarmerMiho</defName>
+    <title>农民糊狐</title>
+    <titleShort>农民糊狐</titleShort>
+    <baseDesc>[PAWN_nameDef]是一名生活在农业星球上的糊狐，曾过着普通而平凡的日子。战争迫使她离开家乡，来到边缘世界寻找新的生活。</baseDesc>
+    <skillGains>
+      <Plants>10</Plants>
+      <Intellectual>2</Intellectual>
+      <Cooking>3</Cooking>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_UniversityStudent</defName>
+    <title>大学生糊狐</title>
+    <titleShort>糊狐大学生</titleShort>
+    <baseDesc>[PAWN_nameDef]还是一名大学生，平时好吃懒做，整天过着科目能及格就行的日子。为了顺利毕业，她只好来到边缘世界实习并赚取学分。</baseDesc>
+    <skillGains>
+      <Social>-5</Social>
+      <Shooting>3</Shooting>
+      <Melee>3</Melee>
+      <Construction>3</Construction>
+      <Mining>3</Mining>
+      <Cooking>3</Cooking>
+      <Plants>3</Plants>
+      <Animals>3</Animals>
+      <Crafting>3</Crafting>
+      <Artistic>3</Artistic>
+      <Medicine>3</Medicine>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_UnionPresident</defName>
+    <title>美狐工会会长</title>
+    <titleShort>工会会长</titleShort>
+    <baseDesc>[PAWN_nameDef]曾是一名德高望重的工会会长，为工人们敢于据理力争。直到某天，有人在她家中发现了一名与她毫无亲属关系的正太智人种。</baseDesc>
+    <skillGains>
+      <Crafting>10</Crafting>
+      <Intellectual>8</Intellectual>
+      <Social>-3</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_TailGroomer</defName>
+    <title>美狐尾巴护理师</title>
+    <titleShort>尾巴护理师</titleShort>
+    <baseDesc>[PAWN_nameDef]是一名专业的尾巴护理师。尽管有些客人的尾巴数量过多，会让她花上一整天，经过她护理的美狐仍然一致好评。</baseDesc>
+    <skillGains>
+      <Crafting>3</Crafting>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_CatLover</defName>
+    <title>美狐族爱猫者</title>
+    <titleShort>爱猫者</titleShort>
+    <baseDesc>[PAWN_nameDef]小时候被猫抓伤，从此一直对猫有心理阴影。自从她借走同学的爱宠而宠物随后不翼而飞后，这份阴影似乎有所缓解。</baseDesc>
+    <skillGains>
+      <Social>-3</Social>
+      <Melee>1</Melee>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <catSlaughter>true</catSlaughter>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_Hannibal</defName>
+    <title>美狐族汉尼拔</title>
+    <titleShort>美狐汉尼拔</titleShort>
+    <baseDesc>[PAWN_nameDef]有一个难以启齿的爱好，已经享用过无数同类。尽管她选用的食材取自新鲜尸体，仍然遭到身边熟人的厌恶。</baseDesc>
+    <skillGains>
+      <Social>-5</Social>
+      <Cooking>20</Cooking>
+    </skillGains>
+    <forcedTraits>
+      <Cannibal>0</Cannibal>
+    </forcedTraits>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_ShrineMaiden</defName>
+    <title>糊狐巫女</title>
+    <titleShort>糊狐巫女</titleShort>
+    <baseDesc>[PAWN_nameDef]是整个家族第三千四百二十三代巫女。她既没有神社，也没有正式职业，更不会祝福，只会定期开直播骗取智人种的钱财。</baseDesc>
+    <skillGains>
+      <Social>10</Social>
+      <Intellectual>3</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <offsets>
+          <PawnBeauty>2</PawnBeauty>
+        </offsets>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoCivilianBase">
+    <defName>MihoPhase2_Adulthood_Intern</defName>
+    <title>糊狐实习生</title>
+    <titleShort>糊狐实习生</titleShort>
+    <baseDesc>[PAWN_nameDef]是十里八乡内的知名黑奴。为了赚到更多的钱，她几乎学会了全部能力。</baseDesc>
+    <skillGains>
+      <Shooting>8</Shooting>
+      <Melee>8</Melee>
+      <Construction>8</Construction>
+      <Mining>8</Mining>
+      <Cooking>8</Cooking>
+      <Plants>8</Plants>
+      <Animals>8</Animals>
+      <Crafting>8</Crafting>
+      <Artistic>8</Artistic>
+      <Medicine>8</Medicine>
+      <Social>8</Social>
+      <Intellectual>8</Intellectual>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <mood>-5</mood>
+        <factors>
+          <RestRateMultiplier>0.6666666666666666</RestRateMultiplier>
+        </factors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+</Defs>

@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <BackstoryDef Name="MihoPhase2_ImperialMihoChildhoodBase" Abstract="True">
+    <slot>Childhood</slot>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <spawnCategories>
+      <li>MihoPhase2_ImperialMihoChildhood</li>
+    </spawnCategories>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_CountryMiho</defName>
+    <title>乡下糊狐</title>
+    <titleShort>乡下糊狐</titleShort>
+    <baseDesc>[PAWN_nameDef]来自帝国边境的一颗农业星球，在那里，她度过了很欢快的童年。</baseDesc>
+    <skillGains>
+      <Intellectual>1</Intellectual>
+      <Artistic>-3</Artistic>
+      <Social>2</Social>
+      <Plants>5</Plants>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_WarOrphan</defName>
+    <title>战争遗孤</title>
+    <titleShort>战争遗孤</titleShort>
+    <baseDesc>[PAWN_nameDef]的父母由于战争逝去，后来由国家孤儿院收养。</baseDesc>
+    <skillGains>
+      <Shooting>5</Shooting>
+      <Melee>5</Melee>
+      <Social>-3</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_UrbanPlanet</defName>
+    <title>城市星球长大的糊狐</title>
+    <titleShort>城市糊狐</titleShort>
+    <baseDesc>[PAWN_nameDef]的童年在一颗布满建筑的星球度过，从未见过自然景观。</baseDesc>
+    <skillGains>
+      <Social>5</Social>
+      <Intellectual>2</Intellectual>
+      <Cooking>3</Cooking>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_WealthyDaughter</defName>
+    <title>富家千金</title>
+    <titleShort>富家千金</titleShort>
+    <baseDesc>[PAWN_nameDef]的父亲是当地的知名人物，她从小锦衣玉食，受到良好的教育。</baseDesc>
+    <skillGains>
+      <Social>6</Social>
+      <Intellectual>4</Intellectual>
+      <Artistic>4</Artistic>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_TaxiBorn</defName>
+    <title>出租车上出生的糊狐</title>
+    <titleShort>出租车出生</titleShort>
+    <baseDesc>[PAWN_nameDef]很不幸地出生在出租车上，母亲是一名体育生，她甚至不知道自己的父亲是谁。</baseDesc>
+    <skillGains>
+      <Melee>3</Melee>
+      <Intellectual>-1</Intellectual>
+      <Social>1</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_NumberedSubject</defName>
+    <title>编号实验体</title>
+    <titleShort>编号实验体</titleShort>
+    <baseDesc>科学家倾注心血造就了[PAWN_nameDef]。作为帝国特殊的存在，她出生的意义就是为帝国铲平一切阻碍。</baseDesc>
+    <spawnCategories Inherit="False">
+      <li>MihoPhase2_LeaderGuardChildhood</li>
+    </spawnCategories>
+    <skillGains>
+      <Melee>10</Melee>
+      <Shooting>12</Shooting>
+      <Social>-5</Social>
+    </skillGains>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_IdolLoveChild</defName>
+    <title>爱豆的私生子</title>
+    <titleShort>爱豆私生子</titleShort>
+    <baseDesc>[PAWN_nameDef]比较幸运，没有被母亲抛弃。受到母亲熏陶的她，立志成为未来最出色的偶像。</baseDesc>
+    <skillGains>
+      <Social>12</Social>
+      <Intellectual>-2</Intellectual>
+      <Artistic>9</Artistic>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <offsets>
+          <PawnBeauty>3</PawnBeauty>
+        </offsets>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_FoolishMiho</defName>
+    <title>笨蛋糊狐</title>
+    <titleShort>笨蛋糊狐</titleShort>
+    <baseDesc>[PAWN_nameDef]智商低下，很容易被人蒙骗，但是心地善良。</baseDesc>
+    <skillGains>
+      <Social>6</Social>
+      <Intellectual>-9</Intellectual>
+    </skillGains>
+    <forcedTraits>
+      <Kind>0</Kind>
+    </forcedTraits>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_PainfulPast</defName>
+    <title>痛苦往事</title>
+    <titleShort>痛苦往事</titleShort>
+    <baseDesc>[PAWN_nameDef]曾是某位星球总督特殊癖好的牺牲者。随着年龄增长，总督抛弃了她，这件事也成了她挥之不去的阴影。</baseDesc>
+    <skillGains>
+      <Social>-3</Social>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <mood>-3</mood>
+        <factors>
+          <Fertility>0</Fertility>
+        </factors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_BrattyMiho</defName>
+    <title>雌小狐</title>
+    <titleShort>雌小狐</titleShort>
+    <baseDesc>[PAWN_nameDef]经常嘲讽邻家大哥哥，想要表达爱欲却只会令人恼怒，最终也因此得到了教训。</baseDesc>
+    <skillGains>
+      <Social>1</Social>
+      <Intellectual>1</Intellectual>
+      <Artistic>3</Artistic>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <factors>
+          <Fertility>0.5</Fertility>
+        </factors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_GiftedMiho</defName>
+    <title>甜菜糊狐</title>
+    <titleShort>甜菜糊狐</titleShort>
+    <baseDesc>[PAWN_nameDef]出生于普通家庭，父母也是普通的糊狐，但她的头脑仿佛发生了进化，智力全面超越了同龄糊狐。</baseDesc>
+    <skillGains>
+      <Intellectual>15</Intellectual>
+      <Social>-10</Social>
+      <Artistic>10</Artistic>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <factors>
+          <Fertility>1.5</Fertility>
+        </factors>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+  <BackstoryDef ParentName="MihoPhase2_ImperialMihoChildhoodBase">
+    <defName>MihoPhase2_Childhood_NeighborMiho</defName>
+    <title>邻家糊狐</title>
+    <titleShort>邻家糊狐</titleShort>
+    <baseDesc>[PAWN_nameDef]是一位非常热心的孩子。她学习优秀、性格温柔，是邻里眼中值得信赖的好孩子。</baseDesc>
+    <skillGains>
+      <Intellectual>5</Intellectual>
+      <Social>5</Social>
+      <Plants>5</Plants>
+      <Artistic>5</Artistic>
+      <Crafting>5</Crafting>
+    </skillGains>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Backgrounds.BackgroundEffects">
+        <offsets>
+          <PawnBeauty>3</PawnBeauty>
+        </offsets>
+      </li>
+    </modExtensions>
+  </BackstoryDef>
+</Defs>

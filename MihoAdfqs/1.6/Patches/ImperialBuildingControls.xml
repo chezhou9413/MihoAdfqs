@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- 完整建造图、实色半透明蓝图和医疗舱专用操作入口。 -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaMedicalPod"]/comps</xpath>
+    <value><li Class="CompProperties"><compClass>MihoAdfqs.Buildings.UI.Comp_ImperialBuildingControls</compClass></li></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_ImperialFortress30mm"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/Fortress/MihoPhase2_ImperialFortressComplete30mm</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_ImperialFortress30mm"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/Fortress/MihoPhase2_ImperialFortressComplete30mm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(6.2061,6.1502)</drawSize>
+      <drawOffset>(0,0,0.6787)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_ImperialFortress88mm"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/Fortress/MihoPhase2_ImperialFortressComplete88mm</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_ImperialFortress88mm"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/Fortress/MihoPhase2_ImperialFortressComplete88mm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(6.2061,6.1502)</drawSize>
+      <drawOffset>(0,0,0.6787)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Supernova3DPrinter"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/MihoPhase2_Supernova3DPrinter</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_Supernova3DPrinter"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/MihoPhase2_Supernova3DPrinter</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(4.5714,4.785)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_NovaAggregator"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/MihoPhase2_NovaAggregator</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_NovaAggregator"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/MihoPhase2_NovaAggregator</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(7.4419,5.3895)</drawSize>
+      <drawOffset>(0,0,0.0263)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_ImperialBeerBarrel"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/MihoPhase2_ImperialBeerBarrel</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_ImperialBeerBarrel"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/MihoPhase2_ImperialBeerBarrel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(1.4798,1.1228)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_ImperialAgriculturalFloodlight"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/MihoPhase2_ImperialAgriculturalFloodlight</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_ImperialAgriculturalFloodlight"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/MihoPhase2_ImperialAgriculturalFloodlight</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(1.2736,1.1082)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_IndoorCultivator"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/IndoorCultivator/MihoPhase2_IndoorCultivatorCover_east</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_IndoorCultivator"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/IndoorCultivator/MihoPhase2_IndoorCultivatorCover_east</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(7.4203,8.2249)</drawSize>
+      <drawOffset>(0,0,-0.0321)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaDrugFabricator"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/DrugFabricator/MihoPhase2_SupernovaDrugFabricator_south</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaDrugFabricator"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/DrugFabricator/MihoPhase2_SupernovaDrugFabricator_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(3.1605,3.1605)</drawSize>
+      <drawOffset>(0,0,0.0309)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaMedicalPod"]</xpath>
+    <value>
+      <uiIconPath>Building/MihoPhase2/MedicalPod/MihoPhase2_SupernovaMedicalPodComplete_south</uiIconPath>
+      <uiIconScale>1</uiIconScale>
+      <uiIconOffset>(0,0)</uiIconOffset>
+      <useBlueprintGraphicAsGhost>true</useBlueprintGraphicAsGhost>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThingDef[defName="MihoPhase2_SupernovaMedicalPod"]/building</xpath>
+    <value><blueprintGraphicData>
+      <texPath>Building/MihoPhase2/MedicalPod/MihoPhase2_SupernovaMedicalPodComplete_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(3.5556,3.2751)</drawSize>
+      <drawOffset>(0,0,0.0032)</drawOffset>
+    </blueprintGraphicData></value>
+  </Operation>
+</Patch>

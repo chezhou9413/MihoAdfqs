@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- 二期远程武器共用制造、交易与近战结构。 -->
+  <ThingDef Name="MihoPhase2_GunBase" ParentName="BaseHumanMakeableGun" Abstract="True">
+    <techLevel>Spacer</techLevel>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <tradeTags>
+      <li>WeaponRanged</li>
+      <li>MihoThirdEmpireGoods</li>
+    </tradeTags>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Flammability>0.2</Flammability>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <recipeUsers>
+        <li>FabricationBench</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <tools>
+      <li>
+        <label>枪托</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>枪管</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+
+  <!-- 二期常规电荷弹共用投射物表现。 -->
+  <ThingDef Name="MihoPhase2_BulletBase" ParentName="BaseBullet" Abstract="True">
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>90</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- 二期重型电荷弹共用较大的投射物表现。 -->
+  <ThingDef Name="MihoPhase2_HeavyBulletBase" ParentName="MihoPhase2_BulletBase" Abstract="True">
+    <graphicData>
+      <texPath>Things/Projectile/ChargeLanceShot</texPath>
+      <drawSize>1.3</drawSize>
+    </graphicData>
+    <projectile>
+      <stoppingPower>2</stoppingPower>
+      <speed>120</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

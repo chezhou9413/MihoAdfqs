@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>MihoPhase2_ImperialBeerBarrel</defName>
+    <label>帝国啤酒酒桶</label>
+    <description>在原版“账单”页添加酿造订单，厨师搬入100份玉米并完成100工作量装料。酒桶在29～31℃累计发酵30天，完成后在操作口附近产出5份帝国啤酒。温度不合适时暂停并保留进度，无需电力。一次只能发酵一批，选中建筑可查看发酵进度。</description>
+    <thingClass>MihoAdfqs.Buildings.Production.Building_AutomatedProcessor</thingClass>
+    <graphicData>
+      <texPath>Building/MihoPhase2/MihoPhase2_ImperialBeerBarrel</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.4798,1.1228)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <size>(1,1)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <fillPercent>0.7</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToBuild>100</WorkToBuild>
+      <Flammability>0.8</Flammability>
+      <Mass>40</Mass>
+    </statBases>
+    <costList>
+      <WoodLog>100</WoodLog>
+      <Steel>10</Steel>
+    </costList>
+    <comps />
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+      <workTableRoomRole>Workshop</workTableRoomRole>
+    </building>
+    <designationCategory>MihoPhase2_ImperialBuildings</designationCategory>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>MihoPhase2_Research_HeavyIndustry</li>
+    </researchPrerequisites>
+    <tickerType>Normal</tickerType>
+  </ThingDef>
+  <RecipeDef>
+    <defName>MihoPhase2_BrewImperialBeerAtBarrel</defName>
+    <label>酒桶酿造帝国啤酒 x5</label>
+    <description>放入一百份玉米，在29～31℃环境发酵三十天。</description>
+    <jobString>正在照料帝国啤酒酒桶。</jobString>
+    <workAmount>10000</workAmount>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <researchPrerequisite>MihoPhase2_Research_CulturalFamiliarity</researchPrerequisite>
+    <recipeUsers>
+      <li>MihoPhase2_ImperialBeerBarrel</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawCorn</li>
+          </thingDefs>
+        </filter>
+        <count>100</count>
+      </li>
+    </ingredients>
+    <products>
+      <MihoPhase2_ImperialCannedBeer>5</MihoPhase2_ImperialCannedBeer>
+    </products>
+  </RecipeDef>
+</Defs>

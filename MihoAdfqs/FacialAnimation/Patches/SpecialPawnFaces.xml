@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="Miho_adfqs"]/modExtensions</xpath>
+    <value>
+      <li Class="ChezhouLib.FA.PawnKindFacialAnimationExtension">
+        <headTypeDef>MihoAdfqsHead</headTypeDef>
+        <eyeballTypeDef>MihoPhase2_ImperialMiho_Eyeball</eyeballTypeDef>
+        <lidTypeDef>MihoPhase2_ImperialMiho_Lid</lidTypeDef>
+        <browTypeDef>MihoPhase2_ImperialMiho_Brow</browTypeDef>
+        <mouthTypeDef>MihoPhase2_ImperialMiho_Mouth</mouthTypeDef>
+        <overrideFaceSize>true</overrideFaceSize>
+        <faceSize>(1.125,1.125)</faceSize>
+        <applyNarrowHeadCorrection>false</applyNarrowHeadCorrection>
+        <animationDefPrefixes><li>MihoPhase2_Face_</li></animationDefPrefixes>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/PawnKindDef[defName="MihoPhase2_LeaderGuardCaptain"]/modExtensions</xpath>
+    <value>
+      <li Class="ChezhouLib.FA.PawnKindFacialAnimationExtension">
+        <headTypeDef>MihoPhase2_HelmerZog_Head</headTypeDef>
+        <eyeballTypeDef>MihoPhase2_HelmerZog_Eyeball</eyeballTypeDef>
+        <lidTypeDef>MihoPhase2_HelmerZog_Lid</lidTypeDef>
+        <browTypeDef>MihoPhase2_HelmerZog_Brow</browTypeDef>
+        <mouthTypeDef>MihoPhase2_HelmerZog_Mouth</mouthTypeDef>
+        <overrideFaceSize>true</overrideFaceSize>
+        <faceSize>(1.125,1.125)</faceSize>
+        <applyNarrowHeadCorrection>false</applyNarrowHeadCorrection>
+        <animationDefPrefixes><li>MihoPhase2_Face_</li></animationDefPrefixes>
+      </li>
+    </value>
+  </Operation>
+</Patch>

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoMilitaryKindBase">
+    <defName>MihoPhase2_StratagemSupportSoldier</defName>
+    <label>帝国战备支援兵</label>
+    <combatPower>500</combatPower>
+    <itemQuality>Excellent</itemQuality>
+    <apparelRequired><li>Apparel_WerewolfArmor</li><li>MihoPhase2_PSOStandardNVGHelmet</li></apparelRequired>
+    <fixedAdultBackstories><li>MihoPhase2_Adulthood_SpecialForcesSoldier</li></fixedAdultBackstories>
+    <apparelTags Inherit="False"><li>MihoPhase2_SpecialForces</li></apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoMilitaryKindBase">
+    <defName>MihoPhase2_DefenseSoldier</defName>
+    <apparelRequired>
+      <li>MihoPhase2_DefenseForceUniform</li>
+      <li>MihoPhase2_DefenseForceHelmet</li>
+    </apparelRequired>
+    <label>帝国国防军士兵</label>
+    <combatPower>180</combatPower>
+    <itemQuality>Good</itemQuality>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_DefenseRecruit</li>
+      <li>MihoPhase2_Adulthood_DefenseSoldier</li>
+      <li>MihoPhase2_Adulthood_DefenseVeteran</li>
+    </fixedAdultBackstories>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_Defense</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoMilitaryKindBase">
+    <defName>MihoPhase2_DefenseNCO</defName>
+    <apparelRequired>
+      <li>MihoPhase2_DefenseForceUniform</li>
+      <li>MihoPhase2_DefenseForceCap</li>
+    </apparelRequired>
+    <label>帝国国防军士官</label>
+    <combatPower>260</combatPower>
+    <itemQuality>Good</itemQuality>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_DefenseNCO</li>
+    </fixedAdultBackstories>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_Defense</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoMilitaryKindBase">
+    <defName>MihoPhase2_SpecialForcesSoldier</defName>
+    <apparelRequired>
+      <li>Apparel_WerewolfArmor</li>
+      <li>MihoPhase2_PSOStandardNVGHelmet</li>
+    </apparelRequired>
+    <label>帝国特战部队士兵</label>
+    <combatPower>500</combatPower>
+    <itemQuality>Excellent</itemQuality>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_SpecialForcesSoldier</li>
+    </fixedAdultBackstories>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_SpecialForces</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoMilitaryKindBase">
+    <defName>MihoPhase2_OrbitalDropTrooper</defName>
+    <apparelRequired>
+      <li>MihoPhase2_SupernovaDropArmor</li>
+      <li>MihoPhase2_SupernovaDropHelmet</li>
+    </apparelRequired>
+    <label>帝国轨道空降部队士兵</label>
+    <combatPower>800</combatPower>
+    <itemQuality>Excellent</itemQuality>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_OrbitalDropTrooper</li>
+    </fixedAdultBackstories>
+    <weaponMoney>
+      <min>18000</min>
+      <max>40000</max>
+    </weaponMoney>
+    <weaponTags Inherit="False">
+      <li>ThirdEmpirePhase2NovaWeapon</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_SpecialForces</li>
+    </apparelTags>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoMilitaryKindBase">
+    <defName>MihoPhase2_LeaderGuard</defName>
+    <apparelRequired>
+      <li>MihoPhase2_DemiHeavyArmor</li>
+      <li>MihoPhase2_PSOStandardNVGHelmet</li>
+    </apparelRequired>
+    <label>元首亲卫</label>
+    <combatPower>700</combatPower>
+    <itemQuality>Masterwork</itemQuality>
+    <fixedChildBackstories Inherit="False">
+      <li>MihoPhase2_Childhood_NumberedSubject</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories>
+      <li>MihoPhase2_Adulthood_LeaderGuard</li>
+    </fixedAdultBackstories>
+    <weaponMoney>
+      <min>18000</min>
+      <max>40000</max>
+    </weaponMoney>
+    <weaponTags Inherit="False">
+      <li>ThirdEmpirePhase2NovaWeapon</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_Guard</li>
+    </apparelTags>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Xeno_MihoPhase2_LeaderGuard>1</Xeno_MihoPhase2_LeaderGuard>
+      </xenotypeChances>
+    </xenotypeSet>
+  </PawnKindDef>
+  <PawnKindDef ParentName="MihoPhase2_ImperialMihoMilitaryKindBase">
+    <defName>MihoPhase2_LeaderGuardCaptain</defName>
+    <apparelRequired>
+      <li>MihoPhase2_DemiHeavyArmorAlpha</li>
+      <li>MihoPhase2_PSOSpecialNVGHelmet</li>
+    </apparelRequired>
+    <modExtensions>
+      <li Class="ChezhouLib.Extension.kindRule">
+        <BodyTypeName>AlienRace/adfqs/MihoPhase2/HelmerZog/Body/MihoPhase2_HelmerZogBody</BodyTypeName>
+      </li>
+    </modExtensions>
+    <label>元首亲卫队长</label>
+    <combatPower>1000</combatPower>
+    <itemQuality>Legendary</itemQuality>
+    <weaponMoney>
+      <min>18000</min>
+      <max>40000</max>
+    </weaponMoney>
+    <weaponTags Inherit="False">
+      <li>ThirdEmpirePhase2NovaWeapon</li>
+    </weaponTags>
+    <apparelTags Inherit="False">
+      <li>MihoPhase2_Guard</li>
+    </apparelTags>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Xeno_MihoPhase2_HelmerZog>1</Xeno_MihoPhase2_HelmerZog>
+      </xenotypeChances>
+    </xenotypeSet>
+    <fixedChildBackstories Inherit="False">
+      <li>MihoPhase2_Childhood_Helmer</li>
+    </fixedChildBackstories>
+    <fixedAdultBackstories Inherit="False">
+      <li>MihoPhase2_Adulthood_Helmer</li>
+    </fixedAdultBackstories>
+    <minGenerationAge>74</minGenerationAge>
+    <maxGenerationAge>74</maxGenerationAge>
+  </PawnKindDef>
+</Defs>

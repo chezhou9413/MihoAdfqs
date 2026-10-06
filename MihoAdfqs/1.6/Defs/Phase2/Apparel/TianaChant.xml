@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelClothingBase">
+    <defName>MihoPhase2_TianaChant</defName>
+    <label>颂歌</label>
+    <description>颂歌。帝国民用服装。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/TianaChant/MihoPhase2_TianaChant</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>500</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList>
+      <RawPosFlower>10</RawPosFlower>
+    </costList>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>200</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps />
+    <equippedStatOffsets>
+      <PawnBeauty>5</PawnBeauty>
+      <MoveSpeed>2</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+        <li>Arms</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/TianaChant/MihoPhase2_TianaChant</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Civilian</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Cloth</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

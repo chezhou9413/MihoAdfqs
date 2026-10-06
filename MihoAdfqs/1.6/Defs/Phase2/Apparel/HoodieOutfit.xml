@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelClothingBase">
+    <defName>MihoPhase2_HoodieOutfit</defName>
+    <label>卫衣套装</label>
+    <description>卫衣套装。帝国民用服装。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/HoodieOutfit/MihoPhase2_HoodieOutfit</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToMake>200</WorkToMake>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList />
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>220</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps />
+    <equippedStatOffsets>
+      <MoveSpeed>1</MoveSpeed>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups Inherit="False">
+        <li>Torso</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/HoodieOutfit/MihoPhase2_HoodieOutfit</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Civilian</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Cloth</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

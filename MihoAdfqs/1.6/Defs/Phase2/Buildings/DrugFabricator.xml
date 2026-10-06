@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="BenchBase">
+    <defName>MihoPhase2_SupernovaDrugFabricator</defName>
+    <label>超新星药物制造台</label>
+    <description>在原版“账单”页添加药物订单，并设置生产次数、操作人员和材料范围。接通电源后，由符合配方技能要求的殖民者搬运材料并全程制造；该工作台不会自动加工。尚未完成相应研究的药物配方不会出现在列表中。</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Building/MihoPhase2/DrugFabricator/MihoPhase2_SupernovaDrugFabricator_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <!-- 方形画布等比缩放，非透明设备居中放入2×3占地。 -->
+      <drawSize>(3.1605,3.1605)</drawSize>
+      <drawOffset>(0,0,0.0309)</drawOffset>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <size>(2,3)</size>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <hasInteractionCell>true</hasInteractionCell>
+    <interactionCellOffset>(0,0,-2)</interactionCellOffset>
+    <inspectorTabs><li>ITab_Bills</li></inspectorTabs>
+    <statBases><MaxHitPoints>1000</MaxHitPoints><WorkToBuild>1500</WorkToBuild><Flammability>0</Flammability><Mass>400</Mass></statBases>
+    <costList><Steel>200</Steel><ComponentIndustrial>20</ComponentIndustrial><ComponentSpacer>6</ComponentSpacer></costList>
+    <comps>
+      <li Class="CompProperties_Power"><compClass>CompPowerTrader</compClass><basePowerConsumption>4400</basePowerConsumption><shortCircuitInRain>true</shortCircuitInRain></li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+    </comps>
+    <building><spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity><workTableRoomRole>Workshop</workTableRoomRole><workTableNotInRoomRoleFactor>0.8</workTableNotInRoomRoleFactor></building>
+    <designationCategory>MihoPhase2_ImperialBuildings</designationCategory>
+    <constructionSkillPrerequisite>8</constructionSkillPrerequisite>
+    <placeWorkers><li>PlaceWorker_PreventInteractionSpotOverlap</li></placeWorkers>
+    <researchPrerequisites><li>MihoPhase2_Research_HeavyIndustry</li></researchPrerequisites>
+  </ThingDef>
+</Defs>

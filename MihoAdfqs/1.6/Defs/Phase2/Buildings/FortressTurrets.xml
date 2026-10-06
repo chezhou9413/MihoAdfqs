@@ -1,0 +1,247 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef Name="MihoPhase2_Fortress30Base" ParentName="AutocannonTurret">
+    <defName>MihoPhase2_ImperialFortress30mm</defName>
+    <designationCategory>MihoPhase2_ImperialBuildings</designationCategory>
+    <label>帝国堡垒（30毫米速射炮）</label>
+    <description>选中建筑查看弹仓、装填倒计时和原版钢铁库存条；搬运人员自动补给，也可选中人物后右键安排补给。堡垒需要通电，库存上限500钢铁，每发消耗1点库存；空仓自动装填5秒，断电暂停。30毫米速射炮弹仓500发、射程80格，88毫米高爆炮弹仓50发、射程120格。使用“切换炮型”按钮换装，消耗库存100钢铁，会清空弹仓并取消攻击目标；使用原版强制攻击按钮指定目标。</description>
+    <graphicData>
+      <texPath>Building/MihoPhase2/Fortress/MihoPhase2_ImperialFortressBase</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <!-- 透明边距不计入4×4底座，炮轴仍对应原画布中心。 -->
+      <drawSize>(6.2061,6.1502)</drawSize>
+      <drawOffset>(0,0,0.6787)</drawOffset>
+    </graphicData>
+    <size>(4,4)</size>
+    <placeWorkers Inherit="False">
+      <li>MihoAdfqs.Buildings.Defense.PlaceWorker_ImperialFortress</li>
+    </placeWorkers>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>800</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>1.0</ShootingAccuracyTurret>
+    </statBases>
+    <costList>
+      <Steel>1500</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <MihoPhase2_IndustrialSteelPlate>100</MihoPhase2_IndustrialSteelPlate>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>钢铁库存</fuelLabel>
+        <fuelGizmoLabel>钢铁库存</fuelGizmoLabel>
+        <outOfFuelMessage>需要装填钢铁</outOfFuelMessage>
+        <fuelFilter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>500</fuelCapacity>
+        <fuelMultiplier>1</fuelMultiplier>
+        <initialFuelPercent>0</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+        <fuelConsumptionRate>0</fuelConsumptionRate>
+      </li>
+    </comps>
+    <building>
+      <combatPower>800</combatPower>
+      <turretGunDef>MihoPhase2_Gun_Fortress30mm</turretGunDef>
+      <turretBurstCooldownTime>0.75</turretBurstCooldownTime>
+      <turretTopDrawSize>6.1502</turretTopDrawSize>
+      <turretTopOffset>(0,0.6787)</turretTopOffset>
+      <turretBurstWarmupTime>1.5</turretBurstWarmupTime>
+    </building>
+    <researchPrerequisites>
+      <li>MihoPhase2_Research_HeavyIndustry</li>
+    </researchPrerequisites>
+    <thingClass>MihoAdfqs.Buildings.Defense.Building_ImperialFortress</thingClass>
+  </ThingDef>
+  <ThingDef Name="MihoPhase2_Fortress88Base" ParentName="AutocannonTurret">
+    <defName>MihoPhase2_ImperialFortress88mm</defName>
+    <label>帝国堡垒（88毫米高爆炮）</label>
+    <description>选中建筑查看弹仓、装填倒计时和原版钢铁库存条；搬运人员自动补给，也可选中人物后右键安排补给。堡垒需要通电，库存上限500钢铁，每发消耗1点库存；空仓自动装填5秒，断电暂停。30毫米速射炮弹仓500发、射程80格，88毫米高爆炮弹仓50发、射程120格。使用“切换炮型”按钮换装，消耗库存100钢铁，会清空弹仓并取消攻击目标；使用原版强制攻击按钮指定目标。</description>
+    <graphicData>
+      <texPath>Building/MihoPhase2/Fortress/MihoPhase2_ImperialFortressBase</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6.2061,6.1502)</drawSize>
+      <drawOffset>(0,0,0.6787)</drawOffset>
+    </graphicData>
+    <size>(4,4)</size>
+    <placeWorkers Inherit="False">
+      <li>MihoAdfqs.Buildings.Defense.PlaceWorker_ImperialFortress</li>
+    </placeWorkers>
+    <passability>Impassable</passability>
+    <fillPercent>1</fillPercent>
+    <statBases>
+      <MaxHitPoints>3000</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <WorkToBuild>1500</WorkToBuild>
+      <Mass>800</Mass>
+      <Beauty>-20</Beauty>
+      <ShootingAccuracyTurret>1.0</ShootingAccuracyTurret>
+    </statBases>
+    <costList>
+      <Steel>1500</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <MihoPhase2_IndustrialSteelPlate>100</MihoPhase2_IndustrialSteelPlate>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>400</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="CompProperties_Breakdownable" />
+      <li Class="CompProperties_Refuelable">
+        <fuelLabel>钢铁库存</fuelLabel>
+        <fuelGizmoLabel>钢铁库存</fuelGizmoLabel>
+        <outOfFuelMessage>需要装填钢铁</outOfFuelMessage>
+        <fuelFilter>
+          <thingDefs>
+            <li>Steel</li>
+          </thingDefs>
+        </fuelFilter>
+        <fuelCapacity>500</fuelCapacity>
+        <fuelMultiplier>0.1</fuelMultiplier>
+        <initialFuelPercent>0</initialFuelPercent>
+        <autoRefuelPercent>0.5</autoRefuelPercent>
+        <showFuelGizmo>true</showFuelGizmo>
+        <minimumFueledThreshold>1</minimumFueledThreshold>
+        <consumeFuelOnlyWhenUsed>true</consumeFuelOnlyWhenUsed>
+        <fuelIconPath>UI/Overlays/Barrel</fuelIconPath>
+        <fuelConsumptionRate>0</fuelConsumptionRate>
+      </li>
+    </comps>
+    <building>
+      <combatPower>1200</combatPower>
+      <turretGunDef>MihoPhase2_Gun_Fortress88mm</turretGunDef>
+      <turretBurstCooldownTime>4</turretBurstCooldownTime>
+      <turretTopDrawSize>6.1502</turretTopDrawSize>
+      <turretTopOffset>(0,0.6787)</turretTopOffset>
+      <turretBurstWarmupTime>1.5</turretBurstWarmupTime>
+    </building>
+    <researchPrerequisites>
+      <li>MihoPhase2_Research_HeavyIndustry</li>
+    </researchPrerequisites>
+    <thingClass>MihoAdfqs.Buildings.Defense.Building_ImperialFortress</thingClass>
+    <designationCategory IsNull="True" />
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MihoPhase2_Bullet_Fortress30mm</defName>
+    <label>30毫米速射炮弹</label>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Projectiles/ImperialShell</texPath>
+      <drawSize>(0.5, 0.75)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <speed>100</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>MihoPhase2_Gun_Fortress30mm</defName>
+    <label>30毫米堡垒速射炮</label>
+    <description>安装在帝国堡垒上的30毫米速射炮。</description>
+    <graphicData>
+      <texPath>Building/MihoPhase2/Fortress/MihoPhase2_ImperialFortress_Autocannon30mm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.95</AccuracyMedium>
+      <AccuracyLong>0.9</AccuracyLong>
+      <RangedWeapon_Cooldown>0.75</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>100</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>MihoAdfqs.Buildings.Defense.Verb_Fortress</verbClass>
+        <defaultProjectile>MihoPhase2_Bullet_Fortress30mm</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>80</range>
+        <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+        <burstShotCount>5</burstShotCount>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MihoPhase2_Shell_Fortress88mm</defName>
+    <label>88毫米高爆炮弹</label>
+    <thingClass>MihoAdfqs.Combat.Projectiles.Projectile_AreaPayload</thingClass>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Projectiles/ImperialShell</texPath>
+      <drawSize>(0.8, 1.25)</drawSize>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bomb</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <speed>65</speed>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+    </projectile>
+    <modExtensions>
+      <li Class="MihoAdfqs.Combat.Projectiles.AreaPayload">
+        <width>3</width>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <ThingDef ParentName="BaseWeaponTurret">
+    <defName>MihoPhase2_Gun_Fortress88mm</defName>
+    <label>88毫米堡垒高爆炮</label>
+    <description>安装在帝国堡垒上的88毫米远程高爆炮。</description>
+    <graphicData>
+      <texPath>Building/MihoPhase2/Fortress/MihoPhase2_ImperialFortress_Cannon88mm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>4</RangedWeapon_Cooldown>
+      <DeteriorationRate>0</DeteriorationRate>
+      <Mass>150</Mass>
+      <Flammability>0</Flammability>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>MihoAdfqs.Buildings.Defense.Verb_Fortress</verbClass>
+        <defaultProjectile>MihoPhase2_Shell_Fortress88mm</defaultProjectile>
+        <warmupTime>1.5</warmupTime>
+        <range>120</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_Autocannon</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>0</muzzleFlashScale>
+        <consumeFuelPerShot>1</consumeFuelPerShot>
+      </li>
+    </verbs>
+  </ThingDef>
+</Defs>

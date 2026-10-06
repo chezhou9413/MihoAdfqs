@@ -1,129 +1,126 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-    <!-- HK416 电荷步枪 -->
-    <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>Gun_HKFourOneSix</defName>
-        <label>HK416突击步枪</label>
-        <description>一把经过改造的HK416步枪，配备了先进的电荷发射系统。采用十连发设计，能够快速连续射击电荷弹药，在中近距离战斗中表现出色。</description>
-
-        <!-- 基本属性 -->
-        <techLevel>Spacer</techLevel>
-        <weaponTags>
-            <li>ThirdEmpireWeapon</li>
-            <li>LongShots</li>
-        </weaponTags>
-        <weaponClasses>
-            <li>RangedHeavy</li>
-        </weaponClasses>
-
-        <!-- 外观 -->
-        <graphicData>
-            <texPath>Weapon/hk416</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(0.8, 0.8)</drawSize>
-            <color>(1,1,1,1)</color>
-        </graphicData>
-
-        <soundInteract>Interact_ChargeRifle</soundInteract>
-
-        <!-- 制作成本：钢铁x225，零部件x5，高级零部件x2 -->
-        <costList>
-            <Steel>225</Steel>
-            <ComponentIndustrial>5</ComponentIndustrial>
-            <ComponentSpacer>2</ComponentSpacer>
-        </costList>
-
-        <!-- 基础数值 -->
-        <statBases>
-            <WorkToMake>30000</WorkToMake>
-            <Mass>3.8</Mass>
-            <AccuracyTouch>0.90</AccuracyTouch>
-            <AccuracyShort>0.90</AccuracyShort>
-            <AccuracyMedium>0.85</AccuracyMedium>
-            <AccuracyLong>0.60</AccuracyLong>
-            <RangedWeapon_Cooldown>1.5</RangedWeapon_Cooldown>
-            <DeteriorationRate>0.5</DeteriorationRate>
-            <Flammability>0.2</Flammability>
-            <MarketValue>2800</MarketValue>
-        </statBases>
-
-        <!-- 制作 -->
-        <recipeMaker>
-            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-            <researchPrerequisite Inherit="False" />
-            <workSkill>Crafting</workSkill>
-            <effectWorking>Smith</effectWorking>
-            <soundWorking>Recipe_Machining</soundWorking>
-            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-            <recipeUsers>
-                <li>TableMachining</li>
-            </recipeUsers>
-            <skillRequirements>
-                <Crafting>9</Crafting>
-            </skillRequirements>
-        </recipeMaker>
-
-        <!-- 交易标签 -->
-        <tradeTags>
-            <li>WeaponRanged</li>
-            <li>MihoThirdEmpireGoods</li>
-        </tradeTags>
-
-        <!-- 装备设置 -->
-        <equippedAngleOffset>45</equippedAngleOffset>
-
-        <!-- 武器属性 -->
-        <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-                <defaultProjectile>Bullet_HK416_Charge</defaultProjectile>
-                <warmupTime>1.5</warmupTime>
-                <range>32</range>
-                <burstShotCount>10</burstShotCount>
-                <ticksBetweenBurstShots>6</ticksBetweenBurstShots>
-                <soundCast>Shot_ChargeRifle</soundCast>
-                <soundCastTail>GunTail_Medium</soundCastTail>
-                <muzzleFlashScale>9</muzzleFlashScale>
-            </li>
-        </verbs>
-
-        <tools>
-            <li>
-                <label>枪托</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>9</power>
-                <cooldownTime>2</cooldownTime>
-            </li>
-            <li>
-                <label>枪管</label>
-                <capacities>
-                    <li>Blunt</li>
-                    <li>Poke</li>
-                </capacities>
-                <power>9</power>
-                <cooldownTime>2</cooldownTime>
-            </li>
-        </tools>
-    </ThingDef>
-
-    <!-- 自定义电荷弹药（伤害15，使用原版电荷步枪的外观和穿透数据） -->
-    <ThingDef ParentName="BaseBullet">
-        <defName>Bullet_HK416_Charge</defName>
-        <label>电荷弹</label>
-        <graphicData>
-            <texPath>Things/Projectile/Charge_Small</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>TransparentPostLight</shaderType>
-        </graphicData>
-        <projectile>
-            <damageDef>Bullet</damageDef>
-            <damageAmountBase>15</damageAmountBase>
-            <speed>70</speed>
-            <armorPenetrationBase>0.75</armorPenetrationBase>
-            <stoppingPower>1.5</stoppingPower>
-        </projectile>
-    </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_HKFourOneSix</defName>
+    <label>HK416突击步枪</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装，使其适应多用途与各种战场环境，同时也是国防军列装的主要武器。</description>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>ThirdEmpireWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Weapon/hk416</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.8, 0.8)</drawSize>
+      <color>(1,1,1,1)</color>
+    </graphicData>
+    <soundInteract>Interact_ChargeRifle</soundInteract>
+    <costList>
+      <Steel>225</Steel>
+      <ComponentIndustrial>5</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>3.8</Mass>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.80</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+      <DeteriorationRate>0.5</DeteriorationRate>
+      <Flammability>0.2</Flammability>
+      <MarketValue>2800</MarketValue>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <researchPrerequisite>MihoPhase2_Research_ServiceWeapons</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <tradeTags>
+      <li>WeaponRanged</li>
+      <li>MihoThirdEmpireGoods</li>
+    </tradeTags>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_HK416_Charge</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>65</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <magazineSize>45</magazineSize>
+        <reloadSeconds>4</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <preciseBurstTicks>4.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 0.95)</li>
+            <li>(20, 0.95)</li>
+            <li>(40, 0.8)</li>
+            <li>(65, 0.75)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>枪托</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>枪管</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_HK416_Charge</defName>
+    <label>电荷弹</label>
+    <graphicData>
+      <texPath>Things/Projectile/Charge_Small</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>70</speed>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+    </projectile>
+  </ThingDef>
 </Defs>

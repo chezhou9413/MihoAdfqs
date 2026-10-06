@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_AA12_Def</defName>
+    <label>AA12自动霰弹枪</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装，仅用于民间武装或守备部队，但其恐怖威力足以令敌人胆寒。</description>
+    <weaponTags>
+      <li>ThirdEmpireWeapon</li>
+      <li>ThirdEmpirePhase2CivilianWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+    </weaponTags>
+    <weaponClasses Inherit="False">
+      <li>ShortShots</li>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_AA12</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.85, 0.85)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>280</Steel>
+      <ComponentIndustrial>8</ComponentIndustrial>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+      <MarketValue>2600</MarketValue>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>0.70</AccuracyMedium>
+      <AccuracyLong>0.55</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForcesWeapons</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_AA12_Def</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>20</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <magazineSize>24</magazineSize>
+        <weaponType>Shotgun</weaponType>
+        <reloadSeconds>2.5</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>8</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <preciseBurstTicks>12.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 1)</li>
+            <li>(10, 1)</li>
+            <li>(15, 0.7)</li>
+            <li>(20, 0.55)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_BulletBase">
+    <defName>MihoPhase2_Projectile_AA12_Def</defName>
+    <label>AA12霰弹</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>14</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>55</speed>
+    </projectile>
+  </ThingDef>
+</Defs>

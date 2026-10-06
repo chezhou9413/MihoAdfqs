@@ -19,6 +19,13 @@ if not exist "%SOURCE_MOD%\About\About.xml" (
     exit /b 1
 )
 
+REM 枪口库必须随主程序集携带，缺失时停止部署，避免发布不可加载的模组。
+if not exist "%SOURCE_MOD%\1.6\Assemblies\WeaponMuzzleFramework.dll" (
+    echo [ERROR] 缺少枪口修正库，请先运行 compile_modSelf.bat。
+    pause
+    exit /b 1
+)
+
 "%DEPLOY_EXE%" deploy --source "%SOURCE_MOD%" --target-name "%TARGET_NAME%"
 set "DEPLOY_ERROR=%ERRORLEVEL%"
 

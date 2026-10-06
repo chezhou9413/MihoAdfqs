@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <FacialAnimation.MouthShapeDef>
+    <defName>MihoPhase2_Smile</defName>
+    <altShapeDef>normal</altShapeDef>
+  </FacialAnimation.MouthShapeDef>
+  <FacialAnimation.MouthShapeDef>
+    <defName>MihoPhase2_Down</defName>
+    <altShapeDef>normal</altShapeDef>
+  </FacialAnimation.MouthShapeDef>
+</Defs>

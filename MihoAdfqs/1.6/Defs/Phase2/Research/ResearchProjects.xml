@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ResearchTabDef>
+    <defName>MihoPhase2_ResearchTab_Imperial</defName>
+    <label>美狐第三帝国</label>
+    <generalTitle>美狐第三帝国科技</generalTitle>
+    <generalDescription>研究帝国文化、工业、军备与医药技术。</generalDescription>
+  </ResearchTabDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_MilitaryApparel</defName>
+    <label>帝国军队衣物</label>
+    <description>掌握国防军与党卫军制式衣物的制作规范。</description>
+    <baseCost>500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_CivilianApparel</defName>
+    <label>帝国平民常见衣物</label>
+    <description>熟悉帝国平民社会常见的服装与日用品制作方式。</description>
+    <baseCost>300</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_CommonWeapons</defName>
+    <label>帝国常见武器</label>
+    <description>研究STG44、Pzb38、鲁格P08与MG42等帝国常见武器。</description>
+    <baseCost>2000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>Electricity</li></prerequisites>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>1.5</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_ServiceWeapons</defName>
+    <label>帝国部队武器</label>
+    <description>研究HK416、ASH12、Q11改进版与10式等帝国部队制式武器。</description>
+    <baseCost>1500</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>Gunsmithing</li></prerequisites>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>2</researchViewX>
+    <researchViewY>1.5</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_HK416Customization</defName>
+    <label>HK416精细化改装</label>
+    <description>掌握HK416下挂榴弹与下挂霰弹版本的精细改装技术。</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>MihoPhase2_Research_ServiceWeapons</li></prerequisites>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>4</researchViewX>
+    <researchViewY>1</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_SpecialForcesWeapons</defName>
+    <label>帝国特战部队武器</label>
+    <description>研究MP7、AA12、DSR系列、USP系列与G36等特战部队武器。</description>
+    <baseCost>2200</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>MihoPhase2_Research_ServiceWeapons</li></prerequisites>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>4</researchViewX>
+    <researchViewY>2</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_Nova</defName>
+    <label>新星</label>
+    <description>解析N3报告并掌握新星聚合器、新星材料及超新星系列装备的制造技术。</description>
+    <baseCost>12000</baseCost>
+    <techLevel>Spacer</techLevel>
+    <techprintCount>1</techprintCount>
+    <heldByFactionCategoryTags><li>MihoThirdEmpire</li></heldByFactionCategoryTags>
+    <techprintCommonality>1</techprintCommonality>
+    <techprintMarketValue>5000</techprintMarketValue>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>6</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_HeavyIndustry</defName>
+    <label>帝国重工业</label>
+    <description>掌握帝国基础重工业，解锁工业级钢板、聚乙烯及除新星聚合器外的二期工业建筑。</description>
+    <baseCost>4400</baseCost>
+    <techLevel>Industrial</techLevel>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>3</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_CulturalFamiliarity</defName>
+    <label>帝国文化熟识</label>
+    <description>了解帝国饮食与纪念物传统，解锁帝国系列食物。</description>
+    <baseCost>100</baseCost>
+    <techLevel>Neolithic</techLevel>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>0</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_AOM</defName>
+    <label>AOM计划</label>
+    <description>研究帝国阿尔法实验室的军用医药计划，解锁超新星系列注射器。</description>
+    <baseCost>3200</baseCost>
+    <techLevel>Spacer</techLevel>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>3</researchViewX>
+    <researchViewY>4.5</researchViewY>
+  </ResearchProjectDef>
+
+  <ResearchProjectDef>
+    <defName>MihoPhase2_Research_SpecialForces</defName>
+    <label>特战部队</label>
+    <description>在帝国军队衣物的基础上，研究除超新星系列外的特战盔甲。</description>
+    <baseCost>3000</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites><li>MihoPhase2_Research_MilitaryApparel</li></prerequisites>
+    <tab>MihoPhase2_ResearchTab_Imperial</tab>
+    <researchViewX>4</researchViewX>
+    <researchViewY>0</researchViewY>
+  </ResearchProjectDef>
+</Defs>

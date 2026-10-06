@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelHatBase">
+    <defName>MihoPhase2_MitaCap</defName>
+    <label>米塔帽子</label>
+    <description>米塔帽子。帝国民用服装。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/MitaCap/MihoPhase2_MitaCap_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>80</WorkToMake>
+      <Mass>1</Mass>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Heat>0</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList />
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <costStuffCount>80</costStuffCount>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_CivilianApparel</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <!-- 帽子贴图自带耳形，隐藏美狐原有左右耳。 -->
+    <comps>
+      <li Class="ChezhouLib.comp.ApparelAddBodyAddonCompProperties">
+        <targetRaces>
+          <li>Alien_Miho</li>
+        </targetRaces>
+        <bodyAddonHidden>
+          <li>MihoEarRight</li>
+          <li>MihoEarLeft</li>
+        </bodyAddonHidden>
+      </li>
+    </comps>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/MitaCap/MihoPhase2_MitaCap</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Civilian</li>
+      </tags>
+    </apparel>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Cloth</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

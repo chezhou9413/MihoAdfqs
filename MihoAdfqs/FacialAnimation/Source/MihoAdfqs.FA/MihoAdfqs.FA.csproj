@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
+  <PropertyGroup>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+    <OutputType>Library</OutputType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <LangVersion>7.3</LangVersion>
+    <AssemblyName>MihoAdfqs.FA</AssemblyName>
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <RimWorldPath>E:\steam\steamapps\common\RimWorld</RimWorldPath>
+    <ManagedPath>$(RimWorldPath)\RimWorldWin64_Data\Managed</ManagedPath>
+    <FacialAnimationPath>E:\steam\steamapps\workshop\content\294100\1635901197</FacialAnimationPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="FaceCompatibilityStartup.cs" />
+    <Compile Include="Patch_TianaFaceAnimations.cs" />
+    <Compile Include="Patch_TianaEyeType.cs" />
+    <Reference Include="0Harmony"><HintPath>E:\捷豹\rimworlddll\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System" />
+    <Reference Include="Assembly-CSharp"><HintPath>$(ManagedPath)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedPath)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="FacialAnimation"><HintPath>$(FacialAnimationPath)\1.6\Assemblies\FacialAnimation.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="MihoAdfqs"><HintPath>..\..\..\1.6\Assemblies\MihoAdfqs.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

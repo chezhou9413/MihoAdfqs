@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <BodyPartDef><defName>MihoPhase2_PerkOrgan</defName><label>佩尔克体</label><hitPoints>40</hitPoints><bleedRate>0.5</bleedRate><skinCovered>false</skinCovered><solid>false</solid></BodyPartDef>
+  <HediffDef>
+    <defName>MihoPhase2_PerkBody</defName>
+    <label>佩尔克体</label>
+    <description>严格意义来讲，帝国的美狐们，除了跟寻常的美狐没有生殖隔离外，已经不是同一物种了。原本，美狐在缺少秘灵物质的情况下，会陷入精神崩溃；得益于科研领域的进步，佩尔克体完美替代了灵腺，并将成长过程转化为可以人为控制的道路。脱离药物只会令其生长十分缓慢。
+
+当前阶段会提高全局学习效率并缩短瞄准时间；进入中期后还会限制一秒内能够承受的累计伤害。</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>0.15</initialSeverity>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <comps>
+      <li Class="MihoAdfqs.Health.HediffCompProperties_PerkBodyGrowth" />
+  </comps>
+    <stages>
+      <li>
+        <label>前期</label>
+        <statFactors>
+          <GlobalLearningFactor>1.3</GlobalLearningFactor>
+          <AimingDelayFactor>0.75</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>中期</label>
+        <minSeverity>0.31</minSeverity>
+        <statFactors>
+          <GlobalLearningFactor>1.5</GlobalLearningFactor>
+          <AimingDelayFactor>0.4</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>后期</label>
+        <minSeverity>0.71</minSeverity>
+        <statFactors>
+          <GlobalLearningFactor>2</GlobalLearningFactor>
+          <AimingDelayFactor>0.25</AimingDelayFactor>
+        </statFactors>
+      </li>
+      <li>
+        <label>完全体</label>
+        <minSeverity>1</minSeverity>
+        <statFactors>
+          <GlobalLearningFactor>2.75</GlobalLearningFactor>
+          <AimingDelayFactor>0.2</AimingDelayFactor>
+        </statFactors>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>MihoPhase2_RemovePerkBody</defName>
+    <label>移除佩尔克体</label>
+    <description>通过精密手术移除头部内的佩尔克体，同时失去它提供的学习、瞄准和限伤效果。</description>
+    <workerClass>MihoAdfqs.Phase2.Medicine.Recipe_RemovePerkBody</workerClass>
+    <recipeUsers><li>Alien_Miho</li></recipeUsers>
+    <jobString>正在移除佩尔克体。</jobString>
+    <workAmount>2400</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>true</targetsBodyPart>
+    <appliedOnFixedBodyParts><li>MihoPhase2_PerkOrgan</li></appliedOnFixedBodyParts>
+    <successfullyRemovedHediffMessage>{0}成功移除了{1}的佩尔克体。</successfullyRemovedHediffMessage>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineIndustrial</li>
+          </thingDefs>
+        </filter>
+        <count>4</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>MedicineIndustrial</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+  </RecipeDef>
+</Defs>

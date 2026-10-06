@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_ApparelHeadArmorBase">
+    <defName>MihoPhase2_DefenseForceHelmet</defName>
+    <label>国防军头盔</label>
+    <description>国防军头盔。帝国制式装备。抵消值250，仅可使用插板修复。</description>
+    <graphicData>
+      <texPath>apparel/MihoPhase2/DefenseForceHelmet/MihoPhase2_DefenseForceHelmet_south</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>750</MaxHitPoints>
+      <WorkToMake>400</WorkToMake>
+      <Mass>8</Mass>
+      <ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.9</ArmorRating_Heat>
+      <StuffEffectMultiplierArmor>0</StuffEffectMultiplierArmor>
+    </statBases>
+    <costList>
+      <MihoPhase2_IndustrialSteelPlate>5</MihoPhase2_IndustrialSteelPlate>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_MilitaryApparel</researchPrerequisite>
+      <recipeUsers Inherit="False">
+        <li>HandTailoringBench</li>
+        <li>ElectricTailoringBench</li>
+        <li>TableMachining</li>
+        <li>FabricationBench</li>
+        <li>MihoPhase2_Supernova3DPrinter</li>
+      </recipeUsers>
+    </recipeMaker>
+    <comps>
+      <li Class="MihoAdfqs.Combat.Armor.CompProperties_ArmorReserve">
+        <capacity>250</capacity>
+      </li>
+    </comps>
+    <equippedStatOffsets>
+      <MeleeDodgeChance>1</MeleeDodgeChance>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <wornGraphicPath>apparel/MihoPhase2/DefenseForceHelmet/MihoPhase2_DefenseForceHelmet</wornGraphicPath>
+      <tags Inherit="False">
+        <li>MihoPhase2_Defense</li>
+      </tags>
+    </apparel>
+    <costStuffCount>100</costStuffCount>
+    <stuffCategories Inherit="False">
+      <li>Metallic</li>
+    </stuffCategories>
+    <modExtensions>
+      <li Class="MihoAdfqs.Phase2.Materials.ApparelMaterialBaseline">
+        <material>Steel</material>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

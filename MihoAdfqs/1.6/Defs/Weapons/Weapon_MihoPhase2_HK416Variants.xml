@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_HK416GrenadeLauncher</defName>
+    <label>HK416榴弹下挂版本</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装。这一HK416下挂榴弹版本能够在狭窄地带有效杀伤人员或破坏建筑物。</description>
+    <weaponTags>
+      <li>ThirdEmpireWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_HK416GrenadeLauncher</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentSpacer>6</ComponentSpacer>
+      <Uranium>10</Uranium>
+      <Chemfuel>10</Chemfuel>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+      <MarketValue>4500</MarketValue>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_HK416Customization</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_HK416_Charge</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>65</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <label>HK416主枪</label>
+        <magazineSize>60</magazineSize>
+        <reloadSeconds>4</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <preciseBurstTicks>4.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 0.95)</li>
+            <li>(20, 0.95)</li>
+            <li>(40, 0.8)</li>
+            <li>(65, 0.75)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_HK416Grenade</defaultProjectile>
+        <warmupTime>0.6</warmupTime>
+        <range>20</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <targetParams>
+          <canTargetLocations>true</canTargetLocations>
+        </targetParams>
+        <magazineSize>1</magazineSize>
+        <weaponType>Grenade</weaponType>
+        <reloadSeconds>6</reloadSeconds>
+        <secondary>true</secondary>
+        <pellets>1</pellets>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <fireModes>
+          <li>点射</li>
+        </fireModes>
+        <label>下挂榴弹</label>
+        <guaranteedAccuracy>true</guaranteedAccuracy>
+        <preciseBurstTicks>60.0</preciseBurstTicks>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>MihoPhase2_Projectile_HK416Grenade</defName>
+    <label>HK416下挂榴弹</label>
+    <thingClass>MihoAdfqs.Combat.Projectiles.Projectile_AreaPayload</thingClass>
+    <graphicData>
+      <texPath>Thing/MihoPhase2/Projectiles/ImperialShell</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>(0.7, 0.85)</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>MihoPhase2_Damage_HK416Grenade</damageDef>
+      <damageAmountBase>40</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <speed>60</speed>
+      <soundExplode>MortarBomb_Explode</soundExplode>
+    </projectile>
+    <modExtensions>
+      <li Class="MihoAdfqs.Combat.Projectiles.AreaPayload">
+        <width>3</width>
+        <wallDamage>200</wallDamage>
+      </li>
+    </modExtensions>
+  </ThingDef>
+  <DamageDef ParentName="Bomb">
+    <defName>MihoPhase2_Damage_HK416Grenade</defName>
+    <label>HK416下挂榴弹爆破</label>
+    <defaultDamage>40</defaultDamage>
+    <buildingDamageFactor>5</buildingDamageFactor>
+  </DamageDef>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_HK416Shotgun</defName>
+    <label>HK416霰弹下挂版本</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装。这一HK416下挂霰弹版本能够在狭窄地带有效杀伤或驱散人员。</description>
+    <weaponTags>
+      <li>ThirdEmpireWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_HK416Shotgun</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(0.9, 0.9)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>200</Steel>
+      <ComponentSpacer>6</ComponentSpacer>
+      <Uranium>20</Uranium>
+    </costList>
+    <statBases>
+      <Mass>5</Mass>
+      <MarketValue>4400</MarketValue>
+      <AccuracyTouch>0.95</AccuracyTouch>
+      <AccuracyShort>0.95</AccuracyShort>
+      <AccuracyMedium>0.8</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_HK416Customization</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_HK416_Charge</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>65</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+        <soundCast>Shot_ChargeRifle</soundCast>
+        <soundCastTail>GunTail_Medium</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <label>HK416主枪</label>
+        <magazineSize>60</magazineSize>
+        <reloadSeconds>4</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+          <li>全自动</li>
+        </fireModes>
+        <preciseBurstTicks>4.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 0.95)</li>
+            <li>(20, 0.95)</li>
+            <li>(40, 0.8)</li>
+            <li>(65, 0.75)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_HK416Shotgun</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>10</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>12</ticksBetweenBurstShots>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <magazineSize>5</magazineSize>
+        <weaponType>Shotgun</weaponType>
+        <reloadSeconds>2</reloadSeconds>
+        <secondary>true</secondary>
+        <pellets>1</pellets>
+        <fireModes>
+          <li>点射</li>
+        </fireModes>
+        <label>下挂霰弹</label>
+        <guaranteedAccuracy>true</guaranteedAccuracy>
+        <preciseBurstTicks>12.0</preciseBurstTicks>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_BulletBase">
+    <defName>MihoPhase2_Projectile_HK416Shotgun</defName>
+    <label>HK416下挂霰弹</label>
+    <graphicData>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
+    </graphicData>
+    <projectile>
+      <damageAmountBase>10</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <speed>55</speed>
+    </projectile>
+    <thingClass>MihoAdfqs.Combat.Projectiles.Projectile_AreaPayload</thingClass>
+    <modExtensions>
+      <li Class="MihoAdfqs.Combat.Projectiles.AreaPayload">
+        <width>3</width>
+        <height>1</height>
+        <orientToFlight>true</orientToFlight>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

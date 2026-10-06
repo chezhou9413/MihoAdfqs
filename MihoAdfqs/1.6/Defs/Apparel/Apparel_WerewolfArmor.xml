@@ -111,6 +111,7 @@
 
     <!-- 服装定义：重型盔甲，覆盖全身 -->
     <apparel>
+      <shellRenderedBehindHead>true</shellRenderedBehindHead>
       <bodyPartGroups>
         <li>Torso</li>
         <li>Neck</li>

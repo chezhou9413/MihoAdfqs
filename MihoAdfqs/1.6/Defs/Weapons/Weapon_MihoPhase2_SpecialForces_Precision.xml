@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_DSR1_Def</defName>
+    <label>DSR狙击步枪</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装，使其适应各种战场环境，也是特战部队列装的主要武器。它通常由狙击手配备，用于远程压制。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_DSR1</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>280</Steel>
+      <ComponentSpacer>10</ComponentSpacer>
+      <Uranium>50</Uranium>
+    </costList>
+    <statBases>
+      <Mass>7</Mass>
+      <MarketValue>6500</MarketValue>
+      <AccuracyTouch>0.10</AccuracyTouch>
+      <AccuracyShort>0.10</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForcesWeapons</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_DSR1_Def</defaultProjectile>
+        <warmupTime>0.25</warmupTime>
+        <range>150</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <magazineSize>10</magazineSize>
+        <reloadSeconds>6.5</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <fireModes>
+          <li>点射</li>
+        </fireModes>
+        <preciseBurstTicks>60.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 0.1)</li>
+            <li>(10, 0.1)</li>
+            <li>(80, 0.9)</li>
+            <li>(150, 0.95)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_HeavyBulletBase">
+    <defName>MihoPhase2_Projectile_DSR1_Def</defName>
+    <label>DSR电荷弹</label>
+    <projectile>
+      <damageAmountBase>45</damageAmountBase>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_GunBase">
+    <defName>MihoPhase2_DSR50_Def</defName>
+    <label>DSR-50狙击步枪</label>
+    <description>DSR-50是帝国为特战部队准备的大口径改装型号。它保留了DSR的远程压制能力，代价是口径增大后连发节奏更慢。</description>
+    <weaponTags>
+      <li>ThirdEmpireHighWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <graphicData>
+      <texPath>Weapon/MihoPhase2/MihoPhase2_DSR50</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+    </graphicData>
+    <costList>
+      <Steel>280</Steel>
+      <ComponentSpacer>11</ComponentSpacer>
+      <Uranium>60</Uranium>
+    </costList>
+    <statBases>
+      <Mass>9</Mass>
+      <MarketValue>7600</MarketValue>
+      <AccuracyTouch>0.10</AccuracyTouch>
+      <AccuracyShort>0.10</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.95</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+    </statBases>
+    <recipeMaker>
+      <researchPrerequisite>MihoPhase2_Research_SpecialForcesWeapons</researchPrerequisite>
+    </recipeMaker>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>MihoPhase2_Projectile_DSR50_Def</defaultProjectile>
+        <warmupTime>0.3</warmupTime>
+        <range>150</range>
+        <burstShotCount>1</burstShotCount>
+        <soundCast>Shot_SniperRifle</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>11</muzzleFlashScale>
+        <magazineSize>8</magazineSize>
+        <reloadSeconds>8.5</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <fireModes>
+          <li>点射</li>
+        </fireModes>
+        <preciseBurstTicks>60.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 0.1)</li>
+            <li>(10, 0.1)</li>
+            <li>(80, 0.9)</li>
+            <li>(150, 0.95)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+  </ThingDef>
+  <ThingDef ParentName="MihoPhase2_HeavyBulletBase">
+    <defName>MihoPhase2_Projectile_DSR50_Def</defName>
+    <label>DSR-50电荷弹</label>
+    <projectile>
+      <damageAmountBase>60</damageAmountBase>
+    </projectile>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Defs>
+  <ThingDef ParentName="LampBase">
+    <defName>MihoPhase2_ImperialAgriculturalFloodlight</defName>
+    <designationCategory>MihoPhase2_ImperialBuildings</designationCategory>
+    <label>帝国大型农业泛光灯</label>
+    <description>接通电源后，为以自身为中心13×13格内、未被墙体遮挡的植物提供100%光照。选中建筑可看到覆盖边界和供电状态。该灯不播种、不收割，也不改变作物的温度需求与昼夜休息。</description>
+    <thingClass>Building</thingClass>
+    <graphicData>
+      <texPath>Building/MihoPhase2/MihoPhase2_ImperialAgriculturalFloodlight</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1.2736,1.1082)</drawSize>
+      <drawOffset>(0,0,0)</drawOffset>
+    </graphicData>
+    <tickerType>Rare</tickerType>
+    <building />
+    <statBases>
+      <MaxHitPoints>400</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+      <Mass>15</Mass>
+    </statBases>
+    <costList>
+      <Steel>150</Steel>
+      <ComponentIndustrial>4</ComponentIndustrial>
+    </costList>
+    <comps>
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <shortCircuitInRain>true</shortCircuitInRain>
+        <basePowerConsumption>600</basePowerConsumption>
+      </li>
+      <li Class="MihoAdfqs.Buildings.Agriculture.CompProperties_CropLight">
+        <width>13</width>
+        <occupiedOnly>false</occupiedOnly>
+      </li>
+    </comps>
+    <researchPrerequisites>
+      <li>MihoPhase2_Research_HeavyIndustry</li>
+    </researchPrerequisites>
+  </ThingDef>
+  <ThingDef ParentName="BuildingBase">
+    <defName>MihoPhase2_IndoorCultivator</defName>
+    <label>帝国大型室内农用培养机</label>
+    <description>选中建筑，使用原版“选择作物”按钮，再安排种植人员进入4×8格培养区播种，全部32格均可种植。培养机通电时提供100%光照并自动收割成熟的非树木作物，收获放在培养区外，之后仍需人工重新播种。范围内的树木需人工砍伐。培养区隔绝枯萎病，作物仍受温度与昼夜休息影响；断电时作物会受到腐烂损伤。</description>
+    <thingClass>MihoAdfqs.Buildings.Agriculture.Building_IndoorCultivator</thingClass>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <dontPrint>true</dontPrint>
+    <graphicData>
+      <texPath>Building/MihoPhase2/IndoorCultivator/MihoPhase2_IndoorCultivatorCover_east</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>Transparent</shaderType>
+      <drawSize>(7.4203,8.2249)</drawSize>
+      <drawOffset>(0,0,-0.0321)</drawOffset>
+    </graphicData>
+    <rotatable>false</rotatable>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>Standable</passability>
+    <pathCost>30</pathCost>
+    <constructEffect>ConstructMetal</constructEffect>
+    <fillPercent>0.3</fillPercent>
+    <canOverlapZones>false</canOverlapZones>
+    <size>(4,8)</size>
+    <statBases>
+      <WorkToBuild>1300</WorkToBuild>
+      <MaxHitPoints>2000</MaxHitPoints>
+      <Flammability>0</Flammability>
+      <Cleanliness>-3</Cleanliness>
+    </statBases>
+    <costList>
+      <Steel>400</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>2</ComponentSpacer>
+    </costList>
+    <fertility>2.8</fertility>
+    <building>
+      <defaultPlantToGrow>Plant_Rice</defaultPlantToGrow>
+      <sowTag>Hydroponic</sowTag>
+      <buildingTags>
+        <li>Production</li>
+      </buildingTags>
+    </building>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+      <li Class="CompProperties_Power">
+        <compClass>CompPowerTrader</compClass>
+        <basePowerConsumption>1600</basePowerConsumption>
+      </li>
+      <li Class="CompProperties_Flickable" />
+      <li Class="MihoAdfqs.Buildings.Agriculture.CompProperties_CropLight">
+        <width>13</width>
+        <occupiedOnly>true</occupiedOnly>
+      </li>
+    </comps>
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>MihoPhase2_ImperialBuildings</designationCategory>
+    <researchPrerequisites>
+      <li>MihoPhase2_Research_HeavyIndustry</li>
+    </researchPrerequisites>
+  </ThingDef>
+</Defs>

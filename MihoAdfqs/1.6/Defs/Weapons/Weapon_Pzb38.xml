@@ -1,136 +1,125 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version='1.0' encoding='utf-8'?>
 <Defs>
-    <!-- Pzb38 反坦克步枪（电荷弹，单发） -->
-    <ThingDef ParentName="BaseHumanMakeableGun">
-        <defName>Gun_Pzb38_Charge</defName>
-        <label>Pzb38反坦克步枪</label>
-        <description>一把重型反坦克步枪，使用电荷技术将单发弹丸加速并充能，以极高动能贯穿目标装甲。单发装填，瞄准时间较长，适合超远距离精确打击。</description>
-
-        <techLevel>Spacer</techLevel>
-
-        <weaponTags>
-            <li>ThirdEmpireWeapon</li>
-            <li>LongShots</li>
-        </weaponTags>
-        <weaponClasses>
-            <li>RangedHeavy</li>
-        </weaponClasses>
-
-        <!-- 贴图路径：先占位，你可替换为自己的纹理 -->
-        <graphicData>
-            <texPath>Weapon/Pzb38</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <drawSize>(1, 1)</drawSize>
-            <color>(1,1,1,1)</color>
-        </graphicData>
-
-        <soundInteract>Interact_ChargeLance</soundInteract>
-
-        <!-- 制作成本 -->
-        <costList>
-            <Steel>265</Steel>
-            <ComponentIndustrial>12</ComponentIndustrial>
-            <ComponentSpacer>1</ComponentSpacer>
-        </costList>
-
-        <!-- 基础数值 -->
-        <statBases>
-            <WorkToMake>30000</WorkToMake>
-            <Mass>10</Mass>
-
-            <!-- 你给的命中度（注意：RimWorld 的 Accuracy* 是 0~1 之间） -->
-            <AccuracyShort>0.30</AccuracyShort>
-            <AccuracyMedium>1.00</AccuracyMedium>
-            <AccuracyLong>0.90</AccuracyLong>
-
-            <RangedWeapon_Cooldown>2.7</RangedWeapon_Cooldown>
-            <Flammability>0.2</Flammability>
-            <MarketValue>4200</MarketValue>
-        </statBases>
-
-        <recipeMaker>
-            <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
-            <researchPrerequisite Inherit="False" />
-            <workSkill>Crafting</workSkill>
-            <effectWorking>Smith</effectWorking>
-            <soundWorking>Recipe_Machining</soundWorking>
-            <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
-            <recipeUsers>
-                <li>TableMachining</li>
-            </recipeUsers>
-            <skillRequirements>
-                <Crafting>9</Crafting>
-            </skillRequirements>
-        </recipeMaker>
-
-        <tradeTags>
-            <li>WeaponRanged</li>
-            <li>MihoThirdEmpireGoods</li>
-        </tradeTags>
-
-        <equippedAngleOffset>45</equippedAngleOffset>
-
-        <verbs>
-            <li>
-                <verbClass>Verb_Shoot</verbClass>
-                <hasStandardCommand>true</hasStandardCommand>
-
-                <!-- 使用原版电荷标枪子弹（我们用它的贴图/特效） -->
-                <defaultProjectile>Bullet_Pzb38_Charge</defaultProjectile>
-
-                <!-- 单发 -->
-                <burstShotCount>1</burstShotCount>
-
-                <!-- 瞄准时间 4.5 秒 -->
-                <warmupTime>4.5</warmupTime>
-
-                <!-- 射程 75 格 -->
-                <range>75</range>
-
-                <soundCast>ChargeLance_Fire</soundCast>
-                <soundCastTail>GunTail_Heavy</soundCastTail>
-                <muzzleFlashScale>9</muzzleFlashScale>
-            </li>
-        </verbs>
-
-        <tools>
-            <li>
-                <label>枪托</label>
-                <capacities>
-                    <li>Blunt</li>
-                </capacities>
-                <power>12</power>
-                <cooldownTime>2</cooldownTime>
-            </li>
-            <li>
-                <label>枪管</label>
-                <capacities>
-                    <li>Blunt</li>
-                    <li>Poke</li>
-                </capacities>
-                <power>12</power>
-                <cooldownTime>2</cooldownTime>
-            </li>
-        </tools>
-    </ThingDef>
-
-    <!-- 复用原版 Bullet_ChargeLance 的贴图/特效，但伤害按需求改为 60 -->
-    <ThingDef ParentName="BaseBullet">
-        <defName>Bullet_Pzb38_Charge</defName>
-        <label>Pzb38电荷弹</label>
-        <graphicData>
-            <texPath>Things/Projectile/ChargeLanceShot</texPath>
-            <graphicClass>Graphic_Single</graphicClass>
-            <shaderType>TransparentPostLight</shaderType>
-            <drawSize>1.5</drawSize>
-        </graphicData>
-        <projectile>
-            <damageDef>Bullet</damageDef>
-            <damageAmountBase>80</damageAmountBase>
-            <armorPenetrationBase>0.9</armorPenetrationBase>
-            <stoppingPower>1.5</stoppingPower>
-            <speed>120</speed>
-        </projectile>
-    </ThingDef>
+  <ThingDef ParentName="BaseHumanMakeableGun">
+    <defName>Gun_Pzb38_Charge</defName>
+    <label>Pzb38反坦克步枪</label>
+    <description>帝国根据智人种过去的火药武器进行二次现代化改装。作为老式结构武器，它仅列装于警卫团或党卫军一类的部队，但其恐怖破坏力依旧令人畏惧。</description>
+    <techLevel>Spacer</techLevel>
+    <weaponTags>
+      <li>ThirdEmpireWeapon</li>
+      <li>ThirdEmpirePhase2MilitaryWeapon</li>
+      <li>LongShots</li>
+    </weaponTags>
+    <weaponClasses>
+      <li>RangedHeavy</li>
+    </weaponClasses>
+    <graphicData>
+      <texPath>Weapon/Pzb38</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(1, 1)</drawSize>
+      <color>(1,1,1,1)</color>
+    </graphicData>
+    <soundInteract>Interact_ChargeLance</soundInteract>
+    <costList>
+      <Steel>265</Steel>
+      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentSpacer>1</ComponentSpacer>
+    </costList>
+    <statBases>
+      <WorkToMake>30000</WorkToMake>
+      <Mass>10</Mass>
+      <AccuracyTouch>0.25</AccuracyTouch>
+      <AccuracyShort>0.25</AccuracyShort>
+      <AccuracyMedium>0.90</AccuracyMedium>
+      <AccuracyLong>0.75</AccuracyLong>
+      <RangedWeapon_Cooldown>0.1</RangedWeapon_Cooldown>
+      <Flammability>0.2</Flammability>
+      <MarketValue>4200</MarketValue>
+    </statBases>
+    <recipeMaker>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <researchPrerequisite>MihoPhase2_Research_CommonWeapons</researchPrerequisite>
+      <workSkill>Crafting</workSkill>
+      <effectWorking>Smith</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <unfinishedThingDef>UnfinishedGun</unfinishedThingDef>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>9</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    <tradeTags>
+      <li>WeaponRanged</li>
+      <li>MihoThirdEmpireGoods</li>
+    </tradeTags>
+    <equippedAngleOffset>45</equippedAngleOffset>
+    <verbs>
+      <li Class="MihoAdfqs.Combat.Weapons.VerbProperties_Magazine">
+        <verbClass>MihoAdfqs.Combat.Weapons.Verb_Magazine</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <defaultProjectile>Bullet_Pzb38_Charge</defaultProjectile>
+        <burstShotCount>1</burstShotCount>
+        <warmupTime>0.9</warmupTime>
+        <range>120</range>
+        <soundCast>ChargeLance_Fire</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
+        <magazineSize>5</magazineSize>
+        <reloadSeconds>8</reloadSeconds>
+        <secondary>false</secondary>
+        <pellets>1</pellets>
+        <ticksBetweenBurstShots>60</ticksBetweenBurstShots>
+        <fireModes>
+          <li>点射</li>
+        </fireModes>
+        <preciseBurstTicks>60.0</preciseBurstTicks>
+        <accuracyByDistance>
+          <points>
+            <li>(0, 0.25)</li>
+            <li>(10, 0.25)</li>
+            <li>(60, 0.9)</li>
+            <li>(120, 0.75)</li>
+          </points>
+        </accuracyByDistance>
+      </li>
+    </verbs>
+    <tools>
+      <li>
+        <label>枪托</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>枪管</label>
+        <capacities>
+          <li>Blunt</li>
+          <li>Poke</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Pzb38_Charge</defName>
+    <label>Pzb38电荷弹</label>
+    <graphicData>
+      <texPath>Things/Projectile/ChargeLanceShot</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>1.5</drawSize>
+    </graphicData>
+    <projectile>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>80</damageAmountBase>
+      <armorPenetrationBase>1.5</armorPenetrationBase>
+      <stoppingPower>1.5</stoppingPower>
+      <speed>120</speed>
+    </projectile>
+  </ThingDef>
 </Defs>
-

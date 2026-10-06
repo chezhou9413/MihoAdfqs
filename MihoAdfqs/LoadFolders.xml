@@ -3,6 +3,8 @@
   <v1.6>
     <li>/</li>
     <li>1.6</li>
+    <li IfModActive="Ancot.MiliraRace">Compatibility/Milira</li>
     <li IfModActive="Nals.FacialAnimation">FacialAnimation</li>
+    <li IfModActiveAll="Nals.FacialAnimation,Ancot.MiliraRace,Ancot.MiliraRaceFacialAnimation">Compatibility/MiliraFacialAnimation</li>
   </v1.6>
 </loadFolders>

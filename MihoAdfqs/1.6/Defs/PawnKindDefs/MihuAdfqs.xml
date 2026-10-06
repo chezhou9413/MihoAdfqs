@@ -3,10 +3,12 @@
   <PawnKindDef ParentName="MihoMilBase">
     <defName>Miho_adfqs</defName>
     <label>阿道夫-秋霜</label>
+    <description>作为帝国的大脑与最高领导人，她拥有至高无上的权力和威望。很难想象，整个庞大星际帝国的核心会亲自来到这颗处于灰色地带的星球。</description>
     <defaultFactionType>MihoThirdEmpire</defaultFactionType>
+    <overrideDeathOnDownedChance>0</overrideDeathOnDownedChance>
     <fixedGender>Female</fixedGender>
-    <minGenerationAge>23</minGenerationAge>
-    <maxGenerationAge>27</maxGenerationAge>
+    <minGenerationAge>362</minGenerationAge>
+    <maxGenerationAge>362</maxGenerationAge>
     <backstoryFiltersOverride>
       <li>
         <categories>
@@ -41,9 +43,9 @@
       <li>Apparel_FuhrerCoat</li>
     </apparelRequired>
     <inventoryOptions Inherit="False"/>
-    <xenotypeSet>
+    <xenotypeSet Inherit="False">
       <xenotypeChances>
-        <Xeno_MihoThirdEmpire>1</Xeno_MihoThirdEmpire>
+        <Xeno_MihoPhase2_Fuhrer>1</Xeno_MihoPhase2_Fuhrer>
       </xenotypeChances>
     </xenotypeSet>
     <modExtensions>
@@ -130,7 +132,7 @@
           </li>
         </skillSettings>
         <kindDesName></kindDesName>
-        <kindAge>24</kindAge>
+        <kindAge>362</kindAge>
         <BodyTypeName>AlienRace/adfqs/body/body</BodyTypeName>
       </li>
       <li Class="ChezhouLib.HAR.Extension.kindRuleHAR">
